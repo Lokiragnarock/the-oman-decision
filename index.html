@@ -146,7 +146,7 @@ function chrome(sl,pg){
   if(sl.classList.contains("cover"))return;
   if(!sl.querySelector(".bar"))sl.insertAdjacentHTML("afterbegin",'<div class="bar"></div>');
   const sec=+sl.dataset.sec||0, who=sec?WHO[sec]:"";
-  sl.insertAdjacentHTML("beforeend",`<div class="top"><span class="pg">${String(pg).padStart(2,"0")}</span><span>The Oman decision${who?" · "+who:""}</span><span class="rule"></span><span class="mark">GBF CIA</span></div>`);
+  sl.insertAdjacentHTML("beforeend",`<div class="top"><span class="pg">${String(pg).padStart(2,"0")}</span><span>The Oman decision</span><span class="rule"></span><span class="mark">GBF CIA</span></div>`);
   const src=sl.querySelector(".src");
   sl.insertAdjacentHTML("beforeend",`<div class="foot"><div class="rule"></div>${src?src.innerHTML:""}<div class="strip">${STRIP.map((s,k)=>`<span class="${k+1===sec?"on":""}">${s}</span>`).join("")}</div></div>`);
 }
