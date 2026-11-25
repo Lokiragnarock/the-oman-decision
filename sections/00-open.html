@@ -1,0 +1,72 @@
+<!-- Section 00: cover and contents. Owner: open agent. -->
+<section class="slide cover" data-dune="band">
+  <svg class="contours"></svg>
+  <div class="bar"></div>
+  <div class="body">
+    <div class="kicker">Global Finance Crisis Room</div>
+    <h1>The Oman decision</h1>
+    <p class="line">Should an Indian company commit capital to Duqm while Oman's current account slips into deficit?</p>
+  </div>
+  <div class="fade"></div>
+  <div class="team">
+    <div><b>Ahimaa Dutt</b>2420105</div>
+    <div><b>Hriday Rudhra</b>2420121</div>
+    <div><b>Shreya M</b>2420155</div>
+    <div><b>Lokesh Rajan</b>2420129</div>
+  </div>
+</section>
+
+<section class="slide" data-dune="edge" data-sec="0">
+  <svg class="contours"></svg>
+  <div class="body">
+    <h1 class="t">Contents</h1>
+    <div class="idx">
+      <div class="c"><div class="n">01</div><h3>The system</h3><p>Why a dollar peg makes Oman import Fed policy, and how the monetary system got here.</p><div class="who">Ahimaa</div><div class="rub">C1 · Markets and regimes</div></div>
+      <div class="c"><div class="n">02</div><h3>The balance</h3><p>Goods in surplus, current account in deficit. Where the money leaks and who fills the gap.</p><div class="who">Hriday</div><div class="rub">C2 · Balance of payments</div></div>
+      <div class="c"><div class="n">03</div><h3>The crisis room</h3><p>Oil, Fed and peg-break scenarios run live against the project's value in rupees.</p><div class="who">Shreya</div><div class="rub">C3 · Business implications</div></div>
+      <div class="c ans"><div class="n">04</div><h3>The verdict</h3><p>Proceed, postpone or modify, and the structure that protects the rupee return.</p><div class="who">Lokesh</div><div class="rub">C4 · Recommendation</div></div>
+    </div>
+  </div>
+</section>
+
+<script>
+/* Cover dune band: aerial view of 3 barchans (+2 small ones that merge/fork) over faint seif ridges.
+   Every sample lies at y>=400 (grid origin Y0=400), so no line can start above the 55% mark. */
+window.drawBand=function(svg){
+  const W=1280,H=720,S=5,Y0=400,cols=W/S+1,rows=(H-Y0)/S+1,n=noise2(23);
+  const th=0.32,C=Math.cos(th),Sn=Math.sin(th);          // wind blows along (C,Sn), down and to the right
+  // barchan: centre, half-width w, windward length L, horn sweep k, height H
+  const DUNES=[
+    {x:330,y:610,w:250,L:300,k:170,H:1},
+    {x:860,y:575,w:175,L:200,k:120,H:.82},
+    {x:1150,y:670,w:115,L:130,k:75,H:.6},
+    {x:610,y:690,w:95,L:110,k:60,H:.5},     // sits on the big dune's horn: merges
+    {x:80,y:700,w:80,L:90,k:50,H:.45}
+  ];
+  const SEIFS=[{x:640,y:500,v:0,A:34,lam:210,Hs:.3,ws:34},{x:640,y:640,v:110,A:26,lam:170,Hs:.26,ws:28},{x:300,y:470,v:-60,A:20,lam:150,Hs:.2,ws:24}];
+  function barchan(X,Y,D){
+    const dx=X-D.x,dy=Y-D.y,u=dx*C+dy*Sn,v=-dx*Sn+dy*C,r=v/D.w;
+    if(r<=-1||r>=1)return 0;
+    const env=Math.pow(1-r*r,.8),uc=D.k*r*r-D.k*.3,d=u-uc;     // crest curves downwind toward the horns: crescent
+    if(d<0){const q=1+d/D.L;return q<=0?0:D.H*env*Math.pow(q,1.5)}   // windward: long gentle rise
+    const q=1-d/(D.L*.2);return q<=0?0:D.H*env*q                      // slip face: short steep drop
+  }
+  function seif(X,Y,Q){
+    const dx=X-Q.x,dy=Y-Q.y,u=dx*C+dy*Sn,v=-dx*Sn+dy*C;
+    const dist=v-Q.v-Q.A*Math.sin(u/Q.lam),a=Math.exp(-u*u/(2*520*520));
+    return Q.Hs*Math.exp(-dist*dist/(Q.ws*Q.ws))*a
+  }
+  const f=[];
+  for(let y=0;y<rows;y++)for(let x=0;x<cols;x++){
+    const X0=x*S,Y1=Y0+y*S,X=X0+16*(n(X0/110,Y1/110)-.5),Y=Y1+16*(n(X0/110+7,Y1/110+3)-.5);
+    let h=0;for(const D of DUNES)h+=barchan(X,Y,D);
+    for(const Q of SEIFS)h+=seif(X,Y,Q);
+    f.push(h+.035*n(X0/45,Y1/45+11))
+  }
+  const L=[...Array(16)].map((_,i)=>.07+i*.0625);
+  const P=iso(f,cols,rows,S,Y0,L);
+  const paths=P.map((d,i)=>d?`<path d="${d}" stroke-opacity="${(.4+.5*i/L.length).toFixed(2)}"/>`:"").join("");
+  svg.setAttribute("viewBox",`0 0 ${W} ${H}`);
+  svg.innerHTML=`<defs><linearGradient id="gb" x1="0" y1="0" x2="0" y2="1"><stop offset="${Y0/H}" stop-color="#FBF8F3" stop-opacity="0"/><stop offset=".62" stop-color="#FBF8F3" stop-opacity=".1"/><stop offset=".81" stop-color="#FBF8F3" stop-opacity=".18"/><stop offset=".93" stop-color="#FBF8F3" stop-opacity=".85"/><stop offset="1" stop-color="#FBF8F3"/></linearGradient><mask id="mb"><rect width="${W}" height="${H}" fill="url(#gb)"/></mask></defs><g mask="url(#mb)">${paths}</g>`
+};
+</script>

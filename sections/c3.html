@@ -1,0 +1,269 @@
+<style>
+.c3 .p3{display:grid;grid-template-columns:1fr 1fr 1fr;margin-top:16px;height:372px}
+.c3 .p3 .panel{padding-right:24px}
+.c3 .p3 .panel + .panel{padding-left:24px}
+.c3 .p3 .panel:last-child{padding-right:0}
+.c3 .big{font-size:38px}
+.c3 svg.ch{width:100%;height:auto;display:block}
+.c3 svg.ch text{font-family:"Open Sans",system-ui,sans-serif}
+.c3 .ax{font-size:10px;fill:#6b7780}
+.c3 .lb{font-size:11px;font-weight:600;fill:#16222a}
+.c3 .lbt{font-size:11px;font-weight:600;fill:#0B4F4A}
+.c3 .gl{stroke:#d9e0e3;stroke-width:1}
+.c3 .one{margin-bottom:0;margin-top:8px}
+.c3 .banner{position:absolute;left:0;right:0;bottom:0}
+.c3 .sim{display:grid;grid-template-columns:318px 1fr 336px;margin-top:12px;height:446px}
+.c3 .sim .col{padding:0 22px;overflow:hidden}
+.c3 .sim .col:first-child{padding-left:0}
+.c3 .sim .col:last-child{padding-right:0}
+.c3 .sim .col + .col{border-left:1px solid var(--hair)}
+.c3 .dr{margin-top:5px}
+.c3 .dh{display:flex;justify-content:space-between;align-items:baseline;font-size:12.5px;font-weight:600}
+.c3 .dh b{font-size:18px;font-weight:800;color:var(--teal)}
+.c3 .dn{font-size:10.5px;color:var(--grey);line-height:1.3;margin-top:1px}
+.c3 input[type=range]{width:100%;margin:2px 0 0;accent-color:var(--teal);height:16px;cursor:pointer}
+.c3 input[type=range]:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.c3 .kpis{gap:8px 18px;margin-top:6px}
+.c3 .kpi .k{font-size:28px;line-height:1.1}
+.c3 .kpi .l{font-size:11px}
+.c3 .kpi .k.neg{color:var(--ink)}
+.c3 .kpi .k small{font-size:13px;font-weight:600;color:var(--grey)}
+.c3 .sw{display:grid;grid-template-columns:96px 1fr 62px;align-items:center;gap:6px;font-size:11px;height:23px}
+.c3 .sw .bar2{height:9px;background:var(--teal-2);min-width:2px}
+.c3 .sw .v{text-align:right;font-weight:600}
+.c3 .sw .r{font-size:9.5px;color:var(--grey);display:block;line-height:1}
+.c3 .asm{margin-top:8px;border:1px solid var(--hair);padding:7px 10px}
+.c3 .asm h4{font-family:"Poppins";font-weight:500;font-size:11px;color:var(--ink);margin-bottom:3px}
+.c3 .asm h4 span{color:var(--grey);font-weight:400}
+.c3 .asm ul{list-style:none;font-size:10.5px;line-height:1.32;color:#36444d}
+.c3 .asm li{padding-left:0}
+.c3 .asm li b{font-weight:600;color:var(--ink)}
+.c3 .asm .sd{margin-top:4px;padding-top:4px;border-top:1px solid var(--hair);color:var(--grey)}
+.c3 .scn{font-size:10.5px;color:var(--grey);line-height:1.35;margin-top:2px}
+</style>
+
+<section class="slide c3" id="c3" data-sec="3" data-dune="faint">
+<svg class="contours"></svg>
+<div class="body">
+<h1 class="t">Oman's debt rose from 4% to 68% of GDP and S&amp;P cut it eight notches, and the peg held both times</h1>
+<div class="p3 panels">
+  <div class="panel">
+    <div class="q">General government debt, % of GDP (IMF WEO)</div>
+    <div class="big">4% to 68%</div>
+    <div class="cap">2014 to 2020, then 35% by 2025</div>
+    <svg class="ch" id="c3-debt" viewBox="0 0 330 190" role="img" aria-label="Debt as percent of GDP 2014 to 2025"></svg>
+    <div class="one">Fiscal balance was -19.6% of GDP in 2016 and -15.7% in 2020.</div>
+  </div>
+  <div class="panel">
+    <div class="q">Brent and IMF fiscal breakeven, USD per barrel</div>
+    <div class="big">$45 vs $100</div>
+    <div class="cap">2016 average; 2020 was $43 vs $86</div>
+    <svg class="ch" id="c3-oil" viewBox="0 0 330 190" role="img" aria-label="Brent against fiscal breakeven 2014 to 2025"></svg>
+    <div class="one">Brent covered the breakeven in 2022 to 2025; the 2025 cushion is $11.</div>
+  </div>
+  <div class="panel">
+    <div class="q">S&amp;P long-term rating, Dec 2014 to Nov 2026</div>
+    <div class="big">A to B+</div>
+    <div class="cap">8 notches in 6 years; BBB- again in Sep 2024</div>
+    <svg class="ch" id="c3-rate" viewBox="0 0 330 190" role="img" aria-label="S and P rating path"></svg>
+    <div class="one">Contractor arrears were documented in 2016 (Aug and Nov meetings); the total owed was not found.</div>
+  </div>
+</div>
+<div class="banner">Peg held in both episodes: <b>0.37 to 0.39 OMR per USD since 1992</b>, 0.3850 on 24 Nov 2026</div>
+</div>
+<div class="src">Source: Packet P1 Oman macro history, Tables 3, 4, 6 and 7 (IMF WEO and REO series, S&amp;P history via Trading Economics, arrears from press reports in P1 [S20], [S20b]). Debt 2014 4.0, 2016 29.3, 2020 67.9, 2025 34.7.</div>
+</section>
+
+<section class="slide c3" id="c3b" data-sec="3" data-dune="faint">
+<svg class="contours"></svg>
+<div class="body">
+<h1 class="t" style="font-size:26px">A 20% rial devaluation adds INR 595 crore to phase 2 NPV; one point of rupee drift moves it INR 1,565 crore</h1>
+<div class="sim">
+  <div class="col">
+    <div class="q">Crisis room: move the drivers</div>
+    <div class="dr"><div class="dh"><label for="c3-brent">Brent, USD/bbl</label><b id="c3-v-brent"></b></div>
+      <input type="range" id="c3-brent" min="30" max="125" step="1" value="89">
+      <div class="dn">P5 bounds 69 / 89 / 125. Below the IMF fiscal breakeven of 57.3 (P1, 2025) payments slip.</div></div>
+    <div class="dr"><div class="dh"><label for="c3-fed">Fed funds upper bound, %</label><b id="c3-v-fed"></b></div>
+      <input type="range" id="c3-fed" min="2" max="6" step="0.25" value="4">
+      <div class="dn">P2: 4.00 now; CBO repo = upper bound + 0.50. A 25bp hike is priced for 9 Dec.</div></div>
+    <div class="dr"><div class="dh"><label for="c3-peg">Peg break, rial devaluation %</label><b id="c3-v-peg"></b></div>
+      <input type="range" id="c3-peg" min="0" max="30" step="1" value="0">
+      <div class="dn">P1: no break in 2016 or 2020. Range 0 to 30% is set for the stress test.</div></div>
+    <div class="dr"><div class="dh"><label for="c3-inr">USD/INR change, % a year</label><b id="c3-v-inr"></b></div>
+      <input type="range" id="c3-inr" min="0" max="8" step="0.1" value="3.4">
+      <div class="dn">P2: spot 92.84; 1y forward premium 3.37 to 3.54% a year. Default 3.4.</div></div>
+    <div class="dr"><div class="dh"><label for="c3-amm">Green ammonia, USD/t</label><b id="c3-v-amm"></b></div>
+      <input type="range" id="c3-amm" min="400" max="1200" step="1" value="641">
+      <div class="dn">P5 green bounds 591 / 641 / 1,153. Grey ammonia for context: 300 / 585 / 740.</div></div>
+  </div>
+
+  <div class="col">
+    <div class="kpis">
+      <div class="kpi"><div class="k" id="c3-npv"></div><div class="l">Project NPV, INR crore</div></div>
+      <div class="kpi"><div class="k" id="c3-irr"></div><div class="l" id="c3-irrl">Project IRR in INR</div></div>
+      <div class="kpi"><div class="k" id="c3-delay"></div><div class="l">Delay from low oil, months (commissioning + payment)</div></div>
+      <div class="kpi"><div class="k" id="c3-be"></div><div class="l">Ammonia price where NPV = 0, USD/t</div></div>
+    </div>
+    <div class="q" style="margin-top:12px">Project NPV by scenario, INR crore</div>
+    <svg class="ch" id="c3-bars" viewBox="0 0 380 190" role="img" aria-label="NPV by scenario"></svg>
+    <div class="scn">Oil slump: Brent 43 (2020 average, P1). Peg break: rial down 20%. Combined: both, plus Fed upper bound 4.25 (the priced hike, P2). Other drivers at base: Brent 89, Fed 4.00, rupee 3.4%, ammonia 641.</div>
+  </div>
+
+  <div class="col">
+    <div class="q">NPV swing across each slider range, INR crore</div>
+    <div id="c3-sw"></div>
+    <div class="asm">
+      <h4>Assumptions <span>(assumption, to source)</span></h4>
+      <ul>
+        <li><b>Opex</b> 25% of revenue at USD 641/t, a fixed USD amount; 60% of it paid in OMR</li>
+        <li><b>Debt</b> 70% (brief) at Fed upper + 0.50 (CBO rule, P2) + 2.0% spread</li>
+        <li><b>Equity</b> cost 12% in USD; WACC = 70/30 mix, tax 0% (Duqm exemption, P3, phase 2 regime not found)</li>
+        <li><b>INR hurdle</b> = (1 + USD WACC) x (1 + 3.4% forward premium) - 1</li>
+        <li><b>Delay rule</b> per USD of Brent below 57.3: 0.5 month later start, 0.25 month later payment (caps 24 and 12)</li>
+        <li><b>Capex</b> spent 30/40/30 in 2027 to 2029; 25-year life from 2030</li>
+        <li class="sd">Sourced inputs: capex USD 2.1bn = half of USD 4.2bn (P3), 400 kt/yr from 2030 (P3), Fed 4.00 and spot 92.84 (P2), ammonia and Brent bounds (P5), breakeven 57.3 (P1).</li>
+      </ul>
+    </div>
+  </div>
+</div>
+</div>
+<div class="src">Source: Packets P2 Fed watch (Fed range, CBO rule, USD/INR, forward premium), P3 payments route (OMR 1.6bn / USD 4.2bn for phases 2 and 3, 400 kt/yr, 2030), P5 ammonia and urea prices (scenario table), P1 macro history (breakeven, Brent 2020). Model and labelled assumptions: team.</div>
+</section>
+
+<script>
+(function(){
+var NS="http://www.w3.org/2000/svg";
+function el(n,a,t){var e=document.createElementNS(NS,n);for(var k in a)e.setAttribute(k,a[k]);if(t!=null)e.textContent=t;return e}
+
+/* ---------- slide 1: stress history charts (P1) ---------- */
+var yrs=[2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025];
+var debt=[4.0,13.9,29.3,40.1,44.7,52.5,67.9,61.9,41.7,37.4,35.5,34.7];
+var brent=[99.3,53.0,45.1,54.9,71.6,64.2,43.3,70.8,99.0,82.3,79.9,68.3];
+var be=[101.5,96.8,100.0,81.9,76.7,64.7,86.4,76.7,55.4,54.0,55.4,57.3];
+function frame(svg,x0,x1,y0,y1,ymin,ymax,ticks,xt){
+  var X=function(v){return x0+(v-xt.min)/(xt.max-xt.min)*(x1-x0)};
+  var Y=function(v){return y1-(v-ymin)/(ymax-ymin)*(y1-y0)};
+  ticks.forEach(function(t){svg.appendChild(el("line",{x1:x0,x2:x1,y1:Y(t),y2:Y(t),"class":"gl"}));
+    svg.appendChild(el("text",{x:x0-4,y:Y(t)+3,"text-anchor":"end","class":"ax"},t))});
+  xt.ticks.forEach(function(t){svg.appendChild(el("text",{x:X(t),y:y1+14,"text-anchor":"middle","class":"ax"},t))});
+  return {X:X,Y:Y}}
+function path(svg,pts,stroke,w,dash){
+  var d="";pts.forEach(function(p,i){d+=(i?"L":"M")+p[0].toFixed(1)+" "+p[1].toFixed(1)});
+  var a={d:d,fill:"none",stroke:stroke,"stroke-width":w};if(dash)a["stroke-dasharray"]=dash;
+  svg.appendChild(el("path",a))}
+function dot(svg,x,y,r,fill){svg.appendChild(el("circle",{cx:x,cy:y,r:r,fill:fill||"#0B4F4A"}))}
+function txt(svg,x,y,t,cls,anchor){svg.appendChild(el("text",{x:x,y:y,"text-anchor":anchor||"middle","class":cls||"lb"},t))}
+
+var s=document.getElementById("c3-debt");
+if(s){
+  var f=frame(s,30,310,14,164,0,70,[0,35,70],{min:2014,max:2025,ticks:[2014,2016,2020,2025]});
+  path(s,yrs.map(function(y,i){return [f.X(y),f.Y(debt[i])]}),"#0B4F4A",2.2);
+  [[2014,0,"4.0","a"],[2016,2,"29.3","a"],[2020,6,"67.9","a"],[2025,11,"34.7","a"]].forEach(function(p){
+    dot(s,f.X(p[0]),f.Y(debt[p[1]]),3.5);
+    txt(s,f.X(p[0])+(p[0]===2014?8:p[0]===2025?-6:0),f.Y(debt[p[1]])-8,p[2])});
+}
+s=document.getElementById("c3-oil");
+if(s){
+  var g=frame(s,30,310,14,164,0,110,[0,50,100],{min:2014,max:2025,ticks:[2014,2016,2020,2025]});
+  path(s,yrs.map(function(y,i){return [g.X(y),g.Y(be[i])]}),"#6b7780",1.8,"4 3");
+  path(s,yrs.map(function(y,i){return [g.X(y),g.Y(brent[i])]}),"#0B4F4A",2.2);
+  [[2,"45.1",1,100,"100.0"],[6,"43.3",1,86.4,"86.4"],[11,"68.3",0,57.3,"57.3"]].forEach(function(p){
+    var x=g.X(yrs[p[0]]);dot(s,x,g.Y(brent[p[0]]),3.2);dot(s,x,g.Y(be[p[0]]),3.2,"#6b7780");
+    var below=p[2]===1;
+    txt(s,x,g.Y(brent[p[0]])+(below?16:-7),p[1],"lbt",p[0]===11?"end":"middle");
+    txt(s,x,g.Y(be[p[0]])+(below?-8:15),p[4],"lb",p[0]===11?"end":"middle")});
+  s.appendChild(el("line",{x1:190,x2:210,y1:9,y2:9,stroke:"#0B4F4A","stroke-width":2.2}));txt(s,214,12,"Brent","ax","start");
+  s.appendChild(el("line",{x1:252,x2:272,y1:9,y2:9,stroke:"#6b7780","stroke-width":1.8,"stroke-dasharray":"4 3"}));txt(s,276,12,"Breakeven","ax","start");
+}
+s=document.getElementById("c3-rate");
+if(s){
+  var names=["A","A-","BBB+","BBB","BBB-","BB+","BB","BB-","B+"];
+  var pts=[[2014.93,0],[2015.10,1],[2015.89,2],[2016.13,4],[2017.36,5],[2017.86,6],[2020.23,7],[2020.79,8],[2022.25,7],[2022.90,6],[2023.75,5],[2024.74,4],[2026.9,4]];
+  var x0=34,x1=316,y0=14,y1=164;
+  var X=function(v){return x0+(v-2014.5)/(2026.9-2014.5)*(x1-x0)};
+  var Y=function(n){return y0+n/8*(y1-y0)};
+  [0,4,8].forEach(function(n){s.appendChild(el("line",{x1:x0,x2:x1,y1:Y(n),y2:Y(n),"class":"gl"}));
+    s.appendChild(el("text",{x:x0-4,y:Y(n)+3,"text-anchor":"end","class":"ax"},names[n]))});
+  [2015,2020,2025].forEach(function(t){s.appendChild(el("text",{x:X(t),y:y1+14,"text-anchor":"middle","class":"ax"},t))});
+  var st=[];pts.forEach(function(p,i){if(i)st.push([X(p[0]),Y(pts[i-1][1])]);st.push([X(p[0]),Y(p[1])])});
+  path(s,st,"#0B4F4A",2.2);
+  dot(s,X(2014.93),Y(0),3.5);dot(s,X(2016.13),Y(4),3.5);dot(s,X(2020.79),Y(8),3.5);dot(s,X(2024.74),Y(4),3.5);
+  txt(s,X(2014.93)+8,Y(0)-6,"A","lbt","start");
+  txt(s,X(2016.13)+5,Y(4)-8,"BBB- Feb 2016","lb","start");
+  txt(s,X(2020.79)-7,Y(8)-3,"B+ Oct 2020","lbt","end");
+  txt(s,X(2024.74),Y(4)-8,"BBB- Sep 2024","lb","end");
+}
+
+/* ---------- slide 2: simulator ---------- */
+var K={spot:92.84,fwd:0.034,capexUSDm:2100,capexPhase:[0.3,0.4,0.3],kt:400,cod:2030,life:25,base:2026,
+  opexPct:0.25,opexRefPrice:641,omrShare:0.6,spread:2.0,debt:0.7,ke:0.12,be:57.3,dPerUsd:0.5,pPerUsd:0.25,capD:24,capP:12,cbo:0.5};
+function shift(arr,m){var n=Math.floor(m/12),f=(m%12)/12;return arr.map(function(_,i){return (1-f)*(arr[i-n]||0)+f*(arr[i-n-1]||0)})}
+function model(x){
+  var N=34,wd=K.debt*((x.fed+K.cbo+K.spread)/100)+(1-K.debt)*K.ke;
+  var r=(1+wd)*(1+K.fwd)-1,gap=Math.max(0,K.be-x.brent);
+  var D=Math.min(K.capD,K.dPerUsd*gap),P=Math.min(K.capP,K.pPerUsd*gap);
+  var rev0=K.kt*1000*x.amm/1e6,opex0=K.kt*1000*K.opexRefPrice/1e6*K.opexPct;
+  var opexA=opex0*((1-K.omrShare)+K.omrShare*(1-x.peg/100));
+  var R=[],O=[],C=[],t,y;
+  for(t=1;t<=N;t++){y=K.base+t;var on=y>=K.cod&&y<K.cod+K.life;R.push(on?rev0:0);O.push(on?opexA:0);
+    var ci=y-(K.cod-3);C.push(ci>=0&&ci<3?K.capexUSDm*K.capexPhase[ci]:0)}
+  var Rs=shift(R,D+P),Os=shift(O,D),cf=[0],npv=0;
+  for(t=1;t<=N;t++){var u=Rs[t-1]-Os[t-1]-C[t-1];var v=u*K.spot*Math.pow(1+x.inr/100,t)/10;cf.push(v);npv+=v/Math.pow(1+r,t)}
+  var f=function(q){var a=0;for(var i=0;i<cf.length;i++)a+=cf[i]/Math.pow(1+q,i);return a};
+  var lo=-0.5,hi=1,irr=null;
+  if(f(lo)*f(hi)<0){for(var k=0;k<70;k++){var m=(lo+hi)/2;if(f(lo)*f(m)<=0)hi=m;else lo=m}irr=(lo+hi)/2}
+  return {npv:npv,irr:irr,r:r,D:D,P:P}}
+window.c3Model=model;
+var B={brent:89,fed:4.0,peg:0,inr:3.4,amm:641};
+function mix(o){var x={};for(var k in B)x[k]=B[k];for(k in o)x[k]=o[k];return x}
+var SC=[["Base",mix({})],["Oil slump",mix({brent:43})],["Peg break",mix({peg:20})],["Combined",mix({brent:43,fed:4.25,peg:20})]];
+var ids=["brent","fed","peg","inr","amm"];
+var inp={};ids.forEach(function(k){inp[k]=document.getElementById("c3-"+k)});
+if(!inp.brent)return;
+function fmt(n){var v=Math.round(n);return (v<0?"-":"")+Math.abs(v).toLocaleString("en-US")}
+function read(){var x={};ids.forEach(function(k){x[k]=parseFloat(inp[k].value)});return x}
+function npvOf(x){return model(x).npv}
+var SWR=[["Brent","brent",30,125,"USD 30 to 125"],["Fed upper","fed",2,6,"2 to 6%"],["Peg break","peg",0,30,"0 to 30%"],["USD/INR","inr",0,8,"0 to 8% a year"],["Ammonia","amm",591,1153,"USD 591 to 1,153"]];
+var bars=document.getElementById("c3-bars"),swEl=document.getElementById("c3-sw");
+function draw(){
+  var x=read(),m=model(x);
+  document.getElementById("c3-v-brent").textContent=x.brent.toFixed(0);
+  document.getElementById("c3-v-fed").textContent=x.fed.toFixed(2);
+  document.getElementById("c3-v-peg").textContent=x.peg.toFixed(0)+"%";
+  document.getElementById("c3-v-inr").textContent=x.inr.toFixed(1)+"%";
+  document.getElementById("c3-v-amm").textContent=x.amm.toFixed(0);
+  var n=document.getElementById("c3-npv");n.textContent=fmt(m.npv);n.style.color=m.npv>=0?"#0B4F4A":"#16222a";
+  var ir=document.getElementById("c3-irr");
+  ir.innerHTML=m.irr==null?"n/a":(m.irr*100).toFixed(1)+"<small>%</small>";
+  document.getElementById("c3-irrl").textContent="Project IRR in INR; hurdle "+(m.r*100).toFixed(1)+"%";
+  document.getElementById("c3-delay").innerHTML=m.D.toFixed(1)+" + "+m.P.toFixed(1);
+  var lo=200,hi=3000,i;
+  if(npvOf(mix2(x,hi))<0){document.getElementById("c3-be").textContent=">3,000"}
+  else if(npvOf(mix2(x,lo))>0){document.getElementById("c3-be").textContent="<200"}
+  else{for(i=0;i<40;i++){var md=(lo+hi)/2;if(npvOf(mix2(x,md))>0)hi=md;else lo=md}document.getElementById("c3-be").textContent=Math.round(hi).toLocaleString("en-US")}
+  /* scenario bars */
+  var vals=SC.map(function(a){return model(a[1]).npv});vals.push(m.npv);
+  var names=SC.map(function(a){return a[0]});names.push("Your inputs");
+  var vmax=Math.max.apply(null,vals.concat([0])),vmin=Math.min.apply(null,vals.concat([0]));if(vmax-vmin<1){vmax=1}
+  var top=26,bot=146,Y=function(v){return top+(vmax-v)/(vmax-vmin)*(bot-top)};
+  bars.innerHTML="";
+  bars.appendChild(el("line",{x1:8,x2:372,y1:Y(0),y2:Y(0),stroke:"#16222a","stroke-width":1}));
+  vals.forEach(function(v,k){
+    var cx=44+k*73,y1=Y(Math.max(v,0)),y2=Y(Math.min(v,0));
+    var last=k===vals.length-1;
+    bars.appendChild(el("rect",{x:cx-24,y:y1,width:48,height:Math.max(1,y2-y1),fill:last?"#B5482E":(k===0?"#0B4F4A":"#C9A36A")}));
+    bars.appendChild(el("text",{x:cx,y:v>=0?y1-5:y2+13,"text-anchor":"middle","class":"lb"},fmt(v)));
+    bars.appendChild(el("text",{x:cx,y:176,"text-anchor":"middle","class":"ax"},names[k]));
+  });
+  /* swings */
+  var base=m.npv,rows=SWR.map(function(r){var a=npvOf(mix2(x,null,r[1],r[2])),b=npvOf(mix2(x,null,r[1],r[3]));return {n:r[0],rg:r[4],d:b-a}});
+  var mx=Math.max.apply(null,rows.map(function(r){return Math.abs(r.d)}))||1;
+  swEl.innerHTML=rows.map(function(r){
+    return '<div class="sw"><span>'+r.n+'<span class="r">'+r.rg+'</span></span><span><div class="bar2" style="width:'+(Math.abs(r.d)/mx*100).toFixed(1)+'%"></div></span><span class="v">'+(r.d>=0?"+":"-")+Math.abs(Math.round(r.d)).toLocaleString("en-US")+'</span></div>'}).join("");
+}
+function mix2(x,amm,key,val){var o={};for(var k in x)o[k]=x[k];if(amm!=null)o.amm=amm;if(key)o[key]=val;return o}
+ids.forEach(function(k){inp[k].addEventListener("input",draw)});
+draw();
+})();
+</script>
