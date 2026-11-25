@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P2 Fed watch, yields and timeline</title>
+<style>
+  :root { --ink:#1a1a1a; --mute:#666; --line:#e3e3e3; --soft:#f7f7f7; --acc:#4b2e83; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 28px 20px 80px; }
+  .tag { color:var(--mute); font-size:13px; letter-spacing:.02em; }
+  h1 { font-size:26px; line-height:1.25; margin:8px 0 6px; }
+  h2 { font-size:19px; margin:38px 0 8px; padding-top:14px; border-top:1px solid var(--line); }
+  h3 { font-size:15px; margin:22px 0 6px; }
+  .lede { font-size:17px; margin:10px 0 18px; }
+  .meta { color:var(--mute); font-size:13px; margin-bottom:22px; }
+  ol.find { padding-left:22px; } ol.find li { margin:10px 0; }
+  ol.find b { color:var(--acc); }
+  table { border-collapse:collapse; width:100%; font-size:13px; margin:8px 0 6px; }
+  th, td { border-bottom:1px solid var(--line); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { background:var(--soft); font-weight:600; position:sticky; top:0; }
+  .wrap { overflow-x:auto; }
+  td.n, th.n { text-align:right; white-space:nowrap; }
+  tr.flag td { background:#fff6f0; }
+  tr.gap td { background:#f7f7ff; }
+  .conf { display:inline-block; font-size:12px; border:1px solid var(--line); border-radius:12px; padding:2px 10px; margin:2px 0 8px; background:var(--soft); }
+  .note { color:var(--mute); font-size:13px; margin:4px 0 10px; }
+  a { color:#1a4fa0; text-decoration:none; } a:hover { text-decoration:underline; }
+  sup a { font-size:11px; }
+  ul.src { padding-left:18px; font-size:13px; } ul.src li { margin:3px 0; word-break:break-word; }
+  .box { background:var(--soft); border:1px solid var(--line); border-radius:6px; padding:10px 14px; margin:10px 0; font-size:14px; }
+  code { background:var(--soft); padding:1px 4px; border-radius:3px; font-size:12.5px; }
+</style>
+</head>
+<body>
+<main>
+
+<div class="tag">Tangent T6 &middot; Packet P2 &middot; Feeds C1, C3</div>
+<h1>Oman copied every Fed move since July 2022, so the rial's rate is the Fed's rate plus 50bp. A Fed hike on 9 Dec is priced at about 95%.</h1>
+<p class="lede">CBO repo is 4.50% (Fed range 3.75-4.00%, upper bound 4.00% + 0.50). The 1y USD/OMR forward is quoted within about 0.1% of spot, so the rate gap is not what a rial hedge costs today. The rupee forward premium is 3.4 to 3.5% a year (May 2026), well above the 1.5 point India-US bill gap.</p>
+<div class="meta">Case: Indian company deciding whether to proceed, postpone or modify an Oman investment (ACME Duqm phases 2 and 3, or OMIFCO). Compiled 24 Nov 2026, online sources only, no figure from memory. Reuses the CBO 4.50%, Fed 3.75-4.00%, RBI 5.50%, USD/OMR 0.3850 and USD/INR 92.84 already pulled in <code>CIA Crisis Room Deck.md</code> and the class notes <code>Exchange Rate System</code>, <code>Bimetallism</code>, <code>IMF</code>. Tags: &#x1F7E2; verified (primary read directly), &#x1F7E1; reported (credible secondary), &#x1F534; own derivation (arithmetic shown), &#x2B1C; gap (not found).</div>
+
+<h2>Five findings</h2>
+<ol class="find">
+  <li><b>Oman has matched all 15 documented Fed moves since July 2022, the same size, 12 of them on the same day.</b> The other three (Jul, Sep, Nov 2022) came 2 to 3 days later. CBO's own rule is repo = upper bound of the Fed range + 50bp: 4.00 + 0.50 = 4.50. <sup><a href="#S4">S4</a></sup> <sup><a href="#A">Table A</a></sup></li>
+  <li><b>Before 2022 the link was looser, and the record is thin.</b> Of 17 Fed moves from Dec 2015 to Mar 2022, I found one dated CBO match (Mar 2020, a 75bp cut to 0.50%), one explicit refusal (Dec 2015: "no intention to change the official interest rate"), and 15 with no dated CBO decision found. The 50bp spread rule is documented only from 2022. <sup><a href="#S9">S9</a></sup> <sup><a href="#S11">S11</a></sup></li>
+  <li><b>Oman's premium over the US is small and shrinking.</b> The Nov 2025 USD sukuk priced at +60bp over Treasuries (7.5y, 4.525%). IMF staff put average sovereign spreads at 129bp in Jan to Oct 2025, down from 310bp in 2022. 5y CDS was about 76bp in Aug 2026. A current secondary-market USD bond yield was not found, so the sovereign premium is shown at issue, not live. <sup><a href="#B">Table B</a></sup></li>
+  <li><b>The rial's hedge cost is not the rate gap.</b> The indicative 1y USD/OMR forward is -10 / +25 points (about -0.03% / +0.07% of spot). A pure rate-gap calculation (Oman 364d bill 3.80% vs UST 1y 4.47%) would imply about -0.64%, roughly -250 points. The market prices peg credibility, not the gap. In Feb 2016 the same forward hit 1,500 points (about 4%). The rupee is the opposite: premium 3.37 to 3.54% a year, versus a 1.49 point gap. <sup><a href="#C">Table C</a></sup></li>
+  <li><b>Another US hike is next, and both central banks follow.</b> FOMC decides 9 Dec 2026 (next 27 Jan 2027). Futures price a 25bp hike at about 88.6 to 96% (sources differ). On CBO's own rule that takes repo to 4.75%. RBI meets 2 to 4 Dec (decision 4 Dec; Trading Economics consensus 5.75%). Oman's regime is a conventional peg (rial at 2.6008 USD since 1986); India is floating de jure and crawl-like de facto since 28 Nov 2025. <sup><a href="#A">Table A</a></sup> <sup><a href="#D">Table D</a></sup></li>
+</ol>
+
+<h2 id="A">Table A. Oman's own Fed watch, Dec 2015 to Nov 2026</h2>
+<span class="conf">Confidence: Fed column &#x1F7E2; CBO 2022-2026 &#x1F7E1; (news of CBO statements; CBO site gives the rule but no rate history); CBO 2015-2021 &#x2B1C; mostly not found; RBI &#x1F7E1;</span>
+<div class="note">Fed dates are as printed on the Fed's table, which lists the day a change took effect (the day after the FOMC decision; cross-check: CBO article on 3 Nov 2022 says the hike came "earlier on Wednesday" 2 Nov). Lag = CBO announcement date minus the Fed table date, in days. CBO "formula" check = Fed upper bound + 0.50.</div>
+<h3>A1. Fed vs CBO, every Fed change</h3>
+<div class="wrap"><table>
+<thead><tr><th>Fed date</th><th>Fed new range %</th><th>CBO date</th><th class="n">CBO repo %</th><th class="n">Lag (days)</th><th>Formula check / note</th></tr></thead>
+<tbody>
+<tr class="flag"><td>17 Dec 2015</td><td>0.25-0.50</td><td>No change (20 Dec 2015)</td><td class="n">n/a</td><td class="n">not mirrored</td><td><b>CBO did not mirror.</b> Executive president: "no intention to change the official interest rate". <a href="https://www.meed.com/oman-central-bank-refrains-from-interest-rate-hike/">MEED</a></td></tr>
+<tr class="gap"><td>15 Dec 2016</td><td>0.50-0.75</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td>CBO repo was an auction-based rate then. Weighted-average repo 1.95% in Dec 2017 and 2.93% in Dec 2018 per CBO FSR (&#x1F7E1;). <a href="https://cbo.gov.om/sites/assets/Documents/English/Publications/FSR/FinancialStabilityReport2019.pdf">FSR 2019</a></td></tr>
+<tr class="gap"><td>16 Mar 2017</td><td>0.75-1.00</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>15 Jun 2017</td><td>1.00-1.25</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>14 Dec 2017</td><td>1.25-1.50</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>22 Mar 2018</td><td>1.50-1.75</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td>FSR 2019 says the 2018 Fed hikes "were followed by similar increases" in CBO repo; no dates.</td></tr>
+<tr class="gap"><td>14 Jun 2018</td><td>1.75-2.00</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>27 Sep 2018</td><td>2.00-2.25</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>20 Dec 2018</td><td>2.25-2.50</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>1 Aug 2019</td><td>2.00-2.25</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>19 Sep 2019</td><td>1.75-2.00</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>31 Oct 2019</td><td>1.50-1.75</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>4 Mar 2020 (emergency)</td><td>1.00-1.25</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr><td>16 Mar 2020</td><td>0-0.25</td><td>Mar 2020, exact day not found</td><td class="n">0.50</td><td class="n">not computed</td><td>Cut of 75bp to 0.50%, reported after the Fed moved (Bloomberg: Oman "had yet to make an announcement"). Formula would give 0.75, so the 2022 rule did not apply yet. <a href="https://www.bloombergquint.com/global-economics/fed-s-dash-to-zero-lets-gulf-add-rate-cuts-to-fiscal-stimulus">Bloomberg</a>, <a href="https://timesofoman.com/article/2931367/oman/precautions-taken-to-limit-covid-19-impact-in-oman">Times of Oman</a></td></tr>
+<tr class="gap"><td>17 Mar 2022</td><td>0.25-0.50</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td>As of 18 Mar 2022 Oman "had not yet moved" while Saudi, Qatar, Bahrain, Kuwait, UAE hiked the same day. <a href="https://www.tresor.economie.gouv.fr/Articles/2022/03/22/breves-economiques-18-03-2022">French Treasury</a></td></tr>
+<tr class="gap"><td>5 May 2022</td><td>0.75-1.00</td><td>not found</td><td class="n">not found</td><td class="n">n/a</td><td></td></tr>
+<tr class="gap"><td>16 Jun 2022</td><td>1.50-1.75</td><td>by mid-Jun 2022 (per-date not found)</td><td class="n">2.25 (cumulative)</td><td class="n">n/a</td><td>Reported only as a cumulative 2.25% after three revisions; formula 1.75 + 0.50 = 2.25 fits. Per-meeting values for Mar and May 2022 not found.</td></tr>
+<tr><td>28 Jul 2022</td><td>2.25-2.50</td><td>31 Jul 2022</td><td class="n">3.00</td><td class="n">+3</td><td>2.50 + 0.50 = 3.00 ok. <a href="https://timesofoman.com/article/119635-cbo-raises-repo-rate-for-local-banks-by-75-basis-points">Times of Oman</a></td></tr>
+<tr><td>22 Sep 2022</td><td>3.00-3.25</td><td>24 Sep 2022</td><td class="n">3.75</td><td class="n">+2</td><td>3.25 + 0.50 = 3.75 ok. <a href="https://timesofoman.com/article/121593-cbo-raises-repo-rate-for-local-banks-by-75-basis-points-1">Times of Oman</a></td></tr>
+<tr><td>3 Nov 2022</td><td>3.75-4.00</td><td>5 Nov 2022 (publication date)</td><td class="n">4.50</td><td class="n">+2</td><td>4.00 + 0.50 = 4.50 ok. Article says "in response to ... earlier on Wednesday". <a href="https://timesofoman.com/article/123095-repo-rate-for-local-banks-increased-by-75-basis-points-cbo">Times of Oman</a></td></tr>
+<tr><td>15 Dec 2022</td><td>4.25-4.50</td><td>15 Dec 2022</td><td class="n">5.00</td><td class="n">0</td><td>ok. <a href="https://timesofoman.com//article/124513-omans-central-bank-hikes-repo-rate-by-50-basis-points">Times of Oman</a></td></tr>
+<tr><td>2 Feb 2023</td><td>4.50-4.75</td><td>2 Feb 2023</td><td class="n">5.25</td><td class="n">0</td><td>ok. <a href="https://www.kitco.com/news/off-the-wire/2023-02-02/oman-central-bank-raises-repo-rate-25-bps-statement">Reuters via Kitco</a></td></tr>
+<tr><td>23 Mar 2023</td><td>4.75-5.00</td><td>23 Mar 2023</td><td class="n">5.50</td><td class="n">0</td><td>ok. <a href="https://www.kitco.com/news/off-the-wire/2023-03-23/oman-central-bank-increases-repo-rate-25-bps">Reuters via Kitco</a></td></tr>
+<tr><td>4 May 2023</td><td>5.00-5.25</td><td>4 May 2023</td><td class="n">5.75</td><td class="n">0</td><td>ok. Reuters dates it 4 May; Times of Oman article is stamped 6 May (conflict, Reuters used). <a href="https://www.kitco.com/news/off-the-wire/2023-05-04/oman-central-bank-increases-repo-rate-25-bps-statement">Reuters via Kitco</a>, <a href="https://timesofoman.com/article/130430-cbo-increases-repo-rate-for-local-banks-by-25-basis-points-2">Times of Oman</a></td></tr>
+<tr><td>27 Jul 2023</td><td>5.25-5.50</td><td>27 Jul 2023</td><td class="n">6.00</td><td class="n">0</td><td>ok (peak). <a href="https://timesofoman.com/article/134033-cbo-increases-repo-rate-for-local-banks-by-25-basis-points-3">Times of Oman</a></td></tr>
+<tr><td>19 Sep 2024</td><td>4.75-5.00</td><td>19 Sep 2024</td><td class="n">5.50</td><td class="n">0</td><td>ok. <a href="https://www.omanobserver.om/ampArticle/1159374">Oman Observer</a></td></tr>
+<tr><td>8 Nov 2024</td><td>4.50-4.75</td><td>8 Nov 2024</td><td class="n">5.25</td><td class="n">0</td><td>ok. <a href="https://timesofoman.com/article/151875-repo-rate-for-local-banks-decreases-by-25-basis-points">Times of Oman</a></td></tr>
+<tr><td>19 Dec 2024</td><td>4.25-4.50</td><td>19 Dec 2024</td><td class="n">5.00</td><td class="n">0</td><td>ok. Date from <a href="https://tradingeconomics.com/oman/interest-rate">Trading Economics</a> (&#x1F7E1;, primary release not read).</td></tr>
+<tr><td>18 Sep 2025</td><td>4.00-4.25</td><td>18 Sep 2025</td><td class="n">4.75</td><td class="n">0</td><td>ok. <a href="https://timesofoman.com/article/162880-cbo-reduces-interest-rate-on-repo-operations-by-25-basis-points">Times of Oman</a></td></tr>
+<tr><td>30 Oct 2025</td><td>3.75-4.00</td><td>30 Oct 2025</td><td class="n">4.50</td><td class="n">0</td><td>ok. Trading Economics calendar shows 29 Oct (conflict, article date used). <a href="https://www.timesofoman.com/article/164471-central-bank-of-oman-lower-repo-rate-for-local-banks-by-25bps">Times of Oman</a></td></tr>
+<tr><td>11 Dec 2025</td><td>3.50-3.75</td><td>11 Dec 2025</td><td class="n">4.25</td><td class="n">0</td><td>ok. "stood at 4.25% since 11 Dec 2025" per <a href="https://www.zawya.com/en/economy/the-central-bank-of-oman-raises-repo-rate-to-4.5-in-first-increase-since-july-2023-895810">Zawya</a>; Trading Economics calendar shows 10 Dec (conflict).</td></tr>
+<tr><td>17 Sep 2026</td><td>3.75-4.00</td><td>17 Sep 2026</td><td class="n">4.50</td><td class="n">0</td><td>ok, first hike since Jul 2023. Trading Economics dates it 16 Sep (conflict; Zawya/Times of Oman say effective 17 Sep). <a href="https://www.zawya.com/en/economy/the-central-bank-of-oman-raises-repo-rate-to-4.5-in-first-increase-since-july-2023-895810">Zawya</a>, <a href="https://tradingeconomics.com/oman/interest-rate">TE</a></td></tr>
+</tbody></table></div>
+<div class="note">Count: 32 Fed changes from Dec 2015 to Nov 2026 (<a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">Fed table</a>, read 24 Nov 2026; no change after 17 Sep 2026). CBO dated match with formula: 15 (Jul 2022 to Sep 2026). Mar 2020: matched in direction, day not found. Not found: 15 plus Dec 2015 flagged as not mirrored. Oct 2026 FOMC (27-28 Oct) was a hold. The Oman Observer pages in search results carry unreliable header dates and were not used for dating.</div>
+
+<h3>A2. RBI repo changes, 2015 to Nov 2026</h3>
+<div class="wrap"><table>
+<thead><tr><th>RBI date</th><th class="n">New repo %</th><th>Fed move nearby</th><th>Note</th></tr></thead>
+<tbody>
+<tr><td>15 Jan 2015</td><td class="n">7.75</td><td>none</td><td></td></tr>
+<tr><td>4 Mar 2015</td><td class="n">7.50</td><td>none</td><td></td></tr>
+<tr><td>2 Jun 2015</td><td class="n">7.25</td><td>none</td><td></td></tr>
+<tr><td>29 Sep 2015</td><td class="n">6.75</td><td>none</td><td>RBI cut while the Fed was about to hike (17 Dec 2015)</td></tr>
+<tr><td>5 Apr 2016</td><td class="n">6.50</td><td>none</td><td></td></tr>
+<tr><td>4 Oct 2016</td><td class="n">6.25</td><td>none</td><td></td></tr>
+<tr><td>2 Aug 2017</td><td class="n">6.00</td><td>none</td><td></td></tr>
+<tr><td>6 Jun 2018</td><td class="n">6.25</td><td>Fed 14 Jun 2018 hike</td><td>RBI first</td></tr>
+<tr><td>1 Aug 2018</td><td class="n">6.50</td><td>none</td><td></td></tr>
+<tr><td>7 Feb 2019</td><td class="n">6.25</td><td>none</td><td></td></tr>
+<tr><td>4 Apr 2019</td><td class="n">6.00</td><td>none</td><td></td></tr>
+<tr><td>6 Jun 2019</td><td class="n">5.75</td><td>none</td><td></td></tr>
+<tr><td>7 Aug 2019</td><td class="n">5.40</td><td>Fed 1 Aug 2019 cut</td><td>after Fed</td></tr>
+<tr><td>4 Oct 2019</td><td class="n">5.15</td><td>none</td><td></td></tr>
+<tr><td>27 Mar 2020</td><td class="n">4.40</td><td>Fed 4 and 16 Mar 2020 cuts</td><td>after Fed</td></tr>
+<tr><td>22 May 2020</td><td class="n">4.00</td><td>none</td><td></td></tr>
+<tr><td>4 May 2022</td><td class="n">4.40</td><td>Fed 5 May 2022 hike</td><td>off-cycle, one day before the Fed table date</td></tr>
+<tr><td>8 Jun 2022</td><td class="n">4.90</td><td>Fed 16 Jun 2022 hike</td><td>RBI first</td></tr>
+<tr><td>5 Aug 2022</td><td class="n">5.40</td><td>Fed 28 Jul 2022 hike</td><td></td></tr>
+<tr><td>30 Sep 2022</td><td class="n">5.90</td><td>Fed 22 Sep 2022 hike</td><td></td></tr>
+<tr><td>7 Dec 2022</td><td class="n">6.25</td><td>Fed 15 Dec 2022 hike</td><td>RBI first</td></tr>
+<tr><td>8 Feb 2023</td><td class="n">6.50</td><td>Fed 2 Feb 2023 hike</td><td>Source table prints "08-01-2023"; Trading Economics says last hike was Feb 2023, so 8 Feb used (conflict).</td></tr>
+<tr><td>7 Feb 2025</td><td class="n">6.25</td><td>none</td><td></td></tr>
+<tr><td>9 Apr 2025</td><td class="n">6.00</td><td>none</td><td></td></tr>
+<tr><td>6 Jun 2025</td><td class="n">5.50</td><td>none</td><td></td></tr>
+<tr><td>5 Dec 2025</td><td class="n">5.25</td><td>Fed 11 Dec 2025 cut</td><td>&#x1F7E1; one secondary source only</td></tr>
+<tr><td>7 Oct 2026</td><td class="n">5.50</td><td>Fed 17 Sep 2026 hike</td><td>First hike since Feb 2023; stance "calibrated tightening"; 5.25 held on 5 Jun and 5 Aug 2026. RBI site shows 5.50 as at 23 Nov 2026.</td></tr>
+</tbody></table></div>
+<div class="note">Sources: 2015 to Jun 2025 from <a href="https://freefincal.com/rbi-repo-rate-history/">freefincal's table of RBI repo history</a> (secondary, &#x1F7E1;); Dec 2025 from <a href="https://stableinvestor.com/2021/10/rbi-repo-rate-history-india.html/amp">stableinvestor</a> (&#x1F7E1;); 2026 from <a href="https://tradingeconomics.com/india/interest-rate">Trading Economics</a> and <a href="https://www.scconline.com/blog/post/2026/10/09/rbi-hikes-repo-rate-to-5-50-percent-october-2026/">SCC Online</a>; current 5.50% confirmed on <a href="https://www.rbi.org.in/">RBI's home page</a> (&#x1F7E2;, as at 23 Nov 2026). RBI decisions for Feb and Apr 2026 not found (rate was 5.25% on 5 Jun 2026). RBI follows its own inflation target: it moved ahead of, against, or after the Fed. Oman has no such freedom.</div>
+
+<h3>A3. Next meetings after 24 Nov 2026 and market expectations</h3>
+<div class="wrap"><table>
+<thead><tr><th>Body</th><th>Next meetings</th><th>Expectation</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>Fed (FOMC)</td><td>8-9 Dec 2026 (decision 9 Dec); then 26-27 Jan 2027, 16-17 Mar 2027</td><td>CME FedWatch via news: 95% for +25bp, 4.9% for +50bp (Reuters via FXEmpire, about 24 Nov). Yahoo Finance two days earlier: 88.6% hike, 11.4% hold. FinFlash: 93 to 96% for +25bp, 59.9% chance rates are 50bp higher by Jan 2027. 24/7 Wall St (18 Nov): 95%. <b>Conflict:</b> 88.6% vs 95%, different dates.</td><td><a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">Fed calendar</a>; <a href="https://247wallst.com/investing/2026/11/18/traders-now-see-a-95-chance-the-fed-hikes-rates-in-december/">24/7 Wall St</a>; <a href="https://finance.yahoo.com/economy/policy/articles/fed-hike-rates-december-prediction-075612146.html">Yahoo</a>; <a href="https://www.finflashapp.com/trending/fed-rate-hike-december-2026-pce-stocks">FinFlash</a></td></tr>
+<tr><td>CBO</td><td>No published meeting calendar found. Trading Economics lists 9 Dec 2026 as a decision date. CBO moves the day of or after the Fed.</td><td>On its rule: Fed +25bp gives upper bound 4.25 + 0.50 = repo 4.75% (&#x1F534; derived). Trading Economics expects 4.75% by end of quarter.</td><td><a href="https://tradingeconomics.com/oman/interest-rate">TE</a></td></tr>
+<tr><td>RBI (MPC)</td><td>2-4 Dec 2026 (decision 4 Dec); 3-5 Feb 2027</td><td>Consensus and Trading Economics forecast 5.75% on 4 Dec (from 5.50%). RBI Oct statement: rate cuts "off the table" near term.</td><td><a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422">RBI MPC calendar</a> (&#x1F7E1;, search hit); <a href="https://tradingeconomics.com/india/interest-rate">TE</a>; <a href="https://www.scconline.com/blog/post/2026/10/09/rbi-hikes-repo-rate-to-5-50-percent-october-2026/">SCC Online</a></td></tr>
+</tbody></table></div>
+
+<h2 id="B">Table B. Yields and spreads</h2>
+<span class="conf">Confidence: US Treasury, SOFR, RBI &#x1F7E2;; India 10y, Oman T-bills and bonds &#x1F7E1;; spreads &#x1F534; (arithmetic shown); Oman USD eurobond live yield, OMIBOR &#x2B1C;</span>
+<h3>B1. Levels</h3>
+<div class="wrap"><table>
+<thead><tr><th>Instrument</th><th class="n">Yield %</th><th>As of</th><th>Source</th></tr></thead>
+<tbody>
+<tr><td>US Treasury 3m</td><td class="n">4.37</td><td>23 Nov 2026</td><td><a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">US Treasury daily par yield curve</a> &#x1F7E2;</td></tr>
+<tr><td>US Treasury 2y</td><td class="n">4.63</td><td>23 Nov 2026</td><td>same</td></tr>
+<tr><td>US Treasury 10y</td><td class="n">4.92</td><td>23 Nov 2026</td><td>same (13 Nov 5.15, 19 Nov 5.04, 20 Nov 4.92)</td></tr>
+<tr><td>SOFR</td><td class="n">3.92</td><td>20 Nov 2026</td><td><a href="https://markets.newyorkfed.org/api/rates/secured/sofr/last/3.json">NY Fed API</a> &#x1F7E2;</td></tr>
+<tr><td>Oman T-bill 28d / 91d / 182d / 364d (avg yield)</td><td class="n">3.9225 / 4.1658 / 4.2810 / 3.7987</td><td>auction 12 Oct 2026</td><td><a href="https://timesofoman.com/article/177930-omans-central-bank-raises-omr65mn-through-treasury-bills">Times of Oman reporting CBO tender</a> &#x1F7E1;. Later auctions (e.g. 16 Nov, OMR35mn) found without yields.</td></tr>
+<tr><td>Oman 91d T-bill, earlier</td><td class="n">3.8430</td><td>auction about 31 Aug 2026</td><td><a href="https://qna.org.qa/en/News-Area/News/2026-8/31/central-bank-of-oman-issues-treasury-bills-worth-omr-269-million">QNA</a> &#x1F7E1; (another outlet shows 3.9572 for a tranche; tranche labelling conflicts)</td></tr>
+<tr><td>Oman GDB 84 (7y, coupon 4.50%, matures 25 Aug 2033), avg accepted yield</td><td class="n">4.48</td><td>auction 23 or 24 Aug 2026 (sources differ)</td><td><a href="https://www.muscatdaily.com/2026/08/24/omans-ro100mn-development-bonds-draw-strong-investor-demand/">Muscat Daily</a> &#x1F7E1; (page blocked on fetch; figures from search extract)</td></tr>
+<tr><td>Oman GDB 81 (10y, coupon 4.30%, matures 3 Feb 2036), avg accepted yield</td><td class="n">4.25</td><td>auction about 1 Feb 2026</td><td><a href="https://cbo.gov.om/sites/assets/Documents/Global/GDB/GDB%2081%20AuctionResults.pdf">CBO auction results PDF</a> &#x1F7E1; (PDF not machine-readable here; figure from search extract)</td></tr>
+<tr><td>Oman GDB 83 (5y, coupon 4.20%) / GDB 82 (7y, 4.25%) / GDB 80 (5y, 4.05%)</td><td class="n">coupons only</td><td>Apr / Mar / Jan 2026</td><td><a href="https://www.zawya.com/en/economy/gcc/omans-new-development-bond-issue-sees-strong-demand-oe4ccvd9">Zawya</a> (GDB 83) &#x1F7E1;</td></tr>
+<tr><td>Oman sovereign sukuk, USD 1bn, 7.5y (coupon)</td><td class="n">4.525 at issue</td><td>Nov 2025</td><td><a href="https://www.muscatdaily.com/2025/11/29/oman-returns-to-global-debt-market-with-1bn-sukuk/">Muscat Daily</a>, <a href="https://www.zawya.com/economy/islamic-economy/oman-prices-1bn-seven-year-sukuk-at-4525-jo5h37b0">Zawya</a> &#x1F7E1;; priced +60bp over UST, initial guidance +95bp</td></tr>
+<tr><td>Oman local sukuk yields</td><td class="n">not found</td><td></td><td>&#x2B1C; Zawya notes OMR 850mn planned in bonds and local sukuk in 2026, no sukuk terms found</td></tr>
+<tr><td>Oman USD eurobond, secondary yield</td><td class="n">not found</td><td></td><td>&#x2B1C; Trading Economics and worldgovernmentbonds carry no Oman series</td></tr>
+<tr><td>Oman 5y CDS</td><td class="n">76 bp</td><td>about 24 Aug 2026</td><td><a href="https://www.agbi.com/analysis/markets/2026/08/gulf-credit-risk-recedes-but-bahrain-still-heavily-exposed/">AGBI</a> &#x1F7E1; (page blocked; "76", tenor taken from article context; +7bp YTD). November value not found.</td></tr>
+<tr><td>Oman sovereign spread, IMF average</td><td class="n">129 bp</td><td>Jan to Oct 2025 (310 bp in 2022)</td><td><a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">IMF 2025 Article IV staff report</a> &#x1F7E2;; instrument not specified</td></tr>
+<tr><td>India 91-day T-bill (last auction cut-off)</td><td class="n">5.8602</td><td>RBI page as at 23 Nov 2026</td><td><a href="https://www.rbi.org.in/">RBI</a> &#x1F7E2;</td></tr>
+<tr><td>India 10y G-sec</td><td class="n">7.2030</td><td>23 Nov 2026</td><td><a href="https://tradingeconomics.com/india/government-bond-yield">Trading Economics</a> &#x1F7E1; (same page news item says 7.22% intraday)</td></tr>
+<tr><td>India 6.94% GS 2036</td><td class="n">7.2629</td><td>19 Nov 2026</td><td><a href="https://www.rbi.org.in/">RBI home page</a> &#x1F7E2;</td></tr>
+<tr><td>OMR interbank (OMIBOR) vs SOFR</td><td class="n">not found</td><td></td><td>&#x2B1C; CBO OMIBOR table does not load in fetchable form</td></tr>
+</tbody></table></div>
+
+<h3>B2. Spreads recomputed, inputs shown</h3>
+<div class="wrap"><table>
+<thead><tr><th>Spread</th><th>Calculation (percentage points)</th><th class="n">Result</th><th>Read</th></tr></thead>
+<tbody>
+<tr><td>Oman USD sovereign premium (at issue)</td><td>sukuk spread over UST, Nov 2025</td><td class="n">+0.60</td><td>Live "Oman USD bond minus UST" <b>not found</b>; this is the issue-day number.</td></tr>
+<tr><td>Oman USD premium, IMF average</td><td>IMF staff, Jan to Oct 2025</td><td class="n">+1.29</td><td>Down from 3.10 in 2022; "now below the GCC average".</td></tr>
+<tr><td>Oman 91d T-bill minus UST 3m</td><td>4.1658 (12 Oct) - 4.25 (UST 9 Oct; 12 Oct was a US holiday)</td><td class="n">-0.08</td><td>OMR paper yields about the same as USD paper: the peg at work.</td></tr>
+<tr><td>Oman GDB 84 (7y) minus UST 7y</td><td>4.48 (24 Aug) - 4.55 (24 Aug)</td><td class="n">-0.07</td><td>Local currency bond, so not a sovereign premium.</td></tr>
+<tr><td>Oman GDB 81 (10y) minus UST 10y</td><td>4.25 (1 Feb) - 4.29 (2 Feb)</td><td class="n">-0.04</td><td>Same caveat; UST 30 Jan not pulled.</td></tr>
+<tr><td>India 10y minus US 10y</td><td>7.2030 - 4.92 (23 Nov)</td><td class="n">+2.28</td><td>Cross-check with RBI GS 2036: 7.2629 - 5.04 (19 Nov) = +2.22.</td></tr>
+<tr><td>India 91d T-bill minus UST 3m</td><td>5.8602 - 4.37</td><td class="n">+1.49</td><td>Cut-off date of the Indian auction not stated by RBI page.</td></tr>
+<tr><td>CBO repo minus SOFR</td><td>4.50 - 3.92 (20 Nov)</td><td class="n">+0.58</td><td>vs Fed upper bound 4.00: +0.50 by rule.</td></tr>
+<tr><td>RBI repo minus CBO repo</td><td>5.50 - 4.50</td><td class="n">+1.00</td><td>RBI repo minus Fed upper bound: +1.50.</td></tr>
+<tr><td>US 3m bill minus Fed upper bound</td><td>4.37 - 4.00</td><td class="n">+0.37</td><td>Bills already price the December hike.</td></tr>
+</tbody></table></div>
+<div class="note">Adversary check: what would make Table B wrong? Mixed dates (auction vs Treasury close), local-currency bonds read as sovereign premium, and a single-outlet CDS number. Oman's USD premium therefore stays at issue-day and IMF-average values until a live eurobond yield is pulled.</div>
+
+<h2 id="C">Table C. Hedging cost</h2>
+<span class="conf">Confidence: USD/OMR forward quotes &#x1F7E1; (indicative, one aggregator); 2016 episode &#x1F7E1;; INR premia &#x1F7E2; (RBI Handbook, May 2026, stale); parity gap &#x1F534;; 1y USD/INR premium &#x2B1C; not found</span>
+<div class="wrap"><table>
+<thead><tr><th>Item</th><th>Value</th><th>As of</th><th>Source / working</th></tr></thead>
+<tbody>
+<tr><td>USD/OMR peg</td><td>RO 1 = USD 2.6008 since 1986, so USD/OMR = 1 / 2.6008 = 0.38450</td><td>CBO page, 2026</td><td><a href="https://www.cbo.gov.om/Pages/FixedPeg.aspx">CBO</a> &#x1F7E2;. <b>Conflict:</b> Trading Economics shows 0.3850 (deck). 0.3845 is the arithmetic of the peg; TE rounds. CBO buy/sell RO 1 = 2.5974 / 2.6042 (<a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">IMF</a>).</td></tr>
+<tr><td>USD/OMR forward, indicative (bid / ask, points)</td><td>1M -5/+5; 3M -8/+2; 6M -10/+5; 9M -10/+15; <b>1Y -10/+25</b>; 2Y +10/+70; 3Y +50/+150</td><td>23 Nov 2026</td><td><a href="https://uk.investing.com/currencies/usd-omr-forward-rates">Investing.com forwards</a>. Page says indicative, not for trading. 4Y and 5Y quotes (500 to 1,000) look stale and are not used.</td></tr>
+<tr><td>1y forward in % of spot</td><td>-10 pts = -0.026%; +25 pts = +0.065%</td><td></td><td>&#x1F534; 1 point = 0.00001, derived from the 2016 report: 1,500 points = 4% of 0.3849 (0.015 / 0.3849 = 3.9%). 0.00025 / 0.3845 = 0.065%.</td></tr>
+<tr><td>What the rate gap would imply</td><td>(1.037987 / 1.0447) - 1 = -0.64% = about -247 points</td><td>mixed: 364d bill 12 Oct, UST 1y 9 Oct</td><td>&#x1F534; Oman 364d 3.7987% (<a href="https://timesofoman.com/article/177930-omans-central-bank-raises-omr65mn-through-treasury-bills">CBO tender</a>) vs UST 1y 4.47 (<a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610">Treasury</a>). Quoted forwards sit about 240 points above this. Parity does not bind because the CBO defends the peg.</td></tr>
+<tr><td>Stress benchmark: 1y forward, Feb 2016</td><td>1,500 points, highest since 2006, about 4% implied rial weakness; CBO: "We are committed to the peg"</td><td>2 Feb 2016</td><td><a href="https://www.arabnews.com/business/oman-central-bank-committed-to-dollar-peg-874456">Arab News (Reuters-based)</a> &#x1F7E1;</td></tr>
+<tr><td>Policy corridor (cost of carry for banks)</td><td>CBO repo 4.50%; T-bill discount facility = policy rate + 0.50</td><td>2026</td><td><a href="https://cbo.gov.om/Pages/MoneyMarketOperations.aspx">CBO</a> &#x1F7E2;</td></tr>
+<tr><td>USD/INR forward premia, annualised, inter-bank</td><td>1M 3.54%, 3M 3.48%, 6M 3.37%</td><td>May 2026 (published 31 Jul 2026)</td><td><a href="https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24034">RBI Handbook table (FBIL reference rate)</a> &#x1F7E2; but 6 months stale</td></tr>
+<tr><td>USD/INR 1y forward premium</td><td>not found</td><td></td><td>&#x2B1C; RBI table stops at 6M; FBIL site is not fetchable. An undated LinkedIn post cites 341 paise; not used.</td></tr>
+<tr><td>Rate gap to compare</td><td>India 91d 5.8602 - UST 3m 4.37 = 1.49</td><td>Nov 2026</td><td>&#x1F534; Premium (about 3.4%) exceeds the gap (1.49) by about 2 points. Dates differ (May vs Nov), so read the size as indicative. RBI's large net short forward book (USD 239bn, <a href="https://www.deccanchronicle.com/business/rbis-239-bn-forward-dollar-bets-may-cap-rupee-gains-despite-fpi-inflows-report-2002899">Deccan Chronicle, 9 Nov 2026</a> &#x1F7E1;) is one reported driver.</td></tr>
+<tr><td>USD/INR spot</td><td>92.7968 (FBIL reference)</td><td>23 Nov 2026, 1pm</td><td><a href="https://www.rbi.org.in/">RBI home page</a> &#x1F7E2;. Deck's 92.84 (Trading Economics, 24 Nov) differs by 0.04, consistent with different timing.</td></tr>
+</tbody></table></div>
+<div class="note">Reading for the case: an Indian company's rial exposure is a USD exposure, and a rial forward costs about nothing today. The expensive hedge is the rupee (3.4 to 3.5% a year). That supports "hedge the oil, not the rial", with the caveat that the forward is thin and was 4% in 2016.</div>
+
+<h2 id="D">Table D. International monetary system timeline, with Oman and India</h2>
+<span class="conf">Confidence: IMF/ECB/RBI/CBO dates &#x1F7E2;; BIS, Fed-history and news-sourced items &#x1F7E1;; bimetallism and classical gold standard dates &#x2B1C; not sourced in this packet</span>
+<div class="wrap"><table>
+<thead><tr><th>Date</th><th>Event</th><th>Source</th></tr></thead>
+<tbody>
+<tr class="gap"><td>Before 1870s</td><td><b>Bimetallism:</b> gold and silver both legal standards at a fixed legal ratio (class note). Dates and country list not found in a primary source yet.</td><td>Vault note <code>Bimetallism.md</code> (class). &#x2B1C; for dates.</td></tr>
+<tr class="gap"><td>Classical gold standard</td><td>Currencies fixed to gold. Start and end years not sourced here.</td><td>&#x2B1C;</td></tr>
+<tr><td>1925 to 1931</td><td><b>Interwar:</b> Britain returned to gold in 1925 at the pre-war parity (overvalued, forced wage and price deflation). Left gold 21 Sep 1931. <b>Conflict:</b> an IMF F&amp;D article dates the exit to Aug 1931.</td><td><a href="https://www.bis.org/speeches/20091123-evolution-international-monetary-system.pdf">BIS (Carney)</a>, <a href="https://www.bis.org/review/r011127c.pdf">BIS review</a> &#x1F7E1;</td></tr>
+<tr><td>1 to 22 Jul 1944</td><td><b>Bretton Woods:</b> IMF and World Bank drafted; currencies pegged to the dollar, dollar at USD 35 an ounce, margins +/-1%.</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;, <a href="https://www.federalreservehistory.org/essays/bretton-woods-launched">Fed history</a> &#x1F7E1;</td></tr>
+<tr><td>27 Dec 1945</td><td>IMF Articles of Agreement take effect (29 governments).</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;</td></tr>
+<tr><td>15 Aug 1971</td><td><b>Nixon shock:</b> US stops freely buying and selling gold to settle international transactions; par values and dollar convertibility end.</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;</td></tr>
+<tr><td>18 Dec 1971</td><td><b>Smithsonian Agreement:</b> currencies realigned, gold price raised, temporary central rates and wider margins. Collapsed Mar 1973.</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;</td></tr>
+<tr><td>19 Mar 1973</td><td>"Generalized floating" begins (EC joint float against the dollar).</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;</td></tr>
+<tr><td>7-8 Jan 1976; effective 1 Apr 1978</td><td><b>Jamaica (Kingston) agreement</b> then Second Amendment: members choose their own exchange arrangements, gold loses its monetary role, firm surveillance.</td><td><a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a> &#x1F7E2;</td></tr>
+<tr><td>22 Sep 1985</td><td><b>Plaza Accord:</b> G5 coordinate intervention to weaken the dollar; US dollar fell about 35% in real effective terms from early 1985 to Apr 1987. <b>Conflict:</b> one IMF text gives 11 Sep as the signing date.</td><td><a href="https://www.imf.org/external/pubs/ft/fandd/1999/09/coeure.htm">IMF F&amp;D</a> &#x1F7E1; (from search extract; page not read in full)</td></tr>
+<tr><td>1 Jan 1999</td><td><b>Euro</b> launched, 11 founding members (Greece joined 2001).</td><td><a href="https://www.ecb.europa.eu/euro/intro/html/index.en.html">ECB</a> &#x1F7E2;</td></tr>
+<tr class="flag"><td>1973 and 1986 (Oman)</td><td><b>Oman:</b> US dollar anchor dates from 1973 (IMF). Last change in parity in <b>1986</b> (CBO); rial fixed at USD 2.6008 since. Direction and size of the 1986 change, and the earlier parity: <b>not found</b>, so "1986 devaluation" is confirmed only as "a change in parity".</td><td><a href="https://www.cbo.gov.om/Pages/FixedPeg.aspx">CBO</a> &#x1F7E2;, <a href="https://www.imf.org/-/media/files/publications/cr/2025/english/1omnea2025003-print-pdf.pdf.md">IMF 2024 CBT review</a> &#x1F7E2;</td></tr>
+<tr class="flag"><td>1 and 3 Jul 1991 (India)</td><td><b>India:</b> two-step devaluation, about 18% cumulative in USD terms; ended the pegged regime in effect.</td><td><a href="https://www.rbi.org.in/scripts/his_Chro1991to2000.aspx">RBI chronology</a> &#x1F7E2;</td></tr>
+<tr class="flag"><td>Mar 1992 to 1 Mar 1993 (India)</td><td>LERMS dual rate from Mar 1992; unified, market-determined rate from 1 Mar 1993 (RBI chronology gives March 1993; the day is from RBI policy documents in the search results).</td><td><a href="https://www.rbi.org.in/scripts/his_Chro1991to2000.aspx">RBI chronology</a> &#x1F7E2;</td></tr>
+<tr class="flag"><td>Today: Oman</td><td>IMF 2025 Article IV staff report classifies Oman as a <b>conventional peg</b> (de jure and de facto); CBO reserves USD 19.3bn at end-Sep 2025, 4.2 months of imports at end-2024. This is the staff report's Annex table, not the AREAER volume itself (AREAER table not read).</td><td><a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">IMF staff report</a> &#x1F7E2;</td></tr>
+<tr class="flag"><td>Today: India</td><td>De jure floating; de facto "stabilised" from Dec 2023 (kept through Nov 2024), reclassified <b>crawl-like arrangement</b> on 28 Nov 2025 (rate within a 2% band around a trend for six months). India's position is reported by news; the IMF page was not read directly.</td><td><a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/imf-classifies-indias-exchange-rate-regime-to-a-crawl-like-arrangement/print_manually">Drishti IAS</a>, <a href="https://theprint.in/india/imf-keeps-indias-stabilised-exchange-rate-classification-through-2024/2514354">ThePrint</a> &#x1F7E1;</td></tr>
+</tbody></table></div>
+<div class="note">Slide use: one line per row; shaded rows are the Oman and India lines. The impossible trinity then reads off Table A: fixed rate and open capital account, so the CBO has no independent rate.</div>
+
+<h2>What is missing</h2>
+<ul>
+<li>CBO's dated decisions for Fed moves from Dec 2015 to Mar 2022 (15 moves), except Mar 2020. CBO's site does not list rate history; a CBO annual report table would close this.</li>
+<li>Oman USD eurobond live yield and current 5y CDS; OMIBOR vs SOFR; Oman local sukuk yields.</li>
+<li>USD/INR 1y forward premium (RBI's table stops at 6M and is dated May 2026) and any primary-source USD/OMR forward quote.</li>
+<li>Dates for bimetallism and the classical gold standard from a primary source.</li>
+<li>AREAER volume tables themselves (IMF staff report and press used instead).</li>
+</ul>
+
+<h2>Sources annexure</h2>
+<p class="note">All accessed 24 Nov 2026. Sources marked (extract) were blocked or unreadable on fetch; the figure comes from a search-result extract and is tagged &#x1F7E1;.</p>
+<ul class="src">
+<li id="S1">S1 Fed, target rate changes table (updated Sep 2026): <a href="https://www.federalreserve.gov/monetarypolicy/openmarket.htm">federalreserve.gov/monetarypolicy/openmarket.htm</a></li>
+<li id="S2">S2 Fed, FOMC calendars (last update 18 Nov 2026): <a href="https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm">federalreserve.gov/monetarypolicy/fomccalendars.htm</a></li>
+<li id="S3">S3 CBO, fixed peg page: <a href="https://www.cbo.gov.om/Pages/FixedPeg.aspx">cbo.gov.om/Pages/FixedPeg.aspx</a>; monetary policy: <a href="https://www.cbo.gov.om/Pages/MonetaryPolicy.aspx">cbo.gov.om/Pages/MonetaryPolicy.aspx</a></li>
+<li id="S4">S4 CBO, money market operations (repo = upper bound TFFR + 50bp): <a href="https://cbo.gov.om/Pages/MoneyMarketOperations.aspx">cbo.gov.om/Pages/MoneyMarketOperations.aspx</a>. Rule also stated in CBO 2025 annual report as quoted by <a href="https://www.omanobserver.om/ampArticle/1196345">Oman Observer</a>.</li>
+<li id="S5">S5 Trading Economics, Oman interest rate: <a href="https://tradingeconomics.com/oman/interest-rate">tradingeconomics.com/oman/interest-rate</a> (calendar dates 29 Oct 2025, 10 Dec 2025, 16 Sep 2026, 9 Dec 2026; all-time high 6.00% Jul 2023). Its 9 Dec 2026 entry is internally inconsistent, as the page itself shows.</li>
+<li id="S6">S6 Times of Oman CBO repo articles: <a href="https://timesofoman.com/article/119635-cbo-raises-repo-rate-for-local-banks-by-75-basis-points">31 Jul 2022</a>, <a href="https://timesofoman.com/article/121593-cbo-raises-repo-rate-for-local-banks-by-75-basis-points-1">24 Sep 2022</a>, <a href="https://timesofoman.com/article/123095-repo-rate-for-local-banks-increased-by-75-basis-points-cbo">5 Nov 2022</a>, <a href="https://timesofoman.com//article/124513-omans-central-bank-hikes-repo-rate-by-50-basis-points">15 Dec 2022</a>, <a href="https://timesofoman.com/article/126382-cbo-increases-repo-rate-for-local-banks-by-25-basis-points">2 Feb 2023</a>, <a href="https://timesofoman.com/article/130430-cbo-increases-repo-rate-for-local-banks-by-25-basis-points-2">May 2023</a>, <a href="https://timesofoman.com/article/134033-cbo-increases-repo-rate-for-local-banks-by-25-basis-points-3">27 Jul 2023</a>, <a href="https://timesofoman.com/article/151875-repo-rate-for-local-banks-decreases-by-25-basis-points">8 Nov 2024</a>, <a href="https://timesofoman.com/article/162880-cbo-reduces-interest-rate-on-repo-operations-by-25-basis-points">18 Sep 2025</a>, <a href="https://www.timesofoman.com/article/164471-central-bank-of-oman-lower-repo-rate-for-local-banks-by-25bps">30 Oct 2025</a></li>
+<li id="S7">S7 Reuters via Kitco: <a href="https://www.kitco.com/news/off-the-wire/2023-02-02/oman-central-bank-raises-repo-rate-25-bps-statement">2 Feb 2023</a>, <a href="https://www.kitco.com/news/off-the-wire/2023-03-23/oman-central-bank-increases-repo-rate-25-bps">23 Mar 2023</a>, <a href="https://www.kitco.com/news/off-the-wire/2023-05-04/oman-central-bank-increases-repo-rate-25-bps-statement">4 May 2023</a></li>
+<li id="S8">S8 Oman Observer 19 Sep 2024: <a href="https://www.omanobserver.om/ampArticle/1159374">omanobserver.om/ampArticle/1159374</a>; Zawya 17 Sep 2026: <a href="https://www.zawya.com/en/economy/the-central-bank-of-oman-raises-repo-rate-to-4.5-in-first-increase-since-july-2023-895810">zawya.com (first increase since July 2023)</a></li>
+<li id="S9">S9 MEED 20 Dec 2015: <a href="https://www.meed.com/oman-central-bank-refrains-from-interest-rate-hike/">meed.com/oman-central-bank-refrains-from-interest-rate-hike</a></li>
+<li id="S10">S10 CBO Financial Stability Report 2019 (extract: repo 1.95% Dec 2017, 2.93% Dec 2018): <a href="https://cbo.gov.om/sites/assets/Documents/English/Publications/FSR/FinancialStabilityReport2019.pdf">cbo.gov.om FSR 2019</a></li>
+<li id="S11">S11 Mar 2020 cut: <a href="https://www.bloombergquint.com/global-economics/fed-s-dash-to-zero-lets-gulf-add-rate-cuts-to-fiscal-stimulus">Bloomberg</a>, <a href="https://timesofoman.com/article/2931367/oman/precautions-taken-to-limit-covid-19-impact-in-oman">Times of Oman</a> (extract); Mar 2022: <a href="https://www.tresor.economie.gouv.fr/Articles/2022/03/22/breves-economiques-18-03-2022">French Treasury</a></li>
+<li id="S12">S12 IMF, Oman 2025 Article IV staff report: <a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">1omnea2026001</a>; IMF CBT review: <a href="https://www.imf.org/-/media/files/publications/cr/2025/english/1omnea2025003-print-pdf.pdf.md">1omnea2025003</a>; IMF monetary transmission paper: <a href="https://www.imf.org/en/publications/selected-issues-papers/issues/2024/06/12/monetary-policy-transmission-in-oman-550139">selected issues 2024</a></li>
+<li id="S13">S13 RBI home page (policy repo 5.50%, 91d T-bill 5.8602%, GS yields, FBIL USD/INR 92.7968, as at 23 Nov 2026): <a href="https://www.rbi.org.in/">rbi.org.in</a>; RBI Handbook forward premia: <a href="https://www.rbi.org.in/Scripts/PublicationsView.aspx?id=24034">PublicationsView id=24034</a>; MPC calendar: <a href="https://www.rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=62422">prid=62422</a> (extract); RBI chronology: <a href="https://www.rbi.org.in/scripts/his_Chro1991to2000.aspx">1991 to 2000</a></li>
+<li id="S14">S14 RBI repo history secondary: <a href="https://freefincal.com/rbi-repo-rate-history/">freefincal</a>, <a href="https://stableinvestor.com/2021/10/rbi-repo-rate-history-india.html/amp">stableinvestor</a>; Oct 2026 hike: <a href="https://www.scconline.com/blog/post/2026/10/09/rbi-hikes-repo-rate-to-5-50-percent-october-2026/">SCC Online</a>, <a href="https://tradingeconomics.com/india/interest-rate">Trading Economics India</a>; India 10y: <a href="https://tradingeconomics.com/india/government-bond-yield">Trading Economics</a></li>
+<li id="S15">S15 US Treasury daily par yield curve: <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202611">Nov 2026</a>, <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202610">Oct 2026</a>, <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202608">Aug 2026</a>, <a href="https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&amp;field_tdr_date_value_month=202602">Feb 2026</a>; SOFR: <a href="https://markets.newyorkfed.org/api/rates/secured/sofr/last/3.json">NY Fed API</a></li>
+<li id="S16">S16 Oman T-bills: <a href="https://timesofoman.com/article/177930-omans-central-bank-raises-omr65mn-through-treasury-bills">Times of Oman 12 Oct 2026</a>, <a href="https://qna.org.qa/en/News-Area/News/2026-8/31/central-bank-of-oman-issues-treasury-bills-worth-omr-269-million">QNA 31 Aug 2026</a>; GDBs: <a href="https://www.muscatdaily.com/2026/08/24/omans-ro100mn-development-bonds-draw-strong-investor-demand/">Muscat Daily (84)</a>, <a href="https://www.zawya.com/en/economy/gcc/omans-new-development-bond-issue-sees-strong-demand-oe4ccvd9">Zawya (83)</a>, <a href="https://cbo.gov.om/sites/assets/Documents/Global/GDB/GDB%2081%20AuctionResults.pdf">CBO (81)</a>, <a href="https://www.mof.gov.om/UploadsAll/Ads/Collaboration/1786862740143Prospectus%20GDB%2084%20%20English.pdf">MoF prospectus (84)</a></li>
+<li id="S17">S17 Oman USD sukuk Nov 2025: <a href="https://www.muscatdaily.com/2025/11/29/oman-returns-to-global-debt-market-with-1bn-sukuk/">Muscat Daily</a>, <a href="https://www.zawya.com/economy/islamic-economy/oman-prices-1bn-seven-year-sukuk-at-4525-jo5h37b0">Zawya</a> (extract); CDS: <a href="https://www.agbi.com/analysis/markets/2026/08/gulf-credit-risk-recedes-but-bahrain-still-heavily-exposed/">AGBI 24 Aug 2026</a> (extract)</li>
+<li id="S18">S18 Forwards: <a href="https://uk.investing.com/currencies/usd-omr-forward-rates">Investing.com USD/OMR forwards</a>; <a href="https://www.arabnews.com/business/oman-central-bank-committed-to-dollar-peg-874456">Arab News, 3 Feb 2016</a>; <a href="https://www.deccanchronicle.com/business/rbis-239-bn-forward-dollar-bets-may-cap-rupee-gains-despite-fpi-inflows-report-2002899">Deccan Chronicle, Nov 2026</a> (extract)</li>
+<li id="S19">S19 Fed expectations (CME FedWatch via news): <a href="https://247wallst.com/investing/2026/11/18/traders-now-see-a-95-chance-the-fed-hikes-rates-in-december/">24/7 Wall St, 18 Nov</a>, <a href="https://finance.yahoo.com/economy/policy/articles/fed-hike-rates-december-prediction-075612146.html">Yahoo Finance</a>, <a href="https://www.finflashapp.com/trending/fed-rate-hike-december-2026-pce-stocks">FinFlash</a>. CME's own page is live-only and was not readable.</li>
+<li id="S20">S20 Monetary system history: <a href="https://www.imf.org/external/pubs/ft/survey/sup0998/14.htm">IMF chronology</a>, <a href="https://www.federalreservehistory.org/essays/bretton-woods-launched">Fed history</a>, <a href="https://www.bis.org/speeches/20091123-evolution-international-monetary-system.pdf">BIS (Carney)</a>, <a href="https://www.bis.org/review/r011127c.pdf">BIS review</a>, <a href="https://www.imf.org/external/pubs/ft/fandd/1999/09/coeure.htm">IMF F&amp;D 1999</a>, <a href="https://www.ecb.europa.eu/euro/intro/html/index.en.html">ECB euro</a>; India classification: <a href="https://www.drishtiias.com/daily-updates/daily-news-analysis/imf-classifies-indias-exchange-rate-regime-to-a-crawl-like-arrangement/print_manually">Drishti IAS</a>, <a href="https://theprint.in/india/imf-keeps-indias-stabilised-exchange-rate-classification-through-2024/2514354">ThePrint</a></li>
+<li>Vault class notes reused: <code>Exchange Rate System.md</code>, <code>Bimetallism.md</code>, <code>IMF.md</code>, <code>CIA Crisis Room Deck.md</code>, <code>CIA Crisis Room Debate Log.md</code> (D:\Lokesh\Core\Work\Christ\Y3\Global Business FInance).</li>
+</ul>
+
+</main>
+</body>
+</html>

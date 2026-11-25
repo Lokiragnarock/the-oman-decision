@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P4 Oman BoP line items</title>
+<style>
+:root{--ink:#111;--mute:#666;--line:#e3e3e3;--bg:#fff;--soft:#f6f6f6;--acc:#4b2e83}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:32px 20px 80px}
+.tag{font-size:12px;color:var(--mute);letter-spacing:.04em;text-transform:uppercase}
+h1{font-size:26px;line-height:1.25;margin:8px 0 6px}
+h2{font-size:18px;margin:40px 0 8px;padding-top:16px;border-top:1px solid var(--line)}
+h3{font-size:15px;margin:22px 0 6px}
+.lead{font-size:17px;border-left:3px solid var(--acc);padding:4px 0 4px 14px;margin:18px 0}
+.wrap{overflow-x:auto;margin:10px 0 6px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:5px 8px;border-bottom:1px solid var(--line);text-align:right;white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+thead th{background:var(--soft);font-weight:600;white-space:normal;vertical-align:bottom}
+td.l,th.l{text-align:left;white-space:normal}
+tbody th{font-weight:600}
+.note{color:var(--mute);font-size:12.5px;margin:4px 0 10px}
+ol.find{padding-left:20px}
+ol.find li{margin:10px 0}
+ol.find b{display:block}
+a{color:var(--acc)}
+.g{white-space:normal}
+code{background:var(--soft);padding:1px 4px;border-radius:3px;font-size:12.5px}
+@media print{main{padding:0}h2{break-after:avoid}}
+</style>
+</head>
+<body>
+<main>
+<div class="tag">Tangent T6 · Packet P4 · Feeds C2</div>
+<h1>Oman's goods surplus is USD 20,111m, but services, primary income and secondary income (mainly remittances) cost USD 21,309m, so the 2025 current account is USD -1,198m</h1>
+<div class="note">Oman balance of payments line items, 2014 to 2025. Fetched 2026-11-24. Units are USD millions unless stated. Negative means a net outflow or deficit. Tags: 🟢 read directly from the primary or official series, 🟡 reported by a secondary outlet, 🔴 own arithmetic or inference (shown), ⬜ not found.</div>
+
+<p class="lead">The goods account and the current account do not contradict each other. Oman earns a large goods surplus every year and then pays out about USD 18.7bn to 22.5bn (USD 27.0bn in 2022) on foreign-delivered services, income due to foreign owners and lenders, and expatriate workers' remittances. The current account is positive only when the goods surplus beats that fixed bill. In 2025 the goods surplus fell to USD 20,111m against a bill of USD 21,309m. 🟢 (computed from World Bank series that reconcile to the published current account within USD 1.4m in every year)</p>
+
+<h2>1. Five findings</h2>
+<ol class="find">
+<li><b>The goods surplus fell USD 5.8bn in 2025 and the fixed outflow bill did not move, so the current account flipped to a USD 1,198m deficit (-1.1% of GDP).</b>
+Goods surplus USD 25,930m (2024) to USD 20,111m (2025). Services 7,069m, primary income 4,707m and secondary income 9,533m (all outflows) sum to USD 21,309m, within 4% of 2024's USD 22,107m. The IMF blames softer oil prices (average export price USD 70.6 a barrel). The Central Bank of Oman (CBO) reports hydrocarbon exports down 15% and imports up 2.8% on large investment projects. 🟢 <a href="#s1">[S1]</a> <a href="#s6">[S6]</a> <a href="#s7">[S7]</a> <a href="#s3">[S3]</a></li>
+<li><b>Oman needs a goods surplus of roughly USD 19bn to 22bn a year just to break even, so the current account is an oil-price story, not a rising import story.</b>
+Outside 2022, the combined services, primary income and secondary income deficit ran from USD 18.7bn to USD 22.5bn across 2014 to 2025. The goods surplus was USD 18.1bn in 2018 and 2019 (current account -4.4bn and -4.3bn) and USD 20.1bn in 2025 (-1.2bn). 🔴 (arithmetic on 🟢 data, section 5 outflow-bill table)</li>
+<li><b>Remittances are the largest single leak: USD 9,466m in 2025, equal to 47% of the goods surplus and 8.6% of GDP.</b>
+The CBO puts workers' remittances at OMR 3,639.6m in 2025, up 3.1% from OMR 3,529.7m. The USD series is flat in a USD 8,118m to 10,991m band since 2014, so it sets a floor under the bill rather than driving 2025. On India's side, Oman supplied 2.5% of India's bank-channel inward remittances in 2023-24 (1.0% in 2016-17, 0.6% in 2020-21), about USD 2.97bn of India's USD 118.7bn. 🟢 / 🔴 <a href="#s9">[S9]</a> <a href="#s10">[S10]</a></li>
+<li><b>The deficit was financed by investment inflows, not by borrowing against reserves: gross FDI inflow was USD 6,747m, down 27.7% from USD 9,331m, and still larger than the deficit.</b>
+Residents sent USD 4,147m into foreign portfolio assets (CBO: financial sector holding more foreign assets) and reserve assets rose USD 1,042m. The financial account is USD -1,767m against a current account of USD -1,198m; the USD 569m difference is errors and omissions (USD -596m) plus a small capital account (+27m, derived). 🟢 / 🔴 <a href="#s2">[S2]</a> <a href="#s3">[S3]</a></li>
+<li><b>India is on the receiving end of Oman's goods surplus: India's imports from Oman rose 44.8% to USD 6,549m in FY2024-25, leaving India a USD 2,484m deficit.</b>
+Indian exports to Oman fell 8.2% to USD 4,065m. The India-Oman CEPA (signed 18 December 2025, in force 1 June 2026, per the deck) sits on top of this trade, and part of Oman's outflow to India is the remittance line in finding 3. 🟢 <a href="#s11">[S11]</a></li>
+</ol>
+
+<h2>2. Why goods are in surplus and the current account is in deficit</h2>
+<div class="wrap"><table>
+<thead><tr><th class="l">2025 line (USD m)</th><th>Value</th><th class="l g">Plain English</th></tr></thead>
+<tbody>
+<tr><td class="l">Goods exports</td><td>60,412</td><td class="l g">Mostly crude oil, LNG and refined products. Hydrocarbons were 68% of goods exports in 2024 (IMF 2025 Article IV vintage: 44,510 of 65,152).</td></tr>
+<tr><td class="l">Goods imports</td><td>-40,301</td><td class="l g">Machinery and materials for large projects, plus consumer goods.</td></tr>
+<tr><td class="l"><b>Goods balance</b></td><td><b>+20,111</b></td><td class="l g">Equals CBO goods surplus of OMR 7.733bn (x 2.6008 = 20,111).</td></tr>
+<tr><td class="l">Services (net)</td><td>-7,069</td><td class="l g">Receipts 5,836, payments 12,905. CBO: deficit OMR 2.718bn.</td></tr>
+<tr><td class="l">Primary income (net)</td><td>-4,707</td><td class="l g">Profits and interest paid to foreign owners and lenders, less income Oman earns abroad.</td></tr>
+<tr><td class="l">Secondary income (net)</td><td>-9,533</td><td class="l g">Of which workers' remittances 9,466; other transfers net -67. CBO: OMR 3,665.5m.</td></tr>
+<tr><td class="l"><b>Current account</b></td><td><b>-1,198</b></td><td class="l g">20,111 - 7,069 - 4,707 - 9,533 = -1,198. Published: -1,198 (World Bank), -1,168 (IMF Article IV), OMR -461m (Trading Economics, x 2.6008 = -1,199).</td></tr>
+</tbody></table></div>
+<p class="note">The USD 1,011m OMR goods surplus in the deck (Trading Economics, September 2026) is a single month. The 2025 fixed bill is about USD 1,776m a month (OMR 683m), so one month of OMR 1,011m is above it. 🔴 (arithmetic; assumes the 2025 bill repeats). Forecasts conflict: the IMF 2025 Article IV table has the 2026 current account at -3.1% of GDP (USD -3,353m); CBO's 2025 report outlook has a surplus of about 4.1%. The gap is mostly the oil price path: Brent is now near USD 88 (deck) against the 2025 average export price of USD 70.6. <a href="#s1">[S1]</a> <a href="#s3">[S3]</a> <a href="#s4">[S4]</a></p>
+
+<h2>3. BoP table, current account, 2014 to 2025</h2>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th>Goods exports</th><th>Goods imports</th><th>Goods balance</th><th>Services net</th><th>Primary income net</th><th>Secondary income net</th><th>of which workers' remittances (outflow)</th><th>Sum of components</th><th>Published CA</th><th>Gap</th><th>CA % GDP</th></tr></thead>
+<tbody>
+<tr><th>2014</th><td>53,566</td><td>-27,889</td><td><b>25,677</b></td><td>-6,847</td><td>-4,237</td><td>-10,301</td><td>10,301</td><td>4,292</td><td><b>4,292</b></td><td>+0.0</td><td>4.6%</td></tr>
+<tr><th>2015</th><td>35,682</td><td>-26,564</td><td><b>9,119</b></td><td>-6,783</td><td>-2,193</td><td>-10,991</td><td>10,991</td><td>-10,847</td><td><b>-10,847</b></td><td>+0.0</td><td>-13.8%</td></tr>
+<tr><th>2016</th><td>27,546</td><td>-21,287</td><td><b>6,259</b></td><td>-6,384</td><td>-2,043</td><td>-10,312</td><td>10,312</td><td>-12,479</td><td><b>-12,479</b></td><td>+0.0</td><td>-16.6%</td></tr>
+<tr><th>2017</th><td>32,886</td><td>-24,121</td><td><b>8,765</b></td><td>-6,875</td><td>-3,082</td><td>-9,815</td><td>9,815</td><td>-11,008</td><td><b>-11,008</b></td><td>+0.0</td><td>-13.6%</td></tr>
+<tr><th>2018</th><td>41,730</td><td>-23,646</td><td><b>18,084</b></td><td>-7,363</td><td>-5,163</td><td>-9,997</td><td>9,958</td><td>-4,438</td><td><b>-4,438</b></td><td>-0.0</td><td>-4.9%</td></tr>
+<tr><th>2019</th><td>38,648</td><td>-20,457</td><td><b>18,192</b></td><td>-7,214</td><td>-6,125</td><td>-9,184</td><td>9,134</td><td>-4,331</td><td><b>-4,331</b></td><td>-0.0</td><td>-4.9%</td></tr>
+<tr><th>2020</th><td>33,448</td><td>-25,364</td><td><b>8,084</b></td><td>-6,220</td><td>-5,607</td><td>-8,867</td><td>8,819</td><td>-12,609</td><td><b>-12,609</b></td><td>+0.0</td><td>-16.6%</td></tr>
+<tr><th>2021</th><td>44,340</td><td>-28,024</td><td><b>16,316</b></td><td>-6,959</td><td>-6,028</td><td>-8,165</td><td>8,118</td><td>-4,836</td><td><b>-4,836</b></td><td>+0.0</td><td>-5.5%</td></tr>
+<tr><th>2022</th><td>65,723</td><td>-34,747</td><td><b>30,976</b></td><td>-8,516</td><td>-9,335</td><td>-9,115</td><td>9,071</td><td>4,010</td><td><b>4,010</b></td><td>+0.0</td><td>3.7%</td></tr>
+<tr><th>2023</th><td>59,547</td><td>-35,169</td><td><b>24,378</b></td><td>-6,624</td><td>-6,115</td><td>-9,483</td><td>9,432</td><td>2,156</td><td><b>2,156</b></td><td>-0.0</td><td>2.0%</td></tr>
+<tr><th>2024</th><td>65,151</td><td>-39,221</td><td><b>25,930</b></td><td>-7,153</td><td>-5,667</td><td>-9,287</td><td>9,180</td><td>3,824</td><td><b>3,825</b></td><td>-1.4</td><td>3.6%</td></tr>
+<tr><th>2025</th><td>60,412</td><td>-40,301</td><td><b>20,111</b></td><td>-7,069</td><td>-4,707</td><td>-9,533</td><td>9,466</td><td>-1,198</td><td><b>-1,198</b></td><td>+0.0</td><td>-1.1%</td></tr>
+</tbody></table></div>
+<p class="note">Source: World Bank WDI, BoP series compiled from IMF and CBO data, last updated 2026-11-11, read from the API on 2026-11-24. Series: <a href="https://api.worldbank.org/v2/country/OMN/indicator/BX.GSR.MRCH.CD?format=json&amp;date=2014:2025">BX.GSR.MRCH.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.GSR.MRCH.CD?format=json&amp;date=2014:2025">BM.GSR.MRCH.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BX.GSR.NFSV.CD?format=json&amp;date=2014:2025">BX.GSR.NFSV.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.GSR.NFSV.CD?format=json&amp;date=2014:2025">BM.GSR.NFSV.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.GSR.FCTY.CD?format=json&amp;date=2014:2025">BN.GSR.FCTY.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.TRF.CURR.CD?format=json&amp;date=2014:2025">BN.TRF.CURR.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.TRF.PWKR.CD.DT?format=json&amp;date=2014:2025">BM.TRF.PWKR.CD.DT</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.CAB.XOKA.CD?format=json&amp;date=2014:2025">BN.CAB.XOKA.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/NY.GDP.MKTP.CD?format=json&amp;date=2014:2025">NY.GDP.MKTP.CD</a>. 🟢. The remittance column is the outflow shown as a positive number; it sits inside secondary income, which is net and negative. "Sum of components" = goods balance + services + primary + secondary.</p>
+
+<h3>Oil and gas versus non-oil goods exports (USD m unless stated)</h3>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th>Total goods exports</th><th>Oil and gas</th><th>Non-oil (derived)</th><th class="l">Source and note</th></tr></thead>
+<tbody>
+<tr><th>2014 to 2017</th><td>see table above</td><td>not found</td><td>not found</td><td class="l g">⬜ No split read from a primary source in this pass. IMF 2019 Article IV press release starts at 2018.</td></tr>
+<tr><th>2018</th><td>41,600</td><td>25,500</td><td>16,100</td><td class="l g">🟡 IMF press release 19/266, USD bn to one decimal. Non-oil is 🔴 derived. <a href="#s13">[S13]</a></td></tr>
+<tr><th>2019</th><td>39,900</td><td>24,300</td><td>15,600</td><td class="l g">🟡 Same release, a projection made in 2019. World Bank outturn for goods exports is 38,648. <a href="#s13">[S13]</a></td></tr>
+<tr><th>2020</th><td>42,600</td><td>24,700</td><td>17,900</td><td class="l g">🟡 IMF press release 21/259. Conflict: the same table gives 41,800 and 23,900 in the 2019 release, and the World Bank outturn is 33,448. Not reconciled; IMF notes free-trade-zone trade was added to coverage from 2020. <a href="#s14">[S14]</a> <a href="#s5">[S5]</a></td></tr>
+<tr><th>2021</th><td>44,340</td><td>25,884</td><td>18,456</td><td class="l g">🟢 IMF 2024 Article IV Table 4: crude 18,686, LNG 4,325. Re-exports 3,430 inside non-oil. <a href="#s5">[S5]</a></td></tr>
+<tr><th>2022</th><td>65,722</td><td>45,620</td><td>20,102</td><td class="l g">🟢 IMF 2025 Article IV Table 4. Conflict: 2024 Article IV gives 66,064 total and 43,068 hydrocarbon. <a href="#s1">[S1]</a> <a href="#s5">[S5]</a></td></tr>
+<tr><th>2023</th><td>59,547</td><td>40,362</td><td>19,185</td><td class="l g">🟢 2025 Article IV. Conflict: 2024 Article IV gives 59,014 and 35,790.</td></tr>
+<tr><th>2024</th><td>65,152</td><td>44,510</td><td>20,642</td><td class="l g">🟢 2025 Article IV. Conflict: 2024 Article IV gives 62,424 and 37,488. The two vintages differ by up to USD 7bn on hydrocarbons; the later report is used for 2022 to 2024 in the text. Reason for the revision not stated in the pages read.</td></tr>
+<tr><th>2025</th><td>60,412 (World Bank); 59,742 (IMF)</td><td>not found in USD</td><td>not found</td><td class="l g">⬜ IMF Table 4 shows hydrocarbons as n/a for 2025. CBO: hydrocarbon exports -15%. NCSI via press: oil exports RO 14.5bn (-15.2%), non-oil exports RO 6.7bn (+7.5%), re-exports RO 2.056bn 🟡. Two measures of total goods exports differ by USD 670m. <a href="#s3">[S3]</a> <a href="#s12">[S12]</a></td></tr>
+</tbody></table></div>
+
+<h2>4. Capital and financial account, 2014 to 2025</h2>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th>FDI liabilities (inflow)</th><th>FDI assets (net acquisition)</th><th>FDI net</th><th>Portfolio net</th><th>Other investment net (residual)</th><th>Reserve assets change</th><th>Financial account</th><th>Capital account (derived)</th><th>Errors and omissions</th><th>CA + KA + E&amp;O - FA</th></tr></thead>
+<tbody>
+<tr><th>2014</th><td>1,286</td><td>1,356</td><td>70</td><td>776</td><td>1,174</td><td>1,117</td><td><b>3,137</b></td><td>-131</td><td>-1,024</td><td>-0.0</td></tr>
+<tr><th>2015</th><td>-2,172</td><td>335</td><td>2,507</td><td>-855</td><td>-13,156</td><td>605</td><td><b>-10,899</b></td><td>543</td><td>-595</td><td>0.0</td></tr>
+<tr><th>2016</th><td>2,266</td><td>357</td><td>-1,909</td><td>-5,000</td><td>3,222</td><td>-9,414</td><td><b>-13,101</b></td><td>515</td><td>-1,137</td><td>0.0</td></tr>
+<tr><th>2017</th><td>2,879</td><td>2,424</td><td>-455</td><td>-6,493</td><td>1,663</td><td>-5,991</td><td><b>-11,277</b></td><td>259</td><td>-528</td><td>0.0</td></tr>
+<tr><th>2018</th><td>5,601</td><td>131</td><td>-5,469</td><td>-6,419</td><td>5,603</td><td>2,042</td><td><b>-4,244</b></td><td>102</td><td>93</td><td>0.0</td></tr>
+<tr><th>2019</th><td>1,998</td><td>-586</td><td>-2,584</td><td>-1,935</td><td>1,543</td><td>-1,353</td><td><b>-4,328</b></td><td>94</td><td>-90</td><td>0.0</td></tr>
+<tr><th>2020</th><td>1,909</td><td>-837</td><td>-2,747</td><td>-1,806</td><td>-4,811</td><td>-2,059</td><td><b>-11,422</b></td><td>180</td><td>1,007</td><td>0.0</td></tr>
+<tr><th>2021</th><td>8,746</td><td>1,181</td><td>-7,565</td><td>-3,984</td><td>1,848</td><td>3,933</td><td><b>-5,768</b></td><td>40</td><td>-972</td><td>0.0</td></tr>
+<tr><th>2022</th><td>6,872</td><td>-305</td><td>-7,177</td><td>1,464</td><td>10,103</td><td>-1,049</td><td><b>3,341</b></td><td>11</td><td>-679</td><td>0.0</td></tr>
+<tr><th>2023</th><td>12,545</td><td>-177</td><td>-12,722</td><td>6,919</td><td>6,968</td><td>-114</td><td><b>1,051</b></td><td>-5</td><td>-1,100</td><td>0.0</td></tr>
+<tr><th>2024</th><td>9,331</td><td>-36</td><td>-9,366</td><td>4,296</td><td>8,548</td><td>548</td><td><b>4,027</b></td><td>25</td><td>177</td><td>0.0</td></tr>
+<tr><th>2025</th><td>6,747</td><td>-148</td><td>-6,895</td><td>4,147</td><td>-61</td><td>1,042</td><td><b>-1,767</b></td><td>27</td><td>-596</td><td>0.0</td></tr>
+</tbody></table></div>
+<p class="note">Sign convention (BPM6): a negative net entry means net inflow of funds into Oman (liabilities rising faster than assets); a positive reserve change is a rise. FDI net = assets minus liabilities, so FDI net of -6,895 in 2025 equals assets of -148 (a net disinvestment abroad) minus inflows of 6,747. 🟢 FDI inflow, FDI net, portfolio net, reserves, financial account and errors and omissions are World Bank series: <a href="https://api.worldbank.org/v2/country/OMN/indicator/BX.KLT.DINV.CD.WD?format=json&amp;date=2014:2025">BX.KLT.DINV.CD.WD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.KLT.DINV.CD.WD?format=json&amp;date=2014:2025">BM.KLT.DINV.CD.WD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.KLT.DINV.CD?format=json&amp;date=2014:2025">BN.KLT.DINV.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.KLT.PTXL.CD?format=json&amp;date=2014:2025">BN.KLT.PTXL.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.RES.INCL.CD?format=json&amp;date=2014:2025">BN.RES.INCL.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.FIN.TOTL.CD?format=json&amp;date=2014:2025">BN.FIN.TOTL.CD</a>, <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.KAC.EOMS.CD?format=json&amp;date=2014:2025">BN.KAC.EOMS.CD</a>. 🔴 Other investment (loans, deposits, trade credit, derivatives) is computed as financial account - FDI net - portfolio net - reserve change because no separate series was found. 🔴 The capital account is computed as financial account - current account - errors and omissions; it comes out small (about +/-30m in 2021 to 2025), which is the test that the three published series are consistent. IMF Table 4 (2024 Article IV) gives capital account 40, 11, -5 for 2021 to 2023, matching the derived 40, 11, -5. <a href="#s5">[S5]</a></p>
+<p class="note"><b>Conflicts to know.</b> (a) Reserve change: IMF Table 4 shows 3,090 for 2021 against World Bank 3,933; the two sources differ by 843, and "other investment" differs by the same amount in the opposite direction, so the sum is unchanged (5,781). Historical flows in the IMF series include CBO and sovereign-fund accumulation. (b) FDI 2025: Trading Economics shows OMR 2,594m, the World Bank gross inflow of 6,747 at 2.6008 per OMR is OMR 2,594m (same number); the CBO's OMR 2.651bn is the net figure (6,895 / 2.6008 = 2,651). They are one dataset on gross versus net bases. (c) CBO's 2025 report calls the financial account a "net inflow" of OMR 679.4m; the amount equals the World Bank's -1,767 (OMR 679m) which is the BPM6 net-lending sign. Same number, different wording. <a href="#s2">[S2]</a> <a href="#s3">[S3]</a> <a href="#s4">[S4]</a></p>
+
+<h2>5. Reconciliation check</h2>
+<div class="wrap"><table>
+<thead><tr><th class="l">Test</th><th class="l g">Result</th><th class="l g">Tolerance and gap</th></tr></thead>
+<tbody>
+<tr><td class="l">Goods + services + primary + secondary = published current account, 2014 to 2025</td><td class="l g">Passes in all 12 years. Largest gap USD 1.4m (2024).</td><td class="l g">Tolerance +/-2m (rounding of four components). 🟢</td></tr>
+<tr><td class="l">CBO 2025 report, OMR x 2.6008, against World Bank 2025 (USD m)</td><td class="l g">Goods surplus 7.733bn = 20,111 (WB 20,111). Services deficit 2.718bn = 7,069 (7,069). Secondary outflow 3,665.5m = 9,533 (9,533). Net FDI 2.651bn = 6,895 (6,895). Portfolio 1.594bn = 4,146 (4,147). Financial account 679.4m = 1,767 (1,767).</td><td class="l g">Within 1 USD m on every line. The World Bank series is the CBO series converted at the peg. 🟡 for the CBO side (read through the Oman Observer summary; the CBO PDF was blocked). <a href="#s3">[S3]</a></td></tr>
+<tr><td class="l">Current account + capital account + errors and omissions = financial account</td><td class="l g">Holds by construction because the capital account is derived (last column of the table above is zero). Derived capital account equals IMF's published capital account for 2021 (40), 2022 (11) and 2023 (-5).</td><td class="l g">Derived 2024 value is 25 against IMF 2024 Article IV projection of 90 (older vintage, not a gap in the series). 🔴</td></tr>
+<tr><td class="l">Financial account = FDI + portfolio + other investment + reserves</td><td class="l g">Holds by construction because other investment is the residual. Cross-check on IMF Table 4 (2021): -7,565 - 3,984 + 2,691 + 3,090 = -5,768, equals the published financial account.</td><td class="l g">Other investment per year not separately sourced. ⬜ (flag)</td></tr>
+<tr><td class="l">Current account level across sources, 2025</td><td class="l g">-1,198 (World Bank), -1,168 (IMF 2025 Article IV Table 4), OMR -461m = -1,199 (Trading Economics), -1.2% of GDP (CBO), -1.1% (IMF).</td><td class="l g">Spread USD 30m. Cause: IMF uses goods exports 59,742 and imports 39,923 against WB 60,412 and 40,301. Not explained in the pages read.</td></tr>
+<tr><td class="l">Current account in 2024 across sources</td><td class="l g">+3,825 (World Bank), +3,469 (IMF 2025 Article IV), +2,537 (IMF 2024 Article IV), +1,407 OMR m = 3,659 (Trading Economics, deck).</td><td class="l g">Conflict, shown not resolved. The Trading Economics page in the deck reads +1,407 OMR m for the prior year; the summarised search result read 1,180 OMR m. Recheck before quoting the swing.</td></tr>
+</tbody></table></div>
+
+<h3>Fixed outflow bill versus goods surplus (USD m)</h3>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th>Goods surplus</th><th>Services + primary + secondary</th><th>Current account</th></tr></thead>
+<tbody>
+<tr><th>2014</th><td>25,677</td><td>-21,385</td><td>4,292</td></tr>
+<tr><th>2015</th><td>9,119</td><td>-19,966</td><td>-10,847</td></tr>
+<tr><th>2016</th><td>6,259</td><td>-18,739</td><td>-12,479</td></tr>
+<tr><th>2017</th><td>8,765</td><td>-19,773</td><td>-11,008</td></tr>
+<tr><th>2018</th><td>18,084</td><td>-22,522</td><td>-4,438</td></tr>
+<tr><th>2019</th><td>18,192</td><td>-22,523</td><td>-4,331</td></tr>
+<tr><th>2020</th><td>8,084</td><td>-20,693</td><td>-12,609</td></tr>
+<tr><th>2021</th><td>16,316</td><td>-21,151</td><td>-4,836</td></tr>
+<tr><th>2022</th><td>30,976</td><td>-26,966</td><td>4,010</td></tr>
+<tr><th>2023</th><td>24,378</td><td>-22,222</td><td>2,156</td></tr>
+<tr><th>2024</th><td>25,930</td><td>-22,107</td><td>3,825</td></tr>
+<tr><th>2025</th><td>20,111</td><td>-21,309</td><td>-1,198</td></tr>
+</tbody></table></div>
+<p class="note">🔴 Arithmetic on the section 3 table. 2022 is the outlier because primary income paid out was USD 9,335m in a year of peak oil prices (inference: higher profits and interest paid; the pages read do not say).</p>
+
+<h2>6. Remittances</h2>
+<h3>Oman outward workers' remittances</h3>
+<div class="wrap"><table>
+<thead><tr><th>Year</th><th>Outflow (USD m)</th><th>% of GDP</th><th>% of goods surplus</th></tr></thead>
+<tbody>
+<tr><th>2014</th><td>10,301</td><td>11.1%</td><td>40%</td></tr>
+<tr><th>2015</th><td>10,991</td><td>14.0%</td><td>121%</td></tr>
+<tr><th>2016</th><td>10,312</td><td>13.7%</td><td>165%</td></tr>
+<tr><th>2017</th><td>9,815</td><td>12.1%</td><td>112%</td></tr>
+<tr><th>2018</th><td>9,958</td><td>10.9%</td><td>55%</td></tr>
+<tr><th>2019</th><td>9,134</td><td>10.4%</td><td>50%</td></tr>
+<tr><th>2020</th><td>8,819</td><td>11.6%</td><td>109%</td></tr>
+<tr><th>2021</th><td>8,118</td><td>9.3%</td><td>50%</td></tr>
+<tr><th>2022</th><td>9,071</td><td>8.3%</td><td>29%</td></tr>
+<tr><th>2023</th><td>9,432</td><td>8.9%</td><td>39%</td></tr>
+<tr><th>2024</th><td>9,180</td><td>8.6%</td><td>35%</td></tr>
+<tr><th>2025</th><td>9,466</td><td>8.6%</td><td>47%</td></tr>
+</tbody></table></div>
+<p class="note">🟢 World Bank series <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.TRF.PWKR.CD.DT?format=json&amp;date=2014:2025">BM.TRF.PWKR.CD.DT</a>, updated 2026-11-11. CBO in OMR: 2025 OMR 3,639.6m (+3.1%) and 2024 OMR 3,529.7m; 9,466 / 2.6008 = OMR 3,639m, so the two sources agree 🟡. CBO attributes the modest growth partly to expatriates becoming more integrated in the domestic economy. Earlier CBO outturns reported by press: 2017 OMR 3.774bn. <a href="#s8">[S8]</a> <a href="#s9">[S9]</a></p>
+
+<h3>India's side</h3>
+<div class="wrap"><table>
+<thead><tr><th>Item</th><th>2016-17</th><th>2020-21</th><th>2023-24</th><th class="l">Source</th></tr></thead>
+<tbody>
+<tr><td class="l">Oman share of India's inward remittances (bank channel)</td><td>1.0%</td><td>0.6%</td><td>2.5%</td><td class="l g">🟢 RBI Bulletin, "Changing Dynamics of India's Remittances", Table 1. <a href="#s10">[S10]</a></td></tr>
+<tr><td class="l">India total inward remittances (USD bn)</td><td>not found</td><td>not found</td><td>118.7</td><td class="l g">🟢 same article.</td></tr>
+<tr><td class="l">Oman-origin remittances to India (USD bn)</td><td>not found</td><td>not found</td><td>about 2.97</td><td class="l g">🔴 2.5% x 118.7. Share is a survey estimate on bank transfers.</td></tr>
+<tr><td class="l">Share of Oman's outflow going to India</td><td colspan="3">not found</td><td class="l g">⬜ CBO and World Bank bilateral matrix not read (CBO site blocked; matrix is a file download). A Statista page ranks India first among destinations for 2021 🟡. <a href="#s15">[S15]</a></td></tr>
+</tbody></table></div>
+<p class="note"><b>Conflict.</b> A Times of Oman item citing an RBI report puts Oman at about 3% of India's 2016-17 remittances; RBI Table 1 gives 1.0% for 2016-17. The bulletin is the primary source and is used. 🟡 <a href="#s15">[S15]</a> GCC total: RBI says 38% in 2023-24 in the text and 33.7% in a footnote on a common country set. <a href="#s10">[S10]</a></p>
+
+<h2>7. India-Oman bilateral trade</h2>
+<div class="wrap"><table>
+<thead><tr><th>Period</th><th>India exports to Oman</th><th>India imports from Oman</th><th>Total</th><th>India balance</th><th class="l">Basis</th></tr></thead>
+<tbody>
+<tr><th>FY2023-24</th><td>4,426.5</td><td>4,520.8</td><td>8,947.3</td><td>-94.4</td><td class="l g">Dept of Commerce via Indian Embassy, Muscat 🟢 <a href="#s11">[S11]</a></td></tr>
+<tr><th>FY2024-25</th><td>4,065.1</td><td>6,548.8</td><td>10,613.9</td><td>-2,483.6</td><td class="l g">Same. Exports -8.2%, imports +44.8%. Oman is India's 28th largest partner.</td></tr>
+<tr><th>CY2014</th><td>2,426.0</td><td>1,819.5</td><td>4,245.5</td><td>+606.5</td><td class="l g" rowspan="11">UN Comtrade, India as reporter, all commodities, calendar year. India's customs data relayed by the UN, not the Ministry's TradeStat portal (not readable here). 🟢 <a href="#s16">[S16]</a></td></tr>
+<tr><th>CY2015</th><td>2,052.0</td><td>1,567.2</td><td>3,619.2</td><td>+484.8</td></tr>
+<tr><th>CY2016</th><td>2,577.6</td><td>1,300.3</td><td>3,877.9</td><td>+1,277.3</td></tr>
+<tr><th>CY2017</th><td>2,880.8</td><td>3,075.4</td><td>5,956.2</td><td>-194.6</td></tr>
+<tr><th>CY2018</th><td>2,289.4</td><td>3,497.0</td><td>5,786.4</td><td>-1,207.6</td></tr>
+<tr><th>CY2019</th><td>2,066.7</td><td>3,294.9</td><td>5,361.6</td><td>-1,228.2</td></tr>
+<tr><th>CY2020</th><td>2,308.4</td><td>3,045.1</td><td>5,353.5</td><td>-736.7</td></tr>
+<tr><th>CY2021</th><td>2,493.2</td><td>5,827.7</td><td>8,320.9</td><td>-3,334.5</td></tr>
+<tr><th>CY2022</th><td>4,720.6</td><td>8,896.2</td><td>13,616.8</td><td>-4,175.6</td></tr>
+<tr><th>CY2023</th><td>4,479.6</td><td>4,378.7</td><td>8,858.3</td><td>+100.9</td></tr>
+<tr><th>CY2024</th><td>3,955.9</td><td>4,517.3</td><td>8,473.2</td><td>-561.4</td></tr>
+</tbody></table></div>
+<p class="note">USD million. Total and balance are 🔴 arithmetic. Fiscal-year and calendar-year rows are different periods and are not additive. India's imports from Oman peaked at USD 8.9bn in 2022, the year of the highest Omani hydrocarbon exports in the IMF series (🔴 inference: India's import bill from Oman tracks oil prices). 2025 calendar year: not found (not yet in the UN preview). Oman-side bilateral series from NCSI: not found. Link to remittances: Oman's secondary income outflow to India is separate from this trade and does not appear in goods.</p>
+
+<h2>8. What drives each account, in plain English</h2>
+<div class="wrap"><table>
+<thead><tr><th class="l">Account</th><th class="l g">Driver</th><th class="l g">Evidence and link</th></tr></thead>
+<tbody>
+<tr><td class="l">Goods</td><td class="l g">Oil price times barrels. About two-thirds of goods exports are hydrocarbons, so a 15% fall in hydrocarbon export revenue is worth about USD 6.7bn on 2024's base (🔴 44,510 x 15%), partly offset by non-oil exports; total goods exports fell USD 4.7bn. Imports follow the investment cycle and grew 2.8% in 2025 on big projects.</td><td class="l g">IMF 2025 Article IV: current account turned to a deficit "weighed down by softer oil prices"; average export price USD 70.6; crude and condensate output 1.005m barrels a day. CBO: hydrocarbon exports -15%, oil price -13%. 2023: lower downstream exports after a two-month refinery shutdown cut the surplus by 0.3% of GDP. 🟢 <a href="#s1">[S1]</a> <a href="#s6">[S6]</a> <a href="#s3">[S3]</a> <a href="#s5">[S5]</a><br>2025 hydrocarbon value in USD: not found.</td></tr>
+<tr><td class="l">Services</td><td class="l g">Oman pays out about USD 12.9bn for services and earns USD 5.8bn. The CBO reports the services deficit at OMR 2.718bn, narrowing 1.2%. What is inside the payments (transport and insurance on imports, foreign contractors, travel) is not itemised in the pages read.</td><td class="l g">🟡 CBO via Oman Observer: receipts OMR 2.244bn (+3.5%), payments OMR 4.962bn (+0.9%). Components: not found. <a href="#s3">[S3]</a></td></tr>
+<tr><td class="l">Primary income</td><td class="l g">Income owed to foreign owners and lenders: dividends, profit shares and interest. Rises with oil profits and with the stock of external debt (USD 62.0bn in 2025). It narrowed 19.3% in 2025 as oil profits fell, and Oman's own investment income receipts rose 63.5%.</td><td class="l g">🟡 CBO via Oman Observer. 🟢 IMF 2025 Article IV Table 4 external debt 62,004. 🔴 That the fall tracks oil profits is inference. <a href="#s3">[S3]</a> <a href="#s1">[S1]</a></td></tr>
+<tr><td class="l">Secondary income</td><td class="l g">Expatriate wages sent home. Roughly constant because it follows the size of the foreign workforce and their pay, not oil. USD 9,466m in 2025.</td><td class="l g">CBO: +3.1%, tied to economic expansion and labour market conditions (🟡 Oman News Agency). <a href="#s8">[S8]</a> <a href="#s3">[S3]</a></td></tr>
+<tr><td class="l">FDI</td><td class="l g">Large energy and industrial projects (the deck's ACME and OMIFCO examples sit here). It is lumpy: high in 2021 (USD 8.7bn gross), 2023 (12.5bn) and 2024 (9.3bn), lower at 6.7bn in 2025.</td><td class="l g">🟢 World Bank series. CBO describes FDI as stable and the financial account as supportive of external stability. 🟡 <a href="#s3">[S3]</a></td></tr>
+<tr><td class="l">Portfolio and other investment</td><td class="l g">Residents (banks, sovereign fund) buying foreign assets. Positive portfolio entries in 2022 to 2025 mean Oman is accumulating foreign assets. The IMF notes banks' net foreign assets turned positive at end-2023, the first time since 2014.</td><td class="l g">🟢 IMF 2024 Article IV, External Sector. CBO: 2025 portfolio outflows reflect higher foreign asset holdings of the financial sector. <a href="#s5">[S5]</a> <a href="#s3">[S3]</a></td></tr>
+<tr><td class="l">Reserves and peg</td><td class="l g">Gross CBO reserves USD 19,304m at end-2025 (IMF), against a 2025 deficit of USD 1,168m, so the deficit equals about 6% of reserves. The IMF projects reserves of USD 17,804m in 2026 on a deficit of USD 3,353m.</td><td class="l g">🟢 IMF 2025 Article IV Table 4. 🔴 6% = 1,168 / 19,304. <a href="#s1">[S1]</a></td></tr>
+</tbody></table></div>
+
+<h3>IMF Article IV commentary read, with links</h3>
+<ul>
+<li>2025 Article IV (Country Report 26/4, Board 14 January 2026): staff report Table 4 gives the external accounts and says the 2025 deficit is oil-price driven and the account returns to surplus as non-hydrocarbon exports expand. It carries no remittance or FDI commentary and no services, income or financial account lines. <a href="#s1">[S1]</a> <a href="#s6">[S6]</a></li>
+<li>2024 Article IV (Country Report 25/13): the 2023 surplus narrowed on lower oil prices and the refinery shutdown; EBA-lite model puts the 2023 current account gap at -0.7% of GDP and the rial about 2.0% overvalued, i.e. the external position was in line with fundamentals. Table 4 has the full financial account lines for 2021 to 2029. <a href="#s5">[S5]</a></li>
+<li>November 2025 staff mission press release (25/393): deficit driven mainly by lower oil prices, gradual return to surplus as output recovers. <a href="#s7">[S7]</a></li>
+</ul>
+
+<h2>9. What this does for the C2 argument</h2>
+<ul>
+<li>The deficit is cyclical on this evidence: goods surplus below break-even in 2018, 2019, 2020, 2021 and 2025, positive in 2014 and 2022 to 2024. Break-even sits near USD 21bn. 🔴</li>
+<li>The financing side is steady: reserves rose in 2025 and FDI inflows exceeded the deficit by more than 5 to 1 (6,747 against 1,198). 🔴 for the ratio.</li>
+<li>Gaps for the next pass: services components, other investment by year, goods exports split for 2014 to 2017 and 2025, the 2026 quarters, bilateral Oman to India remittances. 2026 quarterly BoP: not found (CBO quarterly bulletin blocked; IMF has only an annual projection).</li>
+</ul>
+
+<h2>10. Sources annexure (all fetched 2026-11-24 unless noted)</h2>
+<ol>
+<li id="s1">IMF, Oman 2025 Article IV staff report, Country Report 26/4, Table 4 and text, read in full. <a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">source pdf</a>. As of 11 December 2025 (report), published 14 January 2026. 🟢</li>
+<li id="s2">World Bank WDI, Oman balance of payments series, last updated 2026-11-11. API base <a href="https://api.worldbank.org/v2/country/OMN/indicator/BN.CAB.XOKA.CD?format=json&amp;date=2014:2025">BN.CAB.XOKA.CD</a> plus the indicators linked in the table notes. Underlying data: IMF and CBO. 🟢</li>
+<li id="s3">CBO Annual Report 2025, via Oman Observer, <a href="https://www.omanobserver.om/ampArticle/1196099">merchandise, services, income and financial account figures</a> and <a href="https://www.omanobserver.om/article/1195827/business/economy/economy-expands-24-pc-in-2025-inflation-remains-low">headline summary</a>; Oman News Agency <a href="https://omannews.gov.om/topics/en/80/show/130582">release</a>. The CBO PDF at cbo.gov.om returned "Request Rejected" and publishing.bnet.om did not resolve. 🟡 as read through press.</li>
+<li id="s4">Trading Economics series as recorded in the deck (fetched 2026-11-24): <a href="https://tradingeconomics.com/oman/current-account">current account</a>, <a href="https://tradingeconomics.com/oman/balance-of-trade">balance of trade</a>, <a href="https://tradingeconomics.com/oman/foreign-direct-investment">FDI</a>. 🟡 (aggregator)</li>
+<li id="s5">IMF, Oman 2024 Article IV, Country Report 25/13, Table 4 (2021 to 2029) and External Sector text: <a href="https://meetings.imf.org/-/media/Files/Publications/CR/2025/English/1omnea2025001-print-pdf.ashx">staff report</a>; as of 13 November 2024 discussions. 🟢</li>
+<li id="s6">IMF press release 26/04, <a href="https://www.imf.org/en/news/articles/2026/01/14/pr-2604-oman-imf-executive-board-concludes-2025-article-iv-consult">Executive Board concludes 2025 Article IV</a>, 14 January 2026. 🟢</li>
+<li id="s7">IMF press release 25/393, <a href="https://www.imf.org/en/news/articles/2025/11/24/pr-25393-oman-imf-staff-concludes-staff-visit">staff concludes 2025 Article IV mission</a>, 24 November 2025; read as a search summary only; the figures used come from S1. 🟡</li>
+<li id="s8">Muscat Daily, <a href="https://www.muscatdaily.com/2026/10/05/remittances-from-oman-rise-3-1-to-ro3-64bn/">Remittances from Oman rise 3.1% to RO3.64bn</a>, 5 October 2026, reporting the CBO report. 🟡</li>
+<li id="s9">World Bank <a href="https://api.worldbank.org/v2/country/OMN/indicator/BM.TRF.PWKR.CD.DT?format=json&amp;date=2014:2025">personal remittances paid</a>. 🟢</li>
+<li id="s10">RBI Bulletin, <a href="https://rbi.org.in/Scripts/BS_ViewBulletin.aspx?Id=23260">Changing Dynamics of India's Remittances</a>, March 2025, Table 1 and Section IV (sixth survey round, 2023-24). 🟢</li>
+<li id="s11">Indian Embassy in Oman, <a href="https://www.indemb-oman.gov.in/page/trade-and-commerce/">Trade and Commerce</a>, table attributed to Department of Commerce; page carries no as-of date. 🟢</li>
+<li id="s12">NCSI 2025 trade figures via press (not the NCSI portal): <a href="https://qna.org.qa/en/News-Area/News/2026-2/21/omans-non-oil-exports-surge-to-omr-67-bn-in-2025">QNA, 21 February 2026</a>. Read as a search summary only. 🟡</li>
+<li id="s13">IMF press release 19/266, <a href="https://www.imf.org/en/news/articles/2019/07/03/pr19266-imf-executive-board-concludes-2019-article-iv-consultation-with-oman/index.md">2019 Article IV</a>. 🟢 (release read; figures are 2019 estimates and projections)</li>
+<li id="s14">IMF press release 21/259, <a href="https://www.imf.org/en/news/articles/2021/09/10/pr21259-oman-imf-executive-board-concludes-2021-article-iv-consultation-with-oman">2021 Article IV</a>. 🟢</li>
+<li id="s15">Statista, <a href="https://statista.com/statistics/1382746/bilateral-remittances-oman">bilateral remittances Oman</a>, and Times of Oman, <a href="https://www.pressreader.com/oman/times-of-oman/20181210/281736975535543">Remittances to India</a> (2018). Search-snippet only, not opened. 🟡
+</li>
+<li id="s16">UN Comtrade public preview API, India (reporter 699) with Oman (partner 512), HS all commodities, annual, queried 2014 to 2024 one year at a time, for example <a href="https://comtradeapi.un.org/public/v1/preview/C/A/HS?reporterCode=699&amp;partnerCode=512&amp;period=2024&amp;cmdCode=TOTAL&amp;flowCode=X,M&amp;partner2Code=0&amp;customsCode=C00&amp;motCode=0">2024</a>. 🟢</li>
+</ol>
+<p class="note"><b>Not read, and why:</b> CBO annual reports and statistical bulletins (site returns "Request Rejected"); CEIC pages (403); data.gov.om BoP dataset (data loads by script, not in the page); IMF 2022 Article IV Table 4 (table is an image in the PDF); India Ministry of Commerce TradeStat (not fetched); NCSI portal (not fetched). Conversion: OMR per USD 0.3845 peg, so USD = OMR x 2.6008.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P5 Ammonia and urea prices</title>
+<style>
+  :root { --ink:#111; --mute:#666; --rule:#ddd; --soft:#f6f6f6; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:#fff; color:var(--ink); font:15px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  main { max-width: 920px; margin: 0 auto; padding: 32px 20px 64px; }
+  .tag { font-size: 12px; letter-spacing: .04em; color: var(--mute); border-bottom: 1px solid var(--ink); padding-bottom: 8px; margin-bottom: 24px; }
+  h1 { font-size: 24px; line-height: 1.3; margin: 0 0 8px; }
+  h2 { font-size: 17px; margin: 36px 0 8px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+  h3 { font-size: 14px; margin: 20px 0 6px; }
+  p { margin: 8px 0; }
+  .lead { background: var(--soft); border-left: 3px solid var(--ink); padding: 12px 16px; margin: 16px 0; }
+  .scroll { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; margin: 8px 0 4px; }
+  th, td { border-bottom: 1px solid var(--rule); padding: 6px 8px; text-align: left; vertical-align: top; }
+  th { background: var(--soft); font-weight: 600; }
+  td.n, th.n { text-align: right; white-space: nowrap; }
+  .note { font-size: 12px; color: var(--mute); }
+  .c { font-size: 11px; border: 1px solid var(--ink); padding: 0 4px; white-space: nowrap; }
+  ol.src { font-size: 12px; padding-left: 22px; }
+  ol.src li { margin: 4px 0; word-break: break-word; }
+  a { color: var(--ink); }
+  @media (max-width: 600px) { main { padding: 20px 16px 48px; } }
+</style>
+</head>
+<body>
+<main>
+<div class="tag">Tangent T6 · Packet P5 · Feeds C3, C4</div>
+
+<h1>Ammonia and urea prices: the scenario simulator should treat both as gas and war driven, not as a stable base</h1>
+<p class="note">Global Business Finance CIA, ACME Duqm green ammonia (phase 2) against OMIFCO urea. All sources fetched and read on 24 Nov 2026. Prices in USD per metric tonne unless stated.</p>
+
+<div class="lead">
+<strong>Headline.</strong> Urea (Middle East, World Bank) averaged USD 423/t in 2025 and USD 531/t over Jan to Oct 2026, peaking at USD 857/t in Apr 2026 before falling back to USD 420/t in Oct. Grey ammonia followed the same shock: Tampa settled at USD 645/t for Nov 2026 after a USD 825/t peak in May, and NW Europe was USD 710 to 730/t on 2 Nov. The India auction price for green ammonia, USD 641/t (Jul 2025), is now within 1% of Tampa grey, so the green premium is close to zero at today's war-elevated grey prices but about 25% against the pre-war grey price of USD 515/t.
+</div>
+
+<h2>Five findings</h2>
+<ol>
+<li><strong>Urea and ammonia track gas, not oil.</strong> Over 2014 to 2025 (12 annual points), the Middle East urea price correlates 0.96 with World Bank European gas, 0.82 with Henry Hub and 0.67 with Brent; US Gulf ammonia shows 0.96, 0.87 and 0.73. This is my own calculation and the 2022 gas spike drives it. <span class="c">Estimated</span></li>
+<li><strong>2026 is a supply shock year.</strong> Urea went from USD 415/t (Jan) to USD 857/t (Apr) and back to USD 390/t (Aug). Reports tie the move to the Strait of Hormuz disruption. The simulator range must be wide. <span class="c">Verified</span> for urea, <span class="c">Reported</span> for the cause</li>
+<li><strong>Annual ammonia data is thin in the open.</strong> Only the USGS US Gulf Coast average is freely published for 2014 to 2025. Middle East and NW Europe annual averages are behind Argus, Platts and CRU paywalls: "not found". <span class="c">Gap</span></li>
+<li><strong>Green ammonia sells near USD 590 to 640/t in India, with a wide spread.</strong> SECI auctions cleared at USD 591 and USD 641/t in mid 2025, against a first H2Global tender at USD 1,153/t. The IEA puts electrolytic production cost at about three times conventional (2024 basis). No disclosed price exists for the Yara to ACME Oman offtake. <span class="c">Reported</span></li>
+<li><strong>CBAM covers ammonia and has been definitive since 1 Jan 2026.</strong> Ammonia (CN 2814) is in the fertiliser list with a transitional default of 2.82 tCO2e per tonne. This raises the landed cost of grey ammonia into the EU and helps green ammonia from Oman. <span class="c">Verified</span></li>
+</ol>
+
+<h2>1. Annual series, 2014 to 2025 and latest 2026</h2>
+<div class="scroll">
+<table>
+<thead><tr>
+<th>Year</th><th class="n">Ammonia, US Gulf, USD/short ton</th><th class="n">Ammonia, USD/t (x 1.1023)</th><th class="n">Urea, ME, USD/t</th><th class="n">Brent, USD/bbl</th><th class="n">Gas Europe, USD/mmbtu</th><th class="n">Gas US (Henry Hub), USD/mmbtu</th></tr></thead>
+<tbody>
+<tr><td>2014</td><td class="n">530</td><td class="n">584</td><td class="n">308.4</td><td class="n">98.9</td><td class="n">10.05</td><td class="n">4.37</td></tr>
+<tr><td>2015</td><td class="n">470 (est.)</td><td class="n">518</td><td class="n">277.9</td><td class="n">52.4</td><td class="n">6.82</td><td class="n">2.61</td></tr>
+<tr><td>2016</td><td class="n">267</td><td class="n">294</td><td class="n">194.1</td><td class="n">44.0</td><td class="n">4.56</td><td class="n">2.49</td></tr>
+<tr><td>2017</td><td class="n">247</td><td class="n">272</td><td class="n">213.9</td><td class="n">54.4</td><td class="n">5.72</td><td class="n">2.96</td></tr>
+<tr><td>2018</td><td class="n">281</td><td class="n">310</td><td class="n">249.4</td><td class="n">71.1</td><td class="n">7.68</td><td class="n">3.16</td></tr>
+<tr><td>2019</td><td class="n">232</td><td class="n">256</td><td class="n">245.3</td><td class="n">64.0</td><td class="n">4.80</td><td class="n">2.57</td></tr>
+<tr><td>2020</td><td class="n">220 (est.)</td><td class="n">243</td><td class="n">229.1</td><td class="n">42.3</td><td class="n">3.24</td><td class="n">2.01</td></tr>
+<tr><td>2021</td><td class="n">578</td><td class="n">637</td><td class="n">483.2</td><td class="n">70.4</td><td class="n">16.12</td><td class="n">3.85</td></tr>
+<tr><td>2022</td><td class="n">1,070</td><td class="n">1,179</td><td class="n">700.0</td><td class="n">99.8</td><td class="n">40.34</td><td class="n">6.37</td></tr>
+<tr><td>2023</td><td class="n">470</td><td class="n">518</td><td class="n">358.0</td><td class="n">82.6</td><td class="n">13.11</td><td class="n">2.54</td></tr>
+<tr><td>2024</td><td class="n">440</td><td class="n">485</td><td class="n">338.3</td><td class="n">80.7</td><td class="n">10.96</td><td class="n">2.19</td></tr>
+<tr><td>2025</td><td class="n">450 (est.)</td><td class="n">496</td><td class="n">422.7</td><td class="n">69.0</td><td class="n">11.96</td><td class="n">3.53</td></tr>
+<tr><td><strong>2026, Jan to Oct avg</strong></td><td class="n">not found</td><td class="n">not found</td><td class="n">531.1</td><td class="n">97.1</td><td class="n">18.07</td><td class="n">3.47</td></tr>
+<tr><td><strong>2026 latest</strong></td><td class="n" colspan="2">Tampa CFR 645 (Nov contract); NW Europe CFR 710 to 730 (2 Nov)</td><td class="n">426 (23 Nov, spot)</td><td class="n">88.6 (24 Nov)</td><td class="n">28.50 (Oct avg)</td><td class="n">2.96 (Oct avg)</td></tr>
+</tbody>
+</table>
+</div>
+<p class="note">Ammonia: USGS Mineral Commodity Summaries, average f.o.b. Gulf Coast, USD per short ton, "e" = USGS estimate. Metric conversion is my arithmetic (short ton x 1.10231). USGS revised 2021 from USD 510 (MCS 2022 text, as reported by search summary) to USD 578 (MCS 2026 table); the later table is used. Urea: World Bank Pink Sheet, "Urea, (Ukraine), prill spot f.o.b. Middle East, beginning March 2022; previously f.o.b. Black Sea", so 2014 to Feb 2022 is a Black Sea series and the two are not strictly like for like. Brent and gas: World Bank Pink Sheet annual nominal series (workbook updated 2 Sep 2026; 2026 monthly file updated 3 Nov 2026). 2026 averages are my arithmetic over the 10 monthly values Jan to Oct. Annual ammonia for Middle East fob, Tampa cfr and NW Europe cfr: <strong>not found</strong> (Argus, Platts and CRU are paywalled).</p>
+
+<h3>2026 monthly path (World Bank, monthly nominal)</h3>
+<div class="scroll">
+<table>
+<thead><tr><th>Month 2026</th><th class="n">Urea ME, USD/t</th><th class="n">Brent, USD/bbl</th><th class="n">Gas Europe, USD/mmbtu</th><th class="n">Gas US, USD/mmbtu</th></tr></thead>
+<tbody>
+<tr><td>Jan</td><td class="n">415.4</td><td class="n">66.8</td><td class="n">11.76</td><td class="n">7.58</td></tr>
+<tr><td>Feb</td><td class="n">472.0</td><td class="n">71.1</td><td class="n">11.24</td><td class="n">3.61</td></tr>
+<tr><td>Mar</td><td class="n">725.6</td><td class="n">103.7</td><td class="n">17.91</td><td class="n">3.06</td></tr>
+<tr><td>Apr</td><td class="n">856.9</td><td class="n">120.4</td><td class="n">15.41</td><td class="n">2.77</td></tr>
+<tr><td>May</td><td class="n">770.5</td><td class="n">107.5</td><td class="n">16.17</td><td class="n">2.93</td></tr>
+<tr><td>Jun</td><td class="n">453.1</td><td class="n">85.4</td><td class="n">15.17</td><td class="n">3.15</td></tr>
+<tr><td>Jul</td><td class="n">400.0</td><td class="n">83.4</td><td class="n">18.06</td><td class="n">2.89</td></tr>
+<tr><td>Aug</td><td class="n">390.0</td><td class="n">90.9</td><td class="n">21.11</td><td class="n">2.77</td></tr>
+<tr><td>Sep</td><td class="n">407.5</td><td class="n">116.8</td><td class="n">25.42</td><td class="n">2.95</td></tr>
+<tr><td>Oct</td><td class="n">420.0</td><td class="n">125.0</td><td class="n">28.50</td><td class="n">2.96</td></tr>
+</tbody></table>
+</div>
+<p class="note">Source: World Bank, CMO Historical Data Monthly (updated 3 Nov 2026), sources 1 and 2. Brent of 125.0 (Oct avg) against Trading Economics 88.6 (24 Nov spot, source 3) differ because one is a monthly average and the other a spot print after a reported 23% monthly fall; both are shown.</p>
+
+<h2>2. Ammonia price points in 2026</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>Date</th><th>Benchmark</th><th class="n">USD/t</th><th>Source (as of)</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td>25 Feb 2026</td><td>FOB Middle East</td><td class="n">475</td><td>Platts via S&amp;P (src 9)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>25 Mar 2026</td><td>FOB Middle East / CFR Tampa</td><td class="n">555 / 615</td><td>Platts via S&amp;P (src 9)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>16 Apr 2026</td><td>FOB Middle East (highest since Jan 2023)</td><td class="n">740</td><td>Platts via S&amp;P (src 9)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>30 Apr 2026</td><td>CFR NW Europe, duty paid/free</td><td class="n">905</td><td>Platts via S&amp;P (src 9)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>May 2026</td><td>CFR Tampa contract (peak)</td><td class="n">825</td><td>Fertilizer Daily (src 10)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Sep 2026</td><td>CFR Tampa contract</td><td class="n">555</td><td>Fertilizer Daily (src 10)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Q3 2026</td><td>Tampa benchmark, quarter average (+27% y/y)</td><td class="n">622</td><td>LSB Industries statement, 28 Oct, via src 10</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Nov 2026</td><td>CFR Tampa contract (Yara and Mosaic, up 95 from Oct)</td><td class="n">645</td><td>HortiDaily, 2 Nov (src 11)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>2 Nov 2026</td><td>CFR NW Europe</td><td class="n">710 to 730</td><td>HortiDaily citing AFC (src 11)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>2 Nov 2026</td><td>FOB China (export)</td><td class="n">510 to 535</td><td>HortiDaily citing AFC (src 11)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Nov 2026</td><td>FOB Middle East</td><td class="n">not found</td><td>QCIntel table lists it but values need sign-in (src 12)</td><td><span class="c">Gap</span></td></tr>
+</tbody></table>
+</div>
+<p class="note">Conflict to show: Sep Tampa 555 (src 10) against a Q3 average of 622 (LSB) means Jul and Aug were higher than Sep, which fits a falling market. HortiDaily's October level is implied at 550 (645 less 95), my arithmetic. An August S&amp;P headline says delivered India ammonia fell below pre-war levels (src 13, headline only, page blocked); Argus 1Q26 forecasts of Tampa 435 to 490 and ME fob 300 to 355 (src 14) were set before the 2026 spike and are out of date.</p>
+
+<h2>3. Gas, oil and correlation</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>Pair, 2014 to 2025, n = 12</th><th class="n">Correlation (r)</th></tr></thead>
+<tbody>
+<tr><td>Urea ME with gas Europe</td><td class="n">0.96</td></tr>
+<tr><td>Urea ME with Henry Hub</td><td class="n">0.82</td></tr>
+<tr><td>Urea ME with Brent</td><td class="n">0.67</td></tr>
+<tr><td>Ammonia US Gulf with gas Europe</td><td class="n">0.96</td></tr>
+<tr><td>Ammonia US Gulf with Henry Hub</td><td class="n">0.87</td></tr>
+<tr><td>Ammonia US Gulf with Brent</td><td class="n">0.73</td></tr>
+<tr><td>Ammonia US Gulf with urea ME</td><td class="n">0.94</td></tr>
+</tbody></table>
+</div>
+<p class="note"><span class="c">Estimated</span> Pearson correlation on the annual levels in the table above, my calculation. Adversary sentence: 2022 (gas USD 40/mmbtu) is a single outlier that carries most of the fit, and levels with 12 points overstate causality. A published correlation of ammonia with gas or oil: <strong>not found</strong>. The nearest published figures are cost shares: Argus says gas is on average 60 to 70% of US ammonia production cost (May 2024), and TTF-based costs averaged more than three times Henry Hub-based costs in early 2024 (src 15, <span class="c">Reported</span>).</p>
+
+<h2>4. Green ammonia and CBAM</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>Item</th><th class="n">Figure</th><th>Source (as of)</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td>SECI auction, ACME to Paradeep, 75,000 t/yr, 10 years (INR 55.75/kg)</td><td class="n">about 641 USD/t</td><td>Ammonia Energy Association, 1 Aug 2025 (src 16); IEA cites the same USD 641/t (src 17)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>SECI auction, NTPC RE, 70,000 t/yr (INR 51.8/kg)</td><td class="n">about 591 USD/t</td><td>pv magazine, 5 Aug 2025 (src 18)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Grey ammonia comparator in same article</td><td class="n">515 USD/t (Mar 2025)</td><td>pv magazine (src 18)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>India auction weighted average, with range 566 to 737</td><td class="n">637 USD/t vs 676 grey import 5-yr avg</td><td>CEEW, as quoted in a search summary; CEEW page returned 403, not read directly (src 19)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>H2Global first tender, renewable ammonia delivered</td><td class="n">1,153 USD/t</td><td>Ammonia Energy Association (src 16)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Derived 10-year contract prices, other winners (Jakson, SCC, Oriana)</td><td class="n">about 468 to 557 USD/t</td><td>Ammonia Energy Association, 14 Apr 2026; the page gives totals, derived by a fetch summary, not stated prices (src 20)</td><td><span class="c">Estimated</span></td></tr>
+<tr><td>Electrolytic vs conventional production cost (2024 basis, no CO2 price)</td><td class="n">about 3 times; CCS route about +30%</td><td>IEA Breakthrough Agenda Report 2025 (src 17)</td><td><span class="c">Verified</span></td></tr>
+<tr><td>Production cost premium for low-emission ammonia</td><td class="n">+40% to above +120%</td><td>WEF Net-Zero Industry Tracker 2023 (src 21, from search summary)</td><td><span class="c">Reported</span></td></tr>
+<tr><td>Yara to ACME Oman offtake, 100,000 t/yr from 2027, signed 1 Mar 2024</td><td class="n">price not disclosed</td><td>Yara release, read directly: no price or formula (src 22)</td><td><span class="c">Verified</span> (absence)</td></tr>
+<tr><td>Green ammonia FOB Oman or Duqm price</td><td class="n">not found</td><td>none</td><td><span class="c">Gap</span></td></tr>
+<tr><td>Premium of SECI 641 over Tampa 645 (Nov 2026)</td><td class="n">about -1%</td><td>my arithmetic, 641 / 645 - 1</td><td><span class="c">Estimated</span></td></tr>
+<tr><td>Premium of SECI 641 over grey 515 (Mar 2025)</td><td class="n">about +25%</td><td>my arithmetic, 641 / 515 - 1</td><td><span class="c">Estimated</span></td></tr>
+</tbody></table>
+</div>
+<p class="note">Adversary sentence: India auction prices are delivered-to-Indian-fertiliser-plant, 10-year fixed, backed by a subsidy scheme, so they are not a cost of production and not a clean Oman fob price. Date conflict: the Ammonia Energy page carries a 1 Aug 2025 date but a fetch summary quoted a "29 July 2026" SECI post; pv magazine places the ACME award in July 2025, so 2025 is used.</p>
+
+<h3>CBAM coverage</h3>
+<p>Yes. The Commission states CBAM covers cement, iron and steel, aluminium, fertilisers, electricity and hydrogen and that "as of 1 January 2026, CBAM is applicable under its definitive regime" (src 23). The Commission's transitional default values table lists ammonia, CN 2814, at 2.68 direct plus 0.14 indirect, 2.82 tCO2e per tonne (src 24). <span class="c">Verified</span> For the definitive period, a Commission default-value package carries a 1% markup on fertiliser defaults and is set in Implementing Regulation 2025/2621, with a correction 2026/1740 published July 2026 (src 25, <span class="c">Reported</span>; I did not read the regulation text). Preliminary default costs run up to USD 196/t for US-origin ammonia against about USD 96/t for Trinidad (src 26, <span class="c">Reported</span>). Oman default value: not found. Platts clarified that CBAM costs are not in its existing CFR NW Europe assessment, and carries a separate CBAM-paid series (src 12, 27).</p>
+
+<h2>5. Scenario table for the simulator</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>Product</th><th class="n">Low</th><th class="n">Base</th><th class="n">High</th></tr></thead>
+<tbody>
+<tr><td><strong>Grey ammonia, USD/t</strong> (Middle East fob proxy)</td>
+<td class="n">300<br><span class="note">Argus 1Q26 ME fob forecast range 300 to 355, issued 2025, pre-war (src 14). <span class="c">Reported</span></span></td>
+<td class="n">585<br><span class="note">Tampa Nov 2026 645 (src 11) less the 60 ME discount seen on 25 Mar 2026 (615 vs 555, src 9). My arithmetic. <span class="c">Estimated</span></span></td>
+<td class="n">740<br><span class="note">Platts FOB Middle East, 16 Apr 2026 (src 9). <span class="c">Reported</span></span></td></tr>
+<tr><td><strong>Urea, Middle East, USD/t</strong></td>
+<td class="n">338<br><span class="note">World Bank 2024 annual average (src 1). <span class="c">Verified</span></span></td>
+<td class="n">420<br><span class="note">World Bank Oct 2026 monthly (src 2); Trading Economics 426 on 23 Nov (src 8). <span class="c">Verified</span></span></td>
+<td class="n">857<br><span class="note">World Bank Apr 2026 monthly peak (src 2). <span class="c">Verified</span></span></td></tr>
+<tr><td><strong>Green ammonia, USD/t</strong> (ACME sale price, if it clears like India)</td>
+<td class="n">591<br><span class="note">SECI NTPC award, Aug 2025 (src 18). <span class="c">Reported</span></span></td>
+<td class="n">641<br><span class="note">SECI ACME award, Jul 2025 (src 16, 17). <span class="c">Reported</span></span></td>
+<td class="n">1,153<br><span class="note">H2Global first tender (src 16). <span class="c">Reported</span></span></td></tr>
+<tr><td><strong>Driver: Brent, USD/bbl</strong></td>
+<td class="n">69<br><span class="note">World Bank 2025 average (src 1)</span></td>
+<td class="n">89<br><span class="note">Trading Economics 24 Nov 2026 (src 3)</span></td>
+<td class="n">125<br><span class="note">World Bank Oct 2026 monthly (src 2)</span></td></tr>
+</tbody></table>
+</div>
+<p class="note">Use note for the simulator: the urea base of 420 and the ammonia base of 585 sit after a spike, so a "peace" low (Argus 300, urea 338) and a "war" high (740, 857) bracket them. For OMIFCO, which ships to India under long-term offtake, the urea price is a reference not a realised price; the realised price is not found. Adversary sentence for the table: the ammonia base is built from a Tampa to Middle East spread observed on one day, so it could be off by tens of dollars; replace it if a Middle East fob print for Nov 2026 is found.</p>
+
+<h2>Confidence tags</h2>
+<table>
+<tbody>
+<tr><td><span class="c">Verified</span></td><td>Primary source read directly: World Bank Pink Sheet workbooks (urea, Brent, gas), USGS MCS PDFs (US Gulf ammonia), EC CBAM page and default values PDF, IEA page, Yara release (no price disclosed).</td></tr>
+<tr><td><span class="c">Reported</span></td><td>Credible secondary, to be upgraded: Platts and Argus figures quoted by S&amp;P and search summaries, HortiDaily, Fertilizer Daily, Ammonia Energy Association, pv magazine, Trading Economics.</td></tr>
+<tr><td><span class="c">Estimated</span></td><td>My arithmetic: unit conversions, 2026 averages, correlations, premiums, ME base price.</td></tr>
+<tr><td><span class="c">Gap</span></td><td>Annual Middle East, Tampa and NW Europe ammonia averages 2014 to 2025; any Nov 2026 Middle East ammonia fob print; Oman green ammonia price; Yara offtake price; published ammonia to gas correlation; Oman CBAM default value; OMIFCO realised urea price.</td></tr>
+</tbody></table>
+
+<h2>Sources annexure</h2>
+<ol class="src">
+<li>World Bank, Commodity Price Data annual nominal (Pink Sheet), updated 2 Sep 2026. https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Annual.xlsx (read 24 Nov 2026). The workbook cover also carries a comparison note on barley and sorghum mismatches; urea, Brent and gas columns were not among them.</li>
+<li>World Bank, Commodity Price Data monthly nominal, updated 3 Nov 2026. https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Historical-Data-Monthly.xlsx (read 24 Nov 2026). Landing page: https://www.worldbank.org/en/research/commodity-markets</li>
+<li>Trading Economics, Brent crude oil, as already recorded in the CIA deck note: https://tradingeconomics.com/commodity/brent-crude-oil (24 Nov 2026).</li>
+<li>USGS, Mineral Commodity Summaries 2026, Nitrogen (2021 to 2025e). https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-nitrogen.pdf (read 24 Nov 2026)</li>
+<li>USGS, Mineral Commodity Summaries 2021, Nitrogen (2016 to 2020e). https://pubs.usgs.gov/periodicals/mcs2021/mcs2021-nitrogen.pdf (read 24 Nov 2026)</li>
+<li>USGS, Mineral Commodity Summaries 2016, full volume, Nitrogen (Fixed)-Ammonia (2011 to 2015e). https://apps.usgs.gov/minerals-information-archives/mcs/mcs2016.pdf (read 24 Nov 2026)</li>
+<li>USGS, Minerals Yearbook 2019 Nitrogen, for context on 2019 prices. https://pubs.usgs.gov/myb/vol1/2019/myb1-2019-nitrogen.pdf</li>
+<li>Trading Economics, urea CFD benchmark, 426 USD/t on 23 Nov 2026. https://tradingeconomics.com/commodity/urea (read 24 Nov 2026)</li>
+<li>S&amp;P Global Platts via search summary: ammonia FOB Middle East and CFR Tampa 25 Mar 2026; FOB ME 16 Apr 2026; CFR NW Europe 30 Apr 2026. https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/050126-european-ammonia-price-stalls-as-market-awaits-tampa-settlement and https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/030626-european-ammonia-import-price-reaches-three-year-high-as-production-costs-soar (pages not opened; figures from search summaries, pages are paywalled)</li>
+<li>Fertilizer Daily, Tampa ammonia November 2026, 2 Nov 2026. https://www.fertilizerdaily.com/20261102-tampa-ammonia-november-2026/ (read 24 Nov 2026)</li>
+<li>HortiDaily, "Energy costs drive ammonia higher as weak demand pressures other fertilizer markets", 2 Nov 2026, citing Australian Fertilizer Corporation. https://www.hortidaily.com/article/9888212/energy-costs-drive-ammonia-higher-as-weak-demand-pressures-other-fertilizer-markets/ (read 24 Nov 2026)</li>
+<li>QCIntel (Quantum Commodity Intelligence), ammonia price assessments list; values require sign-in. https://qcintel.com/ammonia/all-prices (read 24 Nov 2026)</li>
+<li>S&amp;P Global, ammonia prices in India fall below prewar levels, 21 Aug 2026. https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/082126-ammonia-prices-in-india-fall-below-prewar-levels-on-weak-demand (blocked, headline only)</li>
+<li>Argus, Monthly Ammonia Outlook (2025 forecasts for 1Q26). https://view.argusmedia.com/rs/584-BUW-606/images/APAC-RSMT-FER-2025-10-01-SAM-FER-Fertilizer%20Campaign-Argus%20Monthly%20Ammonia%20Outlook.pdf?version=0 (from search summary, not opened)</li>
+<li>Argus, "Low US natgas prices help ammonia economics" (May 2024). https://www.argusmedia.com/en/news-and-insights/latest-market-news/2566315-low-us-natgas-prices-help-ammonia-economics (from search summary, not opened)</li>
+<li>Ammonia Energy Association, "ACME: $641 per ton for renewable ammonia in India", dated 1 Aug 2025. https://ammoniaenergy.org/articles/acme-641-per-ton-for-renewable-ammonia-in-india (read 24 Nov 2026)</li>
+<li>IEA, Breakthrough Agenda Report 2025, Fertilisers. https://www.iea.org/reports/breakthrough-agenda-report-2025/fertilisers (read 24 Nov 2026)</li>
+<li>pv magazine, "SECI sets new record with $0.59/kg green ammonia auction price", 5 Aug 2025. https://www.pv-magazine.com/2025/08/05/seci-sets-new-record-with-0-59-kg-green-ammonia-auction-price/ (read 24 Nov 2026)</li>
+<li>CEEW, green ammonia price analysis. https://www.ceew.in/node/4681 (403 on fetch; figures from a search summary only)</li>
+<li>Ammonia Energy Association, "Purchase agreements signed with Indian renewable ammonia auction winners", 14 Apr 2026. https://ammoniaenergy.org/articles/purchase-agreements-signed-with-indian-renewable-ammonia-auction-winners/ (read 24 Nov 2026)</li>
+<li>World Economic Forum, Ammonia industry net-zero tracker 2023. https://www.weforum.org/publications/net-zero-industry-tracker-2023/ammonia-industry-net-zero-tracker (from search summary, not opened)</li>
+<li>Yara, "Yara and ACME signed a binding agreement for supply of green ammonia", 1 Mar 2024. https://www.yara.com/corporate-releases/yara-and-acme-signed-a-binding-agreement-for-supply-of-green-ammonia/ (read 24 Nov 2026)</li>
+<li>European Commission, CBAM page. https://taxation-customs.ec.europa.eu/carbon-border-adjustment-mechanism_en (read 24 Nov 2026)</li>
+<li>European Commission DG TAXUD, Default values for the transitional period of the CBAM, 22 Dec 2023. https://taxation-customs.ec.europa.eu/system/files/2023-12/Default%20values%20transitional%20period.pdf (read 24 Nov 2026; ammonia row, CN 2814, section 2.4)</li>
+<li>S&amp;P Global, fertilizer goods gain lower markups to default values, 17 Dec 2025. https://www.spglobal.com/energy/en/news-research/latest-news/fertilizers/121725-fertilizer-goods-gain-lower-markups-to-default-values-to-curb-price-increases-ec (from search summary, not opened)</li>
+<li>Argus, "CBAM documents outline preliminary ammonia values". https://www.argusmedia.com/en/news-and-insights/latest-market-news/2766788-cbam-documents-outline-preliminary-ammonia-values (from search summary, not opened)</li>
+<li>S&amp;P Platts subscriber note, CBAM costs not reflected in CFR NW Europe ammonia assessments, 17 Nov 2025. https://www.spglobal.com/energy/en/pricing-benchmarks/our-methodology/subscriber-notes/111725-platts-clarifies-cbam-costs-will-not-be-reflected-in-existing-cfr-northwest-europe-ammonia-assessments (from search summary, not opened)</li>
+</ol>
+</main>
+</body>
+</html>

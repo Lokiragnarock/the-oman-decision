@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>P3 Payments and treasury route</title>
+<style>
+  :root { --ink:#111; --mute:#555; --line:#ddd; --bg:#fff; --soft:#f6f6f6; --g:#1a7f37; --y:#b08800; --r:#c0392b; --b:#6b6b6b; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height:1.5; font-size:15px; }
+  main { max-width: 1080px; margin: 0 auto; padding: 40px 24px 80px; }
+  .kicker { color:var(--mute); font-size:13px; letter-spacing:.02em; margin:0 0 8px; }
+  h1 { font-size:28px; line-height:1.25; margin:0 0 12px; }
+  h2 { font-size:20px; margin:44px 0 12px; padding-top:16px; border-top:1px solid var(--line); }
+  h3 { font-size:16px; margin:28px 0 8px; }
+  p { margin:0 0 10px; }
+  .lede { font-size:17px; color:#222; max-width:860px; }
+  ol.findings { padding-left:22px; }
+  ol.findings li { margin:0 0 14px; }
+  ol.findings li b { display:block; font-size:16px; }
+  table { width:100%; border-collapse:collapse; margin:10px 0 18px; font-size:13px; }
+  th, td { text-align:left; vertical-align:top; padding:8px 8px; border-bottom:1px solid var(--line); }
+  th { background:var(--soft); font-weight:600; }
+  td.leg { width:13%; font-weight:600; }
+  .tag { display:inline-block; font-size:11px; font-weight:600; padding:1px 7px; border-radius:10px; border:1px solid currentColor; white-space:nowrap; }
+  .tag.g { color:var(--g); } .tag.y { color:var(--y); } .tag.r { color:var(--r); } .tag.b { color:var(--b); }
+  .nf { color:var(--r); font-style:italic; }
+  .box { background:var(--soft); border:1px solid var(--line); padding:12px 14px; border-radius:6px; margin:12px 0; }
+  .small { font-size:12.5px; color:var(--mute); }
+  svg { width:100%; height:auto; border:1px solid var(--line); border-radius:6px; background:#fff; }
+  svg text { font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  a { color:#0b57d0; text-decoration:none; word-break:break-word; } a:hover { text-decoration:underline; }
+  ul { margin:6px 0 12px; padding-left:20px; }
+  .annex li { margin-bottom:4px; font-size:13px; }
+  .scroll { overflow-x:auto; }
+  @media (max-width:640px){ main{padding:24px 16px 60px;} h1{font-size:23px;} }
+  @media print { main{max-width:none; padding:0;} h2{break-after:avoid;} tr{break-inside:avoid;} }
+</style>
+</head>
+<body>
+<main>
+
+<p class="kicker">Tangent T6 · Packet P3 · Feeds C3, C4</p>
+<h1>Payments and treasury route: money leaves Oman untaxed, so the constraint on both candidates sits on the Indian side</h1>
+<p class="lede">Oman charges 0% withholding tax on dividends and interest paid to non-residents and has no exchange controls on profit or capital repatriation. The binding rules are India's: outbound financial commitment capped at 400% of the investor's net worth, and a 90-day repatriation clock. For ACME the open question is currency and borrower of the REC loan. For OMIFCO the Indian partners no longer sell the urea, so their only recurring cash leg is the dividend.</p>
+<p class="small">Compiled 24 Nov 2026 (as-of date for every fetch below unless a source date is given). Sources are numbered [S1] to [S31] and linked in the annexure. Reused from the deck note: company candidates, CEPA dates, CBO and RBI repo rates, USD/OMR. Everything else is new.</p>
+
+<h2>Five findings</h2>
+<ol class="findings">
+  <li><b>1. Oman does not tax the way money comes home.</b>
+  A royal directive of 11 January 2023 indefinitely suspended the 10% withholding tax on dividends and interest paid to non-residents, so the effective Oman rate is 0% against a treaty ceiling of 10% or 12.5% on dividends and 10% on interest [S3][S4]. Royalties, technical fees and management fees still carry 10% [S3]. Deloitte states there are no exchange controls on inbound or outbound investment or on repatriation of capital or profits [S3]. The directive text is not public, so the suspension rests on adviser reports. <span class="tag y">REPORTED</span></li>
+  <li><b>2. India's ceiling is 400% of net worth, and ACME phases 2 and 3 are the test.</b>
+  Total financial commitment (equity, debt, guarantees) in all foreign entities may not exceed 400% of the Indian entity's net worth on its last audited balance sheet, above which prior approval is needed [S1]. Dues must be repatriated within 90 days of falling due, and the annual performance report is due by 31 December [S2]. Phases 2 and 3 are reported at OMR 1.6bn (USD 4.2bn) [S13]. ACME's net worth was not found in this packet, so headroom is untested. <span class="tag g">VERIFIED rule</span> <span class="tag b">GAP net worth</span></li>
+  <li><b>3. ACME's phase 1 debt is Indian, and the sources disagree on its currency.</b>
+  REC Limited closed about INR 40bn (about USD 488m) on 21 July 2023 [S9]. Zawya instead reports USD 540m of funding against a project of about USD 750m (about 72%, which the article calls 75%), with USD 140m first received, from "international institutions" [S11]. Tenor, rate and borrower entity are not found. No Omani bank is named as a lender to ACME. <span class="tag y">REPORTED</span> <span class="tag b">GAP terms</span></li>
+  <li><b>4. OMIFCO's Indian owners are dividend receivers, not buyers.</b>
+  OQ Trading buys 100% of OMIFCO's exported urea (about 2 mtpa) FOB at Sur, at a 3.0% to 3.5% discount to Middle East FOB netback indices, under an agreement running 1 Aug 2026 to 20 Feb 2031. About 1 mtpa goes on to the Government of India [S16]. IFFCO and KRIBHCO receive OMR dividends: base OMR 71.2m plus special OMR 9.6m for FY2026, then the higher of 90% of net profit or 3% growth for 2027 and 2028 [S14][S15]. The IPO paid OMR 261m to the selling shareholders [S14]. <span class="tag g">VERIFIED company release</span></li>
+  <li><b>5. The tax shield and the treaty cover are both less certain than they look.</b>
+  Duqm's 2015 rules give a 30-calendar-year income tax exemption or the lease term, whichever is closer, on licensed zone income [S6]. Law 38/2025 gives 10 years, renewable twice, and lets existing Duqm enterprises keep current privileges until their periods end [S7]. Which regime the June 2026 phase 2 and 3 agreement sits under is not found. The 1997 India-Oman BIT was terminated on 22 March 2017 [S23], and the CEPA text on transfers of funds was not located [S24]. <span class="tag y">REPORTED</span> <span class="tag b">GAP</span></li>
+</ol>
+
+<h2>1. ACME Group, Duqm green ammonia (phase 1 funded, phases 2 and 3 announced)</h2>
+<p class="small">Phase 1: 100,000 t/yr green ammonia, about USD 750m project cost [S11], Yara binding offtake of 100,000 t/yr, operations expected Q1 2027 [S11]. Phases 2 and 3: 400 kt/yr each, OMR 1.6bn (USD 4.2bn) total, commercial operation 2030 and 2033, financing and offtake not disclosed [S13]. The borrower entity (Indian parent or Oman entity) is not stated in any source read.</p>
+<div class="scroll">
+<table>
+<thead><tr><th>Leg</th><th>Flow and counterparty</th><th>Currency</th><th>Rule</th><th>Tax</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td class="leg">A1 Equity out of India</td>
+<td>ACME Group (India) to Oman project entity. Equity amount: <span class="nf">not found</span>.</td>
+<td>INR sold for USD or OMR through an authorised dealer bank. Settlement currency: <span class="nf">not found</span>.</td>
+<td>Overseas Investment Rules 2022: all financial commitment capped at 400% of net worth (Schedule I para 3(1)) [S1]. Report at remittance (Reg 10(2)(1)); annual performance report by 31 Dec (Reg 10(4)); share evidence within 6 months (Reg 9(1)) [S2]. ACME net worth: <span class="nf">not found</span>.</td>
+<td>Indian tax on the outward remittance: <span class="nf">not found</span>. Oman tax on capital inflow: <span class="nf">not found</span>.</td>
+<td><span class="tag g">VERIFIED</span> rule<br><span class="tag b">GAP</span> amounts</td></tr>
+
+<tr><td class="leg">A2 Debt in</td>
+<td>REC Limited (India) about INR 40bn / USD 488m, 21 Jul 2023 [S9]. Other reports: USD 490m [S12], about USD 500m [S10]; USD 540m of about USD 750m, lender "international institutions", USD 140m first instalment [S11]. Omani bank lender: <span class="nf">not found</span>.</td>
+<td>INR per [S9]; USD per [S11]. <b>Conflict, both shown.</b></td>
+<td>If the borrower is the Oman entity: an Indian entity may lend to a foreign entity only if eligible for ODI, already holding ODI in it with control, under a loan agreement with arm's length interest (Reg 3(1), Reg 4), and the loan counts toward the 400% limit [S2]. Whether the OI Regulations cover a lender such as REC, or ECB rules apply instead: <span class="nf">not found</span>. Tenor and rate: <span class="nf">not found</span>.</td>
+<td>Oman withholding tax on interest to non-residents: 0% (suspended 11 Jan 2023); treaty ceiling 10% [S3][S4]. Oman deductibility of the interest: <span class="nf">not found</span>.</td>
+<td><span class="tag y">REPORTED</span> amount<br><span class="tag b">GAP</span> terms</td></tr>
+
+<tr><td class="leg">A3 Revenue in</td>
+<td>Yara (Norway): binding long-term offtake of 100,000 t/yr, phase 1, start Q1 2027 [S11]. Phases 2 and 3 offtake: not disclosed [S13].</td>
+<td><span class="nf">Not found.</span> Pricing basis <span class="nf">not found</span>.</td>
+<td>Oman: no exchange controls on repatriation [S3]. IMF: Oman accepts IMF Article VIII, Sections 2(a), 3 and 4 [S8].</td>
+<td>Duqm income tax exemption: 30 calendar years or lease or usufruct term, whichever is closer, from start of activity, by Minister's decision, on licensed zone income only (Decision 236/2015, Arts 4 to 6) [S6]. Law 38/2025: 10 years, renewable twice; existing Duqm enterprises keep privileges until their periods expire [S7]. Regime for phases 2 and 3: <span class="nf">not found</span>. Standard Oman rate if no exemption: 15% [S3].</td>
+<td><span class="tag g">VERIFIED</span> exemption text<br><span class="tag y">REPORTED</span> new law</td></tr>
+
+<tr><td class="leg">A4 Local costs</td>
+<td>Land: land use agreement for phases 2 and 3 signed with OPAZ, May 2025, fee <span class="nf">not found</span> [S25]. Wages, utilities, services in Oman. Electrolyser supplier Shuangliang (80 MW, phase 1) [S13].</td>
+<td>OMR for Oman costs (pegged at RO 1 = USD 2.6008 [S8]). Equipment currency: <span class="nf">not found</span>.</td>
+<td>No Oman exchange control on payments [S3]. 100% foreign ownership and Hydrom framework: <span class="nf">terms not found</span>.</td>
+<td>Customs exempt on goods used to build and operate zone enterprises, and on zone exports (Law 38/2025) [S7]. VAT: <span class="nf">not found</span>.</td>
+<td><span class="tag y">REPORTED</span></td></tr>
+
+<tr><td class="leg">A5 Debt service</td>
+<td>Oman entity (or ACME) to REC.</td>
+<td>Same as A2.</td>
+<td>Dues repatriated within 90 days of falling due (Reg 9(4)) [S2].</td>
+<td>Oman withholding tax on interest: 0% effective [S3][S4].</td>
+<td><span class="tag y">REPORTED</span></td></tr>
+
+<tr><td class="leg">A6 Profit home</td>
+<td>Oman entity dividends to ACME Group (India).</td>
+<td>OMR, then USD, then INR. Under the peg the exposure is USD/INR.</td>
+<td>No exchange controls on capital or profit repatriation [S3]. SEZAD lists 100% repatriation of capital and profit as an incentive [S26, snippet only]. India: 90-day repatriation of dues (Reg 9(4)) [S2].</td>
+<td>Oman withholding tax on dividends to non-residents: 0% (suspended) vs treaty 10% (holding of at least 10%) or 12.5% [S4]; one source gives a flat 12.5% [S27]. India: foreign dividend forms part of an Indian company's taxable income; relief by foreign tax credit under sections 90 and 91 [S22]; the section 80M deduction is described as covering foreign-company dividends by the Tax Department text [S21] but as domestic-only by one adviser [S22]: <b>conflict</b>. Applicable Indian rate for ACME: <span class="nf">not found</span>.</td>
+<td><span class="tag y">REPORTED</span><br><span class="tag b">GAP</span> Indian rate</td></tr>
+
+<tr><td class="leg">A7 Fees and royalties</td>
+<td>Oman entity to ACME parent for management, technical services or IP.</td>
+<td>Contract currency: <span class="nf">not found</span>.</td>
+<td>Transfer pricing rule applies (arm's length) [S3].</td>
+<td>Oman withholding tax 10% on royalties, technical and management fees [S3]. India-Oman treaty 10% on royalties and fees for technical services, cut from 15% by the 2025 protocol, applying in India from tax year 2026-27 [S5][S4].</td>
+<td><span class="tag y">REPORTED</span></td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Cash-flow diagram spec: ACME (slide-ready)</h3>
+<svg viewBox="0 0 940 400" role="img" aria-label="ACME cash flow diagram">
+  <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+  <rect x="30" y="40" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="125" y="68" text-anchor="middle" font-size="14" font-weight="600">ACME Group</text><text x="125" y="88" text-anchor="middle" font-size="12">India, parent</text>
+  <rect x="30" y="250" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="125" y="278" text-anchor="middle" font-size="14" font-weight="600">REC Limited</text><text x="125" y="298" text-anchor="middle" font-size="12">India, lender</text>
+  <rect x="370" y="140" width="210" height="84" rx="6" fill="#fff" stroke="#111" stroke-width="2"/><text x="475" y="170" text-anchor="middle" font-size="14" font-weight="600">Oman project entity</text><text x="475" y="190" text-anchor="middle" font-size="12">Duqm SEZAD, OMR economy</text><text x="475" y="208" text-anchor="middle" font-size="12">borrower entity: not found</text>
+  <rect x="730" y="40" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="825" y="68" text-anchor="middle" font-size="14" font-weight="600">Yara</text><text x="825" y="88" text-anchor="middle" font-size="12">buyer, 100,000 t/yr</text>
+  <rect x="730" y="165" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="825" y="193" text-anchor="middle" font-size="14" font-weight="600">Oman suppliers, OPAZ</text><text x="825" y="213" text-anchor="middle" font-size="12">land, labour, utilities</text>
+  <rect x="730" y="290" width="190" height="64" rx="6" fill="#fff" stroke="#999" stroke-dasharray="5 4"/><text x="825" y="318" text-anchor="middle" font-size="14" fill="#555">Omani banks</text><text x="825" y="338" text-anchor="middle" font-size="12" fill="#c0392b">no lending found</text>
+  <line x1="220" y1="82" x2="370" y2="150" stroke="#111" marker-end="url(#ar)"/><text x="232" y="106" font-size="11">A1 equity, INR to USD/OMR</text>
+  <line x1="220" y1="282" x2="370" y2="215" stroke="#111" marker-end="url(#ar)"/><text x="232" y="262" font-size="11">A2 loan, INR or USD (conflict)</text>
+  <line x1="370" y1="228" x2="220" y2="295" stroke="#555" stroke-dasharray="4 3" marker-end="url(#ar)"/><text x="232" y="318" font-size="11">A5 debt service, WHT 0%</text>
+  <line x1="370" y1="160" x2="220" y2="100" stroke="#555" stroke-dasharray="4 3" marker-end="url(#ar)"/><text x="262" y="132" font-size="11">A6 dividend, WHT 0%, INR</text>
+  <line x1="730" y1="85" x2="580" y2="150" stroke="#111" marker-end="url(#ar)"/><text x="610" y="105" font-size="11">A3 sales, currency not found</text>
+  <line x1="580" y1="195" x2="730" y2="195" stroke="#111" marker-end="url(#ar)"/><text x="595" y="187" font-size="11">A4 costs, OMR</text>
+  <line x1="580" y1="220" x2="730" y2="310" stroke="#bbb" stroke-dasharray="3 4"/>
+  <text x="470" y="385" text-anchor="middle" font-size="11" fill="#555">Tax shield at the Oman entity: Duqm income tax exemption (30 years or lease, or 10 years renewable under Law 38/2025). Cap on India side: 400% of net worth.</text>
+</svg>
+<div class="scroll">
+<table>
+<thead><tr><th>Arrow</th><th>From</th><th>To</th><th>Currency</th><th>Rule</th><th>Tax</th></tr></thead>
+<tbody>
+<tr><td>A1</td><td>ACME Group</td><td>Oman entity</td><td>INR to USD or OMR</td><td>ODI automatic route within 400% of net worth; report at remittance</td><td>Indian tax: not found</td></tr>
+<tr><td>A2</td><td>REC Limited</td><td>Borrower (not stated)</td><td>INR [S9] or USD [S11]</td><td>Loan agreement, arm's length interest, counts to 400%</td><td>Oman WHT on interest 0%</td></tr>
+<tr><td>A3</td><td>Yara</td><td>Oman entity</td><td>not found</td><td>No Oman exchange control</td><td>Duqm exemption on zone income</td></tr>
+<tr><td>A4</td><td>Oman entity</td><td>Suppliers, OPAZ</td><td>OMR</td><td>No Oman exchange control</td><td>Customs exempt in zone</td></tr>
+<tr><td>A5</td><td>Oman entity</td><td>REC Limited</td><td>As A2</td><td>Repatriate dues in 90 days</td><td>WHT 0% (treaty ceiling 10%)</td></tr>
+<tr><td>A6</td><td>Oman entity</td><td>ACME Group</td><td>OMR to USD to INR</td><td>No Oman exchange control; 90-day rule</td><td>Oman WHT 0%; India: taxable, credit under ss. 90 and 91</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>2. IFFCO and KRIBHCO in OMIFCO, Sur</h2>
+<p class="small">OMIFCO (Oman India Fertiliser Company SAOG) makes ammonia and granular urea at Sur, listed on the Muscat Stock Exchange on 8 July 2026 [S14]. Before the IPO: OQ 50%, IFFCO 25%, KRIBHCO 25% (deck note). Post-IPO stakes: <span class="nf">not found</span>. Production: 1.65 mt urea plus 0.25 mt ammonia (deck note, KRIBHCO page) against about 2 mtpa exported urea implied by [S16]: <b>conflict</b>, not reconciled.</p>
+<div class="scroll">
+<table>
+<thead><tr><th>Leg</th><th>Flow and counterparty</th><th>Currency</th><th>Rule</th><th>Tax</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td class="leg">O1 Equity out of India</td>
+<td>IFFCO and KRIBHCO, 25% each, historic. Project company of USD 969m reported at the 2001 offtake announcement [S28, snippet only]. Current equity and original outlay: <span class="nf">not found</span>.</td>
+<td>Not found.</td>
+<td>Today's Overseas Investment Rules and Regulations apply to any new commitment or restructuring (Reg 10(2)(3): report within 30 days) [S2]. Net worth test for the two cooperatives: <span class="nf">not found</span>.</td>
+<td><span class="nf">Not found.</span></td>
+<td><span class="tag y">REPORTED</span><br><span class="tag b">GAP</span></td></tr>
+
+<tr><td class="leg">O2 Debt in</td>
+<td>OMIFCO borrowings and lenders: <span class="nf">not found</span> (IPO coverage does not mention debt [S15]). Omani bank lending to OMIFCO: <span class="nf">not found</span>.</td>
+<td>Not found.</td>
+<td>Not found.</td>
+<td>Oman WHT on interest to non-residents 0% [S3] (if any foreign debt exists).</td>
+<td><span class="tag b">GAP</span></td></tr>
+
+<tr><td class="leg">O3 Revenue in</td>
+<td>OQ Trading buys 100% of exported urea, about 2 mtpa, FOB OMIFCO jetty, ownership passes at loading. Agreement signed 9 Jul 2026, effective 1 Aug 2026, valid to 20 Feb 2031, volumes set each Q4 [S16]. Back to back, about 1 mtpa goes to the Government of India [S16][S17]. Earlier Government of India offtake was unlikely to extend beyond 14 Jul 2020 [S29, snippet only].</td>
+<td>Not stated in [S16] or [S17]. Company reports in OMR with USD equivalents [S14].</td>
+<td>Pricing: OQ Trading pays a discount of 3.0% to 3.5% to selected Middle East FOB netback indices. India volumes use the average Middle East FOB non-US netback over the two weeks before the bill of lading date [S16]. No Oman exchange control [S3].</td>
+<td>Oman corporate tax 15% [S3]; manufacturing activities may get a 5-year non-renewable exemption [S3]. OMIFCO's actual tax status: <span class="nf">not found</span>. 2025 revenue USD 802.3m, EBITDA margin 50.6%, net margin 40.0% [S30]; H1 2026 net profit OMR 80.22m [S30].</td>
+<td><span class="tag y">REPORTED</span></td></tr>
+
+<tr><td class="leg">O4 Local costs</td>
+<td>Natural gas from Integrated Gas Company, "competitively priced" [S15]. Wages and services in Oman.</td>
+<td>Gas price and currency: <span class="nf">not found</span>. Local costs OMR.</td>
+<td>No Oman exchange control [S3].</td>
+<td>Not found.</td>
+<td><span class="tag b">GAP</span></td></tr>
+
+<tr><td class="leg">O5 Debt service</td>
+<td>Not found.</td>
+<td>Not found.</td>
+<td>Not found.</td>
+<td>Not found.</td>
+<td><span class="tag b">GAP</span></td></tr>
+
+<tr><td class="leg">O6 Dividend home</td>
+<td>FY2026 base OMR 71.2m (USD 185m), two equal instalments Sep 2026 and Apr 2027, plus special OMR 9.6m (USD 25.0m), total OMR 80.8m, of which OMR 45.2m due by Sep 2026 [S14]. 2027 and 2028: higher of 90% of net profit or 3% compound growth on the 2026 base [S30]. Pre-IPO 25% share of OMR 80.8m is OMR 20.2m per partner (own arithmetic, ceiling only since both partners sold shares).</td>
+<td>OMR, then USD, then INR.</td>
+<td>No exchange controls on profit repatriation [S3]. India: repatriate within 90 days (Reg 9(4)) [S2].</td>
+<td>Oman WHT on dividends to non-residents from a joint stock company: 0% (suspended) [S3]; treaty ceiling 10% or 12.5% [S4]. India: foreign dividend taxable; credit under ss. 90 and 91 [S22]. Rate for a multi-state cooperative society: <span class="nf">not found</span>.</td>
+<td><span class="tag g">VERIFIED</span> dividend plan<br><span class="tag b">GAP</span> Indian rate</td></tr>
+
+<tr><td class="leg">O7 Exit proceeds (IPO)</td>
+<td>1,672,243,750 shares (about 25%) at 156 baisa, gross about OMR 261m (USD 678m), all to selling shareholders OQ, IFFCO and KRIBHCO; book 18.0 times covered [S14]. Split between sellers: <span class="nf">not found</span>.</td>
+<td>OMR.</td>
+<td>Report disinvestment within 30 days of proceeds (Reg 10(2)(2)); repatriate within 90 days (Reg 9(4)) [S2].</td>
+<td>Oman: gains on locally listed shares are exempt for corporate taxpayers [S3]; application to non-resident sellers: <span class="nf">not found</span>. India: <span class="nf">not found</span>.</td>
+<td><span class="tag g">VERIFIED</span> proceeds<br><span class="tag b">GAP</span> tax</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Cash-flow diagram spec: IFFCO and KRIBHCO via OMIFCO (slide-ready)</h3>
+<svg viewBox="0 0 940 400" role="img" aria-label="OMIFCO cash flow diagram">
+  <defs><marker id="ar2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#111"/></marker></defs>
+  <rect x="30" y="140" width="200" height="84" rx="6" fill="#f6f6f6" stroke="#111"/><text x="130" y="170" text-anchor="middle" font-size="14" font-weight="600">IFFCO and KRIBHCO</text><text x="130" y="190" text-anchor="middle" font-size="12">India, 25% each pre-IPO</text><text x="130" y="208" text-anchor="middle" font-size="12">post-IPO stake: not found</text>
+  <rect x="370" y="140" width="210" height="84" rx="6" fill="#fff" stroke="#111" stroke-width="2"/><text x="475" y="170" text-anchor="middle" font-size="14" font-weight="600">OMIFCO, Sur</text><text x="475" y="190" text-anchor="middle" font-size="12">SAOG, listed MSX 8 Jul 2026</text><text x="475" y="208" text-anchor="middle" font-size="12">OQ holds the other 50% pre-IPO</text>
+  <rect x="730" y="40" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="825" y="68" text-anchor="middle" font-size="14" font-weight="600">OQ Trading</text><text x="825" y="88" text-anchor="middle" font-size="12">buys 100% of exports FOB</text>
+  <rect x="730" y="150" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="825" y="178" text-anchor="middle" font-size="14" font-weight="600">Government of India</text><text x="825" y="198" text-anchor="middle" font-size="12">about 1 mtpa back to back</text>
+  <rect x="730" y="265" width="190" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="825" y="293" text-anchor="middle" font-size="14" font-weight="600">Integrated Gas Co, staff</text><text x="825" y="313" text-anchor="middle" font-size="12">gas and local costs</text>
+  <rect x="370" y="300" width="210" height="64" rx="6" fill="#f6f6f6" stroke="#111"/><text x="475" y="328" text-anchor="middle" font-size="14" font-weight="600">MSX investors</text><text x="475" y="348" text-anchor="middle" font-size="12">bought 25% at 156 baisa</text>
+  <line x1="730" y1="75" x2="580" y2="150" stroke="#111" marker-end="url(#ar2)"/><text x="605" y="100" font-size="11">O3 cash, 3.0 to 3.5% off FOB netback</text>
+  <line x1="825" y1="104" x2="825" y2="150" stroke="#555" stroke-dasharray="4 3" marker-end="url(#ar2)"/><text x="835" y="132" font-size="11">urea</text>
+  <line x1="580" y1="215" x2="730" y2="285" stroke="#111" marker-end="url(#ar2)"/><text x="595" y="262" font-size="11">O4 costs, OMR</text>
+  <line x1="370" y1="182" x2="230" y2="182" stroke="#111" marker-end="url(#ar2)"/><text x="244" y="172" font-size="11">O6 dividend, OMR, WHT 0%</text>
+  <line x1="475" y1="300" x2="260" y2="222" stroke="#555" stroke-dasharray="4 3" marker-end="url(#ar2)"/><text x="262" y="268" font-size="11">O7 sale proceeds OMR 261m (all sellers)</text>
+  <text x="470" y="385" text-anchor="middle" font-size="11" fill="#555">India side: repatriate dues in 90 days; report disinvestment in 30 days. Oman side: no exchange controls, WHT on dividends suspended.</text>
+</svg>
+<div class="scroll">
+<table>
+<thead><tr><th>Arrow</th><th>From</th><th>To</th><th>Currency</th><th>Rule</th><th>Tax</th></tr></thead>
+<tbody>
+<tr><td>O3</td><td>OQ Trading</td><td>OMIFCO</td><td>not stated</td><td>FOB Sur; discount 3.0 to 3.5% to Middle East netback; term to 20 Feb 2031</td><td>Oman corporate tax 15% unless exempt (status not found)</td></tr>
+<tr><td>O4</td><td>OMIFCO</td><td>Gas supplier, staff</td><td>OMR (gas not found)</td><td>No Oman exchange control</td><td>Not found</td></tr>
+<tr><td>O6</td><td>OMIFCO</td><td>IFFCO, KRIBHCO</td><td>OMR to USD to INR</td><td>No Oman exchange control; 90-day repatriation</td><td>Oman WHT 0%; India taxable, credit under ss. 90 and 91</td></tr>
+<tr><td>O7</td><td>MSX investors</td><td>OQ, IFFCO, KRIBHCO</td><td>OMR</td><td>Report in 30 days, repatriate in 90 days</td><td>Oman: not found for non-residents; India: not found</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>3. Cross-cutting rules</h2>
+<h3>India outbound: Overseas Investment Rules 2022 and RBI Regulations</h3>
+<ul>
+  <li>Financial commitment is ODI plus debt other than portfolio investment plus non-fund-based facilities such as guarantees (Rule 2(1)(f)) [S1].</li>
+  <li>Cap: 400% of net worth on the last audited balance sheet (Schedule I para 3(1)); Rule 9(3) lets RBI set aggregate ceilings; above the limit needs prior approval [S1]. Net worth takes the Companies Act 2013 meaning [S1].</li>
+  <li>Performance guarantees count at 50% toward the limit (Reg 5(6)); guarantees cannot be open-ended (Reg 5(3)) [S2].</li>
+  <li>Indian entity lending to a foreign entity: must be ODI-eligible, already hold ODI in the borrower and control it, use a loan agreement with arm's length interest (Reg 3(1), Reg 4) [S2].</li>
+  <li>Reporting: financial commitment at remittance (Reg 10(2)(1)); disinvestment and restructuring within 30 days; annual performance report by 31 December (Reg 10(4)). Repatriation of dues within 90 days (Reg 9(4)) [S2].</li>
+  <li>How REC, as an NBFC lender, is treated when lending abroad: <span class="nf">not found</span> in the Master Direction text read.</li>
+</ul>
+<h3>Tax rates, side by side</h3>
+<div class="scroll">
+<table>
+<thead><tr><th>Item</th><th>Rate or rule</th><th>Source</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td>Oman corporate income tax</td><td>15% standard; 3% small companies; 55% petroleum sales; branch tax 15%; capital gains 15%; losses carried forward 5 years</td><td>[S3]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Oman withholding tax, dividends and interest to non-residents</td><td>10% statutory, indefinitely suspended by royal directive of 11 Jan 2023, so 0%. KPMG notes the directive is not public [S31]</td><td>[S3][S4][S31]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Oman withholding tax, royalties, technical and management fees</td><td>10%</td><td>[S3]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>India-Oman treaty (as amended by 2025 protocol)</td><td>Dividends 10% (holding of at least 10%) or 12.5%; interest 10%; royalties 10%; services 10%. Royalties and fees cut from 15% to 10%; protocol in force 28 May 2025, effective in India from tax year 2026-27. Cleartax gives dividends flat 12.5% [S27]</td><td>[S4][S5][S27]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Oman Pillar Two</td><td>15% minimum tax and income inclusion rule for groups of at least EUR 750m revenue; executive regulations pending</td><td>[S3]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Duqm SEZAD</td><td>30 calendar years or lease term, whichever is closer; licensed zone income only; excludes banks, financial institutions, insurers, telecoms and road transport unless permanently registered in the zone. New law: 10 years, renewable twice, existing zone enterprises grandfathered</td><td>[S6][S7]</td><td><span class="tag g">VERIFIED</span> 2015<br><span class="tag y">REPORTED</span> 2025</td></tr>
+<tr><td>Indian tax on foreign dividends</td><td>Included in the Indian company's income; foreign tax credit under ss. 90 and 91; deduction conflict noted above; Finance Act 2026 bars interest deduction against dividend income [S20]. Applicable rate: <span class="nf">not found</span></td><td>[S20][S21][S22]</td><td><span class="tag y">REPORTED</span><br><span class="tag b">GAP</span> rate</td></tr>
+</tbody>
+</table>
+</div>
+
+<h3>Repatriation and capital controls</h3>
+<ul>
+  <li>Deloitte (2026): no exchange controls on inbound or outbound investment or on repatriation of capital or profits, though administrative procedures apply [S3]. <span class="tag y">REPORTED</span></li>
+  <li>IMF Article IV staff report (as of 18 Nov 2025): Oman accepts Article VIII, Sections 2(a), 3 and 4; the document does not discuss capital account controls; peg RO 1 = USD 2.6008 [S8]. <span class="tag g">VERIFIED</span></li>
+  <li>IMF AREAER Oman country chapter: <span class="nf">not found</span>, so the formal controls statement is not read at source.</li>
+</ul>
+
+<h3>India-Oman CEPA (signed 18 Dec 2025, in force 1 Jun 2026)</h3>
+<ul>
+  <li>Oman commits across 127 service sub-sectors; 100% FDI by Indian companies in major services sectors through commercial presence; intra-corporate transferee ceiling raised from 20% to 50%; contractual service suppliers' stay raised from 90 days to 2 years, extendable by 2 [S18]. <span class="tag y">REPORTED</span></li>
+  <li>Whether the CEPA has an investment chapter with a free-transfer article: sources conflict. Khaitan lists investment among covered areas [S18]; a TaxTMI summary mentions free transfer of investment-related funds [S24]; the WTI contents page read lists 16 chapters and no investment chapter, and cross-lists the separate 1997 BIT [S24]. Article text on transfers: <span class="nf">not found</span>.</li>
+  <li>The 1997 India-Oman BIT was terminated on 22 March 2017 at India's request, entered into force 13 Oct 2000 [S23, snippet only]. For an Indian investor at Duqm, dedicated bilateral investment protection therefore rests on the CEPA text, not on a BIT. <span class="tag r">ESTIMATED</span> reading</li>
+  <li>The CEPA's concrete gains read as services and mobility. A manufacturing and export project such as ACME or OMIFCO gains little from them directly. <span class="tag r">ESTIMATED</span> reading</li>
+</ul>
+
+<h2>4. Local borrowing option</h2>
+<div class="scroll">
+<table>
+<thead><tr><th>Item</th><th>Finding</th><th>Source</th><th>Tag</th></tr></thead>
+<tbody>
+<tr><td>Average rate on total bank loans, Aug 2026</td><td>5.323%, down from 5.492%. Total loans and financing RO 38.806bn, up 13.8% y/y</td><td>[S19]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Weighted average rate on OMR loans</td><td>5.327% in May 2026 (from 5.551%); 5.331% reported for June (from 5.487%)</td><td>[S32, snippet only]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Policy rates for context</td><td>CBO repo 4.50% after a 25 bp rise, first since July 2023 [S33, snippet only]; RBI repo 5.50% (deck note, Trading Economics 24 Nov 2026)</td><td>[S33]</td><td><span class="tag y">REPORTED</span></td></tr>
+<tr><td>Private sector credit growth</td><td>5.7% y/y at Sep 2025; banks' net foreign assets positive but uneven across banks; total external debt 58.2% of GDP (2025)</td><td>[S8]</td><td><span class="tag g">VERIFIED</span></td></tr>
+<tr><td>USD loan pricing in Oman, project finance terms in OMR vs USD</td><td><span class="nf">Not found.</span> Only system averages located; no corporate or project-finance quote.</td><td>none</td><td><span class="tag b">GAP</span></td></tr>
+<tr><td>Omani bank lending to ACME</td><td><span class="nf">Not found.</span> Phase 1 lender reported as REC [S9]; Zawya says "international institutions" [S11]; no Omani bank named in any report read.</td><td>[S9][S11]</td><td><span class="tag b">GAP</span></td></tr>
+<tr><td>Omani bank lending to OMIFCO</td><td><span class="nf">Not found.</span> Bank Muscat is issue manager for the IPO only [S15].</td><td>[S15]</td><td><span class="tag b">GAP</span></td></tr>
+</tbody>
+</table>
+</div>
+<div class="box"><b>Read for C4 (invest or borrow there).</b> The rial is pegged, so an OMR loan is in effect a dollar liability. Borrowing in OMR would match Oman revenue and costs, while an INR loan from REC adds INR/USD exposure to the debt service leg. System rates near 5.3% sit close to the RBI repo of 5.50%, but no company-level quote exists to compare against REC's rate, which is not found. The comparison cannot be closed from public data. <span class="tag r">ESTIMATED</span> reading, own inference.</div>
+
+<h2>5. Confidence tags and adversary lines</h2>
+<p class="small">Tags follow the house style: VERIFIED means a primary source read directly; REPORTED means a credible secondary (adviser, press) or a search-result snippet not opened; ESTIMATED means own derivation; GAP means known missing. "Snippet only" marks facts seen in a search result but whose page could not be opened (403 or not fetched).</p>
+<table>
+<thead><tr><th>Claim</th><th>Tag</th><th>What would make it wrong</th></tr></thead>
+<tbody>
+<tr><td>Oman dividend and interest withholding is 0%</td><td><span class="tag y">REPORTED</span></td><td>The directive is not public (KPMG). A reversal or a narrower scope, for example only joint stock companies for dividends [S3], changes the leg for an LLC project entity.</td></tr>
+<tr><td>400% cap, 90-day repatriation, reporting dates</td><td><span class="tag g">VERIFIED</span></td><td>Master Direction amended after the version read (site shows update 24 Nov 2026 [S2]); the cap's text is in the Rules [S1].</td></tr>
+<tr><td>REC loan INR 40bn (USD 488m)</td><td><span class="tag y">REPORTED</span></td><td>Sources give INR and USD; borrower entity and tenor missing; reports range USD 488m to USD 540m.</td></tr>
+<tr><td>OMIFCO offtake terms</td><td><span class="tag y">REPORTED</span></td><td>Read from a Zawya summary of an MSX disclosure, not the disclosure itself; currency not stated.</td></tr>
+<tr><td>OMIFCO dividends and IPO proceeds</td><td><span class="tag g">VERIFIED</span></td><td>Dividends are company expectations, not paid amounts, except the September 2026 instalment whose payment was not checked. OMR 261m checks: 1,672,243,750 x 0.156 = OMR 260.9m.</td></tr>
+<tr><td>Duqm 30-year exemption applies to the projects</td><td><span class="tag g">VERIFIED</span> rule, <span class="tag b">GAP</span> application</td><td>Exemption needs a Minister's decision per enterprise [S6]; no decision for ACME or OMIFCO was found; Law 38/2025 may replace the regime for new phases.</td></tr>
+<tr><td>Pre-IPO per-partner dividend OMR 20.2m</td><td><span class="tag r">ESTIMATED</span></td><td>25% x OMR 80.8m = OMR 20.2m; both partners sold shares, so the real figure is lower.</td></tr>
+</tbody>
+</table>
+
+<h2>6. Gaps to close before the deck</h2>
+<ul>
+  <li>ACME: borrower entity, currency, tenor and rate of the REC loan; equity amount; Yara pricing currency; phases 2 and 3 financing; ACME net worth for the 400% test.</li>
+  <li>OMIFCO: post-IPO stakes; OMIFCO's own tax status; any debt; IFFCO and KRIBHCO Indian tax on foreign dividends and IPO gains; settlement currency of urea sales.</li>
+  <li>CEPA transfers article (open the WTI full PDF, over 10 MB, in a browser); Indian corporate tax rate on foreign dividends under the Income-tax Act 2025; IMF AREAER Oman chapter; Oman VAT on zone supplies.</li>
+</ul>
+
+<h2>Sources annexure</h2>
+<p class="small">All fetched or searched on 24 Nov 2026 unless the source date is shown. "Snippet only" means the page was not opened.</p>
+<ul class="annex">
+  <li>[S1] RBI, Foreign Exchange Management (Overseas Investment) Rules, 2022, G.S.R. 646(E), 22 Aug 2022: <a href="https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5087">https://www.rbi.org.in/Scripts/bs_viewcontent.aspx?Id=5087</a></li>
+  <li>[S2] RBI, Master Direction on Overseas Investment, FEMA 400/2022-RB, site updated 24 Nov 2026: <a href="https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12380">https://www.rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=12380</a></li>
+  <li>[S3] Deloitte, Oman Highlights 2026: <a href="https://www.deloitte.com/content/dam/assets-shared/docs/services/tax/2026/dttl-tax-omanhighlights-2026.pdf">https://www.deloitte.com/content/dam/assets-shared/docs/services/tax/2026/dttl-tax-omanhighlights-2026.pdf</a></li>
+  <li>[S4] PwC Worldwide Tax Summaries, Oman withholding taxes, last reviewed 7 Jul 2026: <a href="https://taxsummaries.pwc.com/oman/corporate/withholding-taxes">https://taxsummaries.pwc.com/oman/corporate/withholding-taxes</a></li>
+  <li>[S5] EY, India notifies the protocol amending the tax treaty with Oman, Sep 2025: <a href="https://www.ey.com/en_in/technical/alerts-hub/2025/09/india-notifies-the-protocol-amending-tax-treaty-with-oman">https://www.ey.com/en_in/technical/alerts-hub/2025/09/india-notifies-the-protocol-amending-tax-treaty-with-oman</a>. Primary text (Notification 69/2025) not opened: <a href="https://www.incometaxindia.gov.in/documents/d/guest/notification-69-2025-pdf">https://www.incometaxindia.gov.in/documents/d/guest/notification-69-2025-pdf</a></li>
+  <li>[S6] SEZAD, Decision 236/2015, rules regulating tax exemptions at the Duqm SEZ (English translation): <a href="https://www.duqm.gov.om/upload/files/regulations/tax-exemptions.pdf">https://www.duqm.gov.om/upload/files/regulations/tax-exemptions.pdf</a></li>
+  <li>[S7] EY, Oman issues law on special economic zones and free zones (Royal Decree 38/2025, effective 14 Apr 2025): <a href="https://www.ey.com/en_gl/technical/tax-alerts/oman-issues-law-on-special-economic-zones-and-free-zones">https://www.ey.com/en_gl/technical/tax-alerts/oman-issues-law-on-special-economic-zones-and-free-zones</a></li>
+  <li>[S8] IMF, Oman 2025 Article IV staff report, as of 18 Nov 2025: <a href="https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md">https://www.imf.org/-/media/files/publications/cr/2026/english/1omnea2026001-source-pdf.pdf.md</a></li>
+  <li>[S9] Mercom India, ACME secures INR 40 billion for green project in Oman, 21 Jul 2023: <a href="https://www.mercomindia.com/acme-secures-%e2%82%b940-billion-for-green-project-in-oman">https://www.mercomindia.com/acme-secures-%e2%82%b940-billion-for-green-project-in-oman</a></li>
+  <li>[S10] Zawya, ACME Group secures 500mln loan for green hydrogen project in Oman: <a href="https://www.zawya.com/en/projects/industry/acme-group-secures-500mln-loan-for-green-hydrogen-project-in-oman-wciq6p76">https://www.zawya.com/en/projects/industry/acme-group-secures-500mln-loan-for-green-hydrogen-project-in-oman-wciq6p76</a></li>
+  <li>[S11] Zawya, Oman SEZAD earns global companies' confidence with over 500mln funding for ACME: <a href="https://www.zawya.com/en/economy/gcc/oman-sezad-earns-global-companies-confidence-with-over-500mln-funding-for-acme-green-hydrogen-project-txjj5gls">https://www.zawya.com/en/economy/gcc/oman-sezad-earns-global-companies-confidence-with-over-500mln-funding-for-acme-green-hydrogen-project-txjj5gls</a></li>
+  <li>[S12] H2 View, ACME secures USD 490m loan (snippet only, page returned 403): <a href="https://www.h2-view.com/story/acme-secures-490m-loan-for-oman-green-hydrogen-and-ammonia-project/">https://www.h2-view.com/story/acme-secures-490m-loan-for-oman-green-hydrogen-and-ammonia-project/</a></li>
+  <li>[S13] Enerdata, ACME signs agreement for 800 kt/year green ammonia and H2 project in Oman, citing Omani release of 10 Jun 2026: <a href="https://www.enerdata.net/publications/daily-energy-news/acme-signs-agreement-800-ktyear-green-ammonia-and-h2-project-oman.html">https://www.enerdata.net/publications/daily-energy-news/acme-signs-agreement-800-ktyear-green-ammonia-and-h2-project-oman.html</a></li>
+  <li>[S14] OQ, press release on OMIFCO listing, 8 Jul 2026: <a href="https://oq.com/en/news-and-media/newsroom/20260708-oman-india-fertiliser-company">https://oq.com/en/news-and-media/newsroom/20260708-oman-india-fertiliser-company</a></li>
+  <li>[S15] Zawya, OMIFCO targets up to 8.3% dividend yield as IPO subscription opens, Jun 2026: <a href="https://www.zawya.com/en/economy/gcc/omifco-targets-up-to-83-dividend-yield-as-ipo-subscription-opens-yldbgoti">https://www.zawya.com/en/economy/gcc/omifco-targets-up-to-83-dividend-yield-as-ipo-subscription-opens-yldbgoti</a></li>
+  <li>[S16] Zawya, OMIFCO signs key pact to supply urea to India, 16-17 Jul 2026: <a href="https://www.zawya.com/en/economy/omifco-signs-key-pact-to-supply-urea-to-india-395000">https://www.zawya.com/en/economy/omifco-signs-key-pact-to-supply-urea-to-india-395000</a></li>
+  <li>[S17] Zawya, India to remain OMIFCO's largest export market post IPO, Jun 2026: <a href="https://www.zawya.com/en/economy/gcc/india-to-remain-omifcos-largest-export-market-post-ipo-h4ezwry3">https://www.zawya.com/en/economy/gcc/india-to-remain-omifcos-largest-export-market-post-ipo-h4ezwry3</a></li>
+  <li>[S18] Khaitan and Co, ERGO India Oman CEPA, 8 Jun 2026: <a href="https://www.khaitanco.com/sites/default/files/2026-06/ERGO_India_Oman_CEPA_8062026.pdf">https://www.khaitanco.com/sites/default/files/2026-06/ERGO_India_Oman_CEPA_8062026.pdf</a></li>
+  <li>[S19] Oman Observer, Oman bank lending rises 13.8%, 16 Nov 2026: <a href="https://www.omanobserver.om/article/1199773/business/banking/oman-bank-lending-rises-138">https://www.omanobserver.om/article/1199773/business/banking/oman-bank-lending-rises-138</a></li>
+  <li>[S20] PwC Worldwide Tax Summaries, India corporate income determination, last reviewed 11 May 2026: <a href="https://taxsummaries.pwc.com/india/corporate/income-determination">https://taxsummaries.pwc.com/india/corporate/income-determination</a></li>
+  <li>[S21] Income Tax Department, section 80M (snippet only, page returned 403): <a href="https://www.incometaxindia.gov.in/w/section-80m-56">https://www.incometaxindia.gov.in/w/section-80m-56</a></li>
+  <li>[S22] TaxGuru, dividend received from foreign subsidiaries and section 80M (snippet only): <a href="https://taxguru.in/income-tax/dividend-received-foreign-subsidiaries-taxation-section-80m-interplay.html">https://taxguru.in/income-tax/dividend-received-foreign-subsidiaries-taxation-section-80m-interplay.html</a></li>
+  <li>[S23] UNCTAD, India-Oman BIT (1997), terminated 22 Mar 2017 (snippet only): <a href="https://investmentpolicy.unctad.org/international-investment-agreements/treaties/bit/1941/india---oman-bit-1997-">https://investmentpolicy.unctad.org/international-investment-agreements/treaties/bit/1941/india---oman-bit-1997-</a>; Oman Ministry of Economy agreements page (snippet only): <a href="https://economy.gov.om/en/Agreements.aspx">https://economy.gov.om/en/Agreements.aspx</a></li>
+  <li>[S24] WTI, India-Oman CEPA (2025) contents page: <a href="https://edit.wti.org/document/show/05972a42-72a8-4788-a001-d0d76a5ae5da?page=10">https://edit.wti.org/document/show/05972a42-72a8-4788-a001-d0d76a5ae5da?page=10</a>; full text PDF (over fetch limit): <a href="https://edit.wti.org/wti-filesystem/20251222/7708dae0-9586-4e93-be08-94fa52a6755d/Oman%20-%20India%20CEPA%20(2025).pdf">WTI full text</a>; TaxTMI summary (snippet only): <a href="https://www.taxtmi.com/tmi_blog_details?id=884833">https://www.taxtmi.com/tmi_blog_details?id=884833</a></li>
+  <li>[S25] OPAZ, signing of land use agreement for phases two and three of ACME green hydrogen project in Duqm, 18 May 2025 (snippet only): <a href="https://opaz.gov.om/en/media-center/news/2025/signing-of-land-use-agreement-for-phases-two-and-three-of-acme-green-hydrogen-project-in-duqm">https://opaz.gov.om/en/media-center/news/2025/signing-of-land-use-agreement-for-phases-two-and-three-of-acme-green-hydrogen-project-in-duqm</a></li>
+  <li>[S26] Duqm investment brochure listing 100% repatriation and customs exemption (snippet only): <a href="https://duqm.gov.om/upload/publications/duqm-adversity-of-investment-opportunities_1.pdf">https://duqm.gov.om/upload/publications/duqm-adversity-of-investment-opportunities_1.pdf</a></li>
+  <li>[S27] Cleartax, India-Oman DTAA (snippet only, page returned 410): <a href="https://cleartax.in/s/india-oman-dtaa">https://cleartax.in/s/india-oman-dtaa</a></li>
+  <li>[S28] PIB archive, OMIFCO offtake announcement, 5 Dec 2001 (snippet only): <a href="https://archive.pib.gov.in/archive/releases98/lyr2001/rdec2001/05122001/r0512200116.html">https://archive.pib.gov.in/archive/releases98/lyr2001/rdec2001/05122001/r0512200116.html</a></li>
+  <li>[S29] ICIS, Oman's OMIFCO to forge new path on end of Indian agreement, 1 Jul 2020 (snippet only): <a href="https://www.icis.com/explore/resources/news/2020/07/01/10525521/oman-s-omifco-to-forge-new-path-on-end-of-indian-agreement">https://www.icis.com/explore/resources/news/2020/07/01/10525521/oman-s-omifco-to-forge-new-path-on-end-of-indian-agreement</a></li>
+  <li>[S30] Oman Observer, OMIFCO plans 25pc IPO (snippet only): <a href="https://www.omanobserver.om/article/1190550/business/markets/omifco-plans-25pc-ipo-as-oman-lines-up-major-industrial-listing">https://www.omanobserver.om/article/1190550/business/markets/omifco-plans-25pc-ipo-as-oman-lines-up-major-industrial-listing</a>; Zawya, OMIFCO net profit jumps 48% in H1 2026 (snippet only): <a href="https://www.zawya.com/en/capital-markets/equities/oman-omifcos-net-profit-jumps-48-in-h1-2026-420716">https://www.zawya.com/en/capital-markets/equities/oman-omifcos-net-profit-jumps-48-in-h1-2026-420716</a></li>
+  <li>[S31] KPMG, TIES Oman, Jan 2023 (snippet only): <a href="https://assets.kpmg.com/content/dam/kpmg/xx/pdf/2023/01/TIES-Oman.pdf">https://assets.kpmg.com/content/dam/kpmg/xx/pdf/2023/01/TIES-Oman.pdf</a></li>
+  <li>[S32] Zawya and Muscat Daily lending-rate reports, May and Jun 2026 (snippet only): <a href="https://www.zawya.com/en/economy/banking-and-insurance/bank-lending-in-oman-jumps-12.3-as-deposits-climb-13-471822">https://www.zawya.com/en/economy/banking-and-insurance/bank-lending-in-oman-jumps-12.3-as-deposits-climb-13-471822</a></li>
+  <li>[S33] Zawya, Central Bank of Oman raises repo rate to 4.5% (snippet only): <a href="https://www.zawya.com/en/economy/the-central-bank-of-oman-raises-repo-rate-to-4.5-in-first-increase-since-july-2023-895810">https://www.zawya.com/en/economy/the-central-bank-of-oman-raises-repo-rate-to-4.5-in-first-increase-since-july-2023-895810</a></li>
+  <li>Deck-note sources reused (not reopened): Trading Economics for USD/OMR 0.3850, CBO repo 4.50%, RBI repo 5.50%: <a href="https://tradingeconomics.com/oman/interest-rate">https://tradingeconomics.com/oman/interest-rate</a>; Muscat Daily on ACME phase 2 (<a href="https://www.muscatdaily.com/2026/06/10/second-phase-of-acmes-duqm-hydrogen-project-to-start-operations-in-2030/">link</a>) and OMIFCO IPO (<a href="https://www.muscatdaily.com/2026/06/02/omifco-to-offer-25-stake-in-ipo/">link</a>); KRIBHCO JV page <a href="https://kribhco.net/pages/about/jv.html">https://kribhco.net/pages/about/jv.html</a>; Gulf News on CEPA <a href="https://gulfnews.com/world/asia/india/india-oman-sign-cepa-as-modi-haitham-seek-deeper-strategic-ties-1.500384146">link</a>.</li>
+</ul>
+
+</main>
+</body>
+</html>
